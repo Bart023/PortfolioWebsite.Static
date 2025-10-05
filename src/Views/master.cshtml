@@ -16,10 +16,7 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">Home</a> |
-            <a href="/about-me">Over mij</a>
-        </nav>
+        @await Html.PartialAsync("Partials/Navbar", Model)
     </header>
 
     <main>

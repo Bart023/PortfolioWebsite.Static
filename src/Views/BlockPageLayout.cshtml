@@ -1,0 +1,15 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = "master.cshtml";
+    var hasBlocksProp = Model.HasValue("blocks");
+    var blocks = Model.Value<BlockGridModel>("blocks");
+}
+
+<h1>@Model.Name</h1>
+
+@if (blocks != null)
+{
+    @await Html.GetBlockGridHtmlAsync(blocks)
+}
