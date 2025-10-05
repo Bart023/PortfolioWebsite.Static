@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@{
+    var heading = Model.Content.Value<string>("heading");
+    var subtitle = Model.Content.Value<string>("subtitle");
+    var bg = Model.Content.Value<Umbraco.Cms.Core.Models.MediaWithCrops>("backgroundImage");
+}
+
+<section class="hero" style="background-image:url('@bg?.Url()'); background-size:cover; color:white; padding:100px 20px; text-align:center;">
+    <h1>@heading</h1>
+    <p>@subtitle</p>
+</section>

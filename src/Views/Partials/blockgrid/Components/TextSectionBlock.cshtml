@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@{
+    var heading = Model.Content.Value<string>("heading");
+    var body = Model.Content.Value<string>("body");
+}
+
+<section class="text-section" style="padding:40px 20px;">
+    <h2>@heading</h2>
+    <div>@Html.Raw(body)</div>
+</section>

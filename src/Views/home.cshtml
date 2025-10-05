@@ -1,0 +1,10 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "master.cshtml";
+}
+
+<h1>@Model.Name</h1>
+<p>@Model.Value("intro")</p>
+@await Html.GetBlockGridHtmlAsync(Model.Value<BlockGridModel>("content"))
