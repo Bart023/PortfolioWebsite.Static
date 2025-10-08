@@ -1,4 +1,5 @@
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
 
 builder.CreateUmbracoBuilder()
     .AddBackOffice()
@@ -6,10 +7,14 @@ builder.CreateUmbracoBuilder()
     .AddComposers()
     .Build();
 
+
 WebApplication app = builder.Build();
 
 await app.BootUmbracoAsync();
 
+app.UseRouting();
+
+app.MapControllers();
 
 app.UseUmbraco()
     .WithMiddleware(u =>
