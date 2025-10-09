@@ -36,11 +36,11 @@ public class StaticExportController : ControllerBase
         var cmd = new ExportCommand(
             SiteUrl: "localhost:44376",
             AdditionalUrls: new[] { "/" },
-            TargetUrl: "https://bartvanderburg.net/",
-            OutputFolder: "C:\\Projects\\MyPortfolioWebsite\\x-static-site-html",
+            TargetUrl: "/",
+            OutputFolder: "C:\\Projects\\MyPortfolioWebsite\\docs",
             StringReplacements: new[] {
-                new StringReplacements("http://localhost:52519/", "https://bartvanderburg.net/"),
-                new StringReplacements("https://localhost:44376/", "https://bartvanderburg.net/")
+                new StringReplacements("http://localhost:52519/", "/"),
+                new StringReplacements("https://localhost:44376/", "/")
             }
         );
 
