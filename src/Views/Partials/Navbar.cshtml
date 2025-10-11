@@ -9,7 +9,7 @@
 
     var home = root;
     var about = Find("About me");
-    var projects = Find("My work");
+    var projects = Find("Portfolio");
     var skills = Find("My skills");
     var contact = Find("Contact");
 
@@ -25,21 +25,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="@home?.Url()">@root?.Name</a>
+        <a class="navbar-brand" href="@home?.Url()">Bart van der Burg</a>
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link @(IsActive(home) ? "active" : "")" href="@(home?.Url() ?? " #")">Home</a>
+                    <a class="nav-link @(IsActive(about) ? "active" : "")" href="@(about?.Url() ?? "#")">Over mij</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @(IsActive(about) ? "active" : "")" href="@(about?.Url() ?? "#")">About me</a>
+                    <a class="nav-link @(IsActive(about) ? "active" : "")" href="@(projects?.Url() ?? "#")">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @(IsActive(about) ? "active" : "")" href="@(projects?.Url() ?? "#")">My projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link @(IsActive(about) ? "active" : "")" href="@(skills?.Url() ?? "#")">My skills</a>
+                    <a class="nav-link @(IsActive(about) ? "active" : "")" href="@(skills?.Url() ?? "#")">Vaardigheden</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @(IsActive(about) ? "active" : "")" href="@(contact?.Url() ?? "#")">Contact</a>

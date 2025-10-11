@@ -7,8 +7,6 @@
     var blocks = Model.Value<BlockGridModel>("blocks");
 }
 
-<h1>@Model.Name</h1>
-
 @if (blocks != null)
 {
     @await Html.GetBlockGridHtmlAsync(blocks)
