@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPortfolioWebsite", "src\MyPortfolioWebsite.csproj", "{AC97256B-38C6-3EEB-063A-0DAE0D09831B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticHost", "StaticHost\StaticHost.csproj", "{342DEFFD-7B0A-4495-A747-723F9F076648}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticHostLib", "StaticHostLib\StaticHostLib.csproj", "{6ED27D65-4C9F-4EF4-9BFB-A222D37F4BB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{AC97256B-38C6-3EEB-063A-0DAE0D09831B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC97256B-38C6-3EEB-063A-0DAE0D09831B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC97256B-38C6-3EEB-063A-0DAE0D09831B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{342DEFFD-7B0A-4495-A747-723F9F076648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{342DEFFD-7B0A-4495-A747-723F9F076648}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{342DEFFD-7B0A-4495-A747-723F9F076648}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{342DEFFD-7B0A-4495-A747-723F9F076648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED27D65-4C9F-4EF4-9BFB-A222D37F4BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED27D65-4C9F-4EF4-9BFB-A222D37F4BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED27D65-4C9F-4EF4-9BFB-A222D37F4BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED27D65-4C9F-4EF4-9BFB-A222D37F4BB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

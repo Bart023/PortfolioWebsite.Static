@@ -1,24 +1,35 @@
-﻿using Umbraco.Cms.Core.Events;
-using Umbraco.Cms.Core.Notifications;
+﻿using Microsoft.Extensions.Options;
+using MyPortfolioWebsite.Models.Settings;
 using Sekmen.StaticSiteGenerator;
+using Umbraco.Cms.Core.Events;
+using Umbraco.Cms.Core.Notifications;
 
 namespace MyPortfolioWebsite.Handlers;
 
 public class ContentPublishedHandler : INotificationAsyncHandler<ContentPublishedNotification>
 {
+    private readonly StaticHtmlBuildSettings _settings;
+    private readonly ILogger<ContentPublishedHandler> _logger;
+
+    public ContentPublishedHandler(
+        IOptions<StaticHtmlBuildSettings> settings,
+        ILogger<ContentPublishedHandler> logger)
+    {
+        _settings = settings.Value;
+        _logger = logger;
+    }
+
     public async Task HandleAsync(ContentPublishedNotification notification, CancellationToken cancellationToken)
     {
         try
         {
-            Console.WriteLine("--- Generating static site...");
-
+            _logger.LogInformation("Generating static website files...");
             await GenerateStaticSite();
-
-            Console.WriteLine("--- Static site generated");
+            _logger.LogInformation("Static website generation completed successfully.");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"--- Static export failed: {ex.Message}");
+            _logger.LogError(ex, "Static export failed: {Message}", ex.Message);
         }
     }
 
@@ -30,17 +41,13 @@ public class ContentPublishedHandler : INotificationAsyncHandler<ContentPublishe
         });
 
         var cmd = new ExportCommand(
-            TargetUrl: "/",
-            AdditionalUrls: ["/"],
-            SiteUrl: "localhost:44376",
-            OutputFolder: "C:\\Projects\\MyPortfolioWebsite\\docs",
-            StringReplacements: [
-                new StringReplacements("http://localhost:52519/", "/"),
-                new StringReplacements("https://localhost:44376/", "/")
-            ]
+            SiteUrl: _settings.SiteUrl,
+            AdditionalUrls: _settings.AdditionalUrls,
+            TargetUrl: _settings.TargetUrl,
+            OutputFolder: _settings.OutputFolder,
+            StringReplacements: _settings.StringReplacements.Select(r => new StringReplacements(r.OldValue, r.NewValue)).ToArray()
         );
 
         await Functions.ExportWebsite(client, cmd);
     }
-
 }
