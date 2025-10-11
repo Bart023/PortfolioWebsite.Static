@@ -12,12 +12,9 @@
     var projects = Find("Portfolio");
     var skills = Find("My skills");
     var contact = Find("Contact");
-
-    bool IsActive(IPublishedContent? n) => 
-        n != null && Model!.AncestorsOrSelf().Any(a => a.Id == n.Id);
 }
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
     <div class="container">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"

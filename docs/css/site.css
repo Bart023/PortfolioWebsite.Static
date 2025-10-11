@@ -1,5 +1,10 @@
 ﻿
-
+/* Navbar styles */
 .nav-link.active {
     text-decoration: underline;
 }
+.navbar {
+    /*background-color: #fff9e5;*/
+    border-bottom: 1px solid var(--bs-gray-400);
+}
+
