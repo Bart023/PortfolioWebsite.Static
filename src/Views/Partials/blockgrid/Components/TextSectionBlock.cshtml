@@ -7,46 +7,29 @@
 }
 
 <section class="container my-4">
-    <div class="border rounded-3 p-4 bg-white shadow-sm">
-        @if (imageAlign?.ToLower() == "center")
-        {
-            <div class="text-center mb-4">
-                @if (image != null)
-                {
-                    <img src="@image.Url()" alt="@heading" class="img-fluid rounded mb-3" style="max-width: 500px;">
-                }
+    <div class="border rounded-3 p-3 bg-white shadow-sm">
+        <div class="row align-items-center g-4">
+            @if (imageAlign?.ToLower() == "left" && image != null)
+            {
+                <div class="col-md-5">
+                    <img src="@image.Url()" alt="@heading" class="img-fluid rounded shadow-sm">
+                </div>
+            }
+
+            <div class="col-md-7">
                 @if (!string.IsNullOrWhiteSpace(heading))
                 {
                     <h2>@heading</h2>
                 }
                 <div>@Html.Raw(body)</div>
             </div>
-        }
-        else
-        {
-            <div class="row align-items-center g-4">
-                @if (imageAlign?.ToLower() == "left" && image != null)
-                {
-                    <div class="col-md-5">
-                        <img src="@image.Url()" alt="@heading" class="img-fluid rounded shadow-sm">
-                    </div>
-                }
 
-                <div class="col-md-7">
-                    @if (!string.IsNullOrWhiteSpace(heading))
-                    {
-                        <h2>@heading</h2>
-                    }
-                    <div>@Html.Raw(body)</div>
+            @if (imageAlign?.ToLower() == "right" && image != null)
+            {
+                <div class="col-md-5">
+                    <img src="@image.Url()" alt="@heading" class="img-fluid rounded shadow-sm">
                 </div>
-
-                @if (imageAlign?.ToLower() == "right" && image != null)
-                {
-                    <div class="col-md-5">
-                        <img src="@image.Url()" alt="@heading" class="img-fluid rounded shadow-sm">
-                    </div>
-                }
-            </div>
-        }
+            }
+        </div>
     </div>
 </section>
