@@ -1,13 +1,15 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@using Umbraco.Cms.Core.Models
 @{
     var heading = Model.Content.Value<string>("title");
     var body = Model.Content.Value<string>("body");
-    var imageAlign = Model.Content.Value<string>("imageAllign");
+    var imageAlign = Model.Content.Value<string>("imagePosition");
     var image = Model.Content.Value<Umbraco.Cms.Core.Models.MediaWithCrops>("image");
+    var link = Model.Content.Value<IEnumerable<Link>>("link")?.FirstOrDefault();
 }
 
 <section class="container my-4">
-    <div class="border rounded-3 p-3 bg-white shadow-sm">
+    <div class="border rounded-3 p-3 bg-white shadow-sm position-relative">
         <div class="row align-items-center g-4">
             @if (imageAlign?.ToLower() == "left" && image != null)
             {
@@ -31,5 +33,13 @@
                 </div>
             }
         </div>
+
+        @if (link != null)
+        {
+            <a href="@link.Url"
+               target="@link.Target"
+               class="stretched-link"
+               aria-label="@(link.Name ?? heading ?? "Lees meer")"></a>
+        }
     </div>
 </section>
