@@ -22,7 +22,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="@home?.Url()">Bart van der Burg</a>
+        <a class="navbar-brand mx-auto" href="@home?.Url()">Bart van der Burg</a>
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto">
@@ -40,5 +40,35 @@
                 </li>
             </ul>
         </div>
+
+        <div class="dropdown ms-auto">
+            <button class="btn btn-outline-secondary border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear-fill fs-4"></i>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+                <li class="dropdown-header fw-bold">Thema</li>
+                <li>
+                    <button class="dropdown-item" id="toggleTheme">
+                        <i class="bi bi-sun-fill me-2"></i> Light / Dark
+                    </button>
+                </li>
+
+                <li><hr class="dropdown-divider"></li>
+
+                <li class="dropdown-header fw-bold">Taal</li>
+                <li>
+                    <a class="dropdown-item language-option" data-lang="nl" href="#">
+                        🇳🇱 Nederlands
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item language-option" data-lang="en" href="#">
+                        🇬🇧 English
+                    </a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </nav>
