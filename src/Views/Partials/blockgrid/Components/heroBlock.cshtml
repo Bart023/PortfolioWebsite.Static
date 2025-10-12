@@ -1,9 +1,0 @@
-﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
-@{
-    var text = Model.Content.Value<string>("text");
-    var image = Model.Content.Value<Umbraco.Cms.Core.Models.MediaWithCrops>("image");
-}
-
-<section class="hero" style="background-image:url('@image?.Url()'); background-size:cover; color:white; padding:100px 20px; text-align:center;">
-    @if (!string.IsNullOrWhiteSpace(text)) { <p>@text</p> }
-</section>
