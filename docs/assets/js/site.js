@@ -45,3 +45,34 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.querySelector("i").className = theme === "light" ? "bi bi-sun-fill me-2" : "bi bi-moon-fill me-2";
     }
 });
+
+// Toggle language
+document.addEventListener("DOMContentLoaded", () => {
+    const html = document.documentElement;
+    const langLinks = document.querySelectorAll(".language-option");
+    const currentLang = location.pathname.match(/^\/(nl|en)(\/|$)/)?.[1] || html.lang || "nl";
+
+    html.setAttribute("lang", currentLang);
+
+    if (!/^\/(nl|en)(\/|$)/.test(location.pathname)) {
+        location.replace(`/${currentLang}${location.pathname}${location.search}`);
+        return;
+    }
+
+    langLinks.forEach(link =>
+        link.classList.toggle("active", link.dataset.lang === currentLang)
+    );
+
+    langLinks.forEach(link => link.addEventListener("click", e => {
+        e.preventDefault();
+        const selectedLang = link.dataset.lang;
+        if (selectedLang === currentLang) return;
+
+        const newPath = location.pathname.replace(/^\/(nl|en)(\/|$)/, `/${selectedLang}/`);
+        const finalPath = /^\/(nl|en)(\/|$)/.test(location.pathname)
+            ? newPath
+            : `/${selectedLang}${location.pathname}`;
+
+        location.href = finalPath + location.search;
+    }));
+});
