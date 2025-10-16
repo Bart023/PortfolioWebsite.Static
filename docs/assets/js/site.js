@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
 
         const linkPath = new URL(link.href, window.location.origin).pathname.toLowerCase().replace(/\/$/, "");
-        if (linkPath === currentPath) {
+
+        if (currentPath.startsWith(linkPath)) {
             link.classList.add("active");
         } else {
             link.classList.remove("active");
