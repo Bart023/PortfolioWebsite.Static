@@ -77,3 +77,25 @@ document.addEventListener("DOMContentLoaded", () => {
         location.href = finalPath + location.search;
     }));
 });
+
+
+// Toggle list/tile view on portfolio overview page
+document.addEventListener("DOMContentLoaded", () => {
+    const root = document.getElementById("projects");
+    const btnTiles = document.getElementById("btnTiles");
+    const btnList = document.getElementById("btnList");
+
+    const setView = view => {
+        root.classList.toggle("view-tiles", view === "tiles");
+        root.classList.toggle("view-list", view === "list");
+        btnTiles.classList.toggle("active", view === "tiles");
+        btnList.classList.toggle("active", view === "list");
+        localStorage.setItem("projectView", view);
+    };
+
+    const saved = localStorage.getItem("projectView");
+    setView(saved === 'list' ? 'list' : 'tiles');
+
+    btnTiles.addEventListener("click", () => setView("tiles"));
+    btnList.addEventListener("click", () => setView("list"));
+});
