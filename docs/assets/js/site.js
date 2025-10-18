@@ -82,6 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Toggle list/tile view on portfolio overview page
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("projects");
+    if (!root) return;
+
     const btnTiles = document.getElementById("btnTiles");
     const btnList = document.getElementById("btnList");
 
