@@ -1,6 +1,4 @@
-﻿
-
-/* bootstrap overrides */
+﻿/* bootstrap overrides */
 [data-bs-theme=light] {
     --bs-secondary-bg-rgb: 255, 249, 229;
 }
@@ -37,6 +35,9 @@ header {
     }
 
 /* Project Detail Page */
+.project-nav {
+    padding-bottom: 1rem;
+}
 @media (max-width: 991.98px) {
     .project-info-card {
         position: static !important;

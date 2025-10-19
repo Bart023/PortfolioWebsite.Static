@@ -23,9 +23,11 @@
 }
 
 #projects.view-list .project-body {
-    display: flex;
     width: 100%;
 }
+    #projects.view-list .project-body > * {
+        padding: .25rem;
+    }
 
 #projects.view-list .image-container {
     align-self: center;
@@ -36,27 +38,20 @@
     }
 
 #projects.view-list .project-meta {
-    text-align: right;
     margin-left: auto;
-    white-space: nowrap;
 }
-    #projects.view-list .project-meta .star-rating {
-        justify-content: right;
-    }
 
 @media (max-width:767.98px) {
-    #projects.view-list .project-body {
-        display: block;
-    }
-
     #projects .project-intro {
         display: none;
     }
-
-    #projects.view-list .project-meta {
-        text-align: left;
+}
+@media (min-width:768px) {
+    #projects.view-list .project-body {
+        display: flex;
     }
-        #projects.view-list .project-meta .star-rating {
-            justify-content: left;
-        }
+    #projects.view-list .project-meta {
+        border-left: 1px solid var(--bs-card-border-color);
+        width: 30%;
+    }
 }
