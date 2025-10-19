@@ -27,11 +27,13 @@
     width: 100%;
 }
 
-#projects.view-list .project-img {
-    width: 18vh;
-    max-width: 220px;
-    border-radius: var(--bs-border-radius);
+#projects.view-list .image-container {
+    align-self: center;
 }
+    #projects.view-list .image-container .project-img {
+        border-radius: var(--bs-border-radius);
+        max-width: 220px;
+    }
 
 #projects.view-list .project-meta {
     text-align: right;
