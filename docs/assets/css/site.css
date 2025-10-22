@@ -6,6 +6,11 @@
 
 }
 
+/* Common */
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 97vw;
     max-width: 1300px;

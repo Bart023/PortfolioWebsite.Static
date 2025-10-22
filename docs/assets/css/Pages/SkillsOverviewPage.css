@@ -1,4 +1,16 @@
-﻿/* legend */
+﻿/* Important for 'Show and go to category' */
+#skills .category-section {
+    position: relative;
+}
+.category-section::before { /* fallback hack */
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+}
+
+/* legend */
 #skills .legend {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -12,10 +24,6 @@
     #skills .legend .legend-text {
         font-size: .9rem;
     }
-#skills .text-bg-junior {
-    background-color: var(--bs-gray-300) !important;
-    color: var(--bs-body-color) !important;
-}
 #skills .text-bg-junior-medior {
     background-color: var(--bs-info-bg-subtle) !important;
     color: var(--bs-info-text-emphasis) !important;
@@ -40,6 +48,7 @@
 
 /* Items */
 #skills .skill-card {
+    margin-bottom: 1rem;
     text-decoration: none;
 }
 

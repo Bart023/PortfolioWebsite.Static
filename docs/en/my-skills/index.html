@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?v=2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4" />
-    <link rel="stylesheet" href="/assets/css/site.css?v=c_BHtofgToRE44npcg9DhuEYTKLhVcOveFUiorwRlzk" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=Q6oN592Gs7eYLUHG65PB_AlqINfEVPQe7VyeN04WQHQ" />
     <link rel="stylesheet" href="/assets/css/Components/ImageStripBlock.css?v=rF9DEFiQx4pHBLfWk4m9Bu45v23tbrnW1sx9k7X1zIQ" />
     <link rel="stylesheet" href="/assets/css/Pages/ProjectsOverviewPage.css?v=0A5qwGXwskQ-xPdyP4dI5tPt9TItIsz6ahu-18v6BLo" />
-    <link rel="stylesheet" href="/assets/css/Pages/SkillsOverviewPage.css?v=UrgQb6zhrZ-6DevtjkRjEypagdjMG6XJ3aPDdXKP_Lc" />
+    <link rel="stylesheet" href="/assets/css/Pages/SkillsOverviewPage.css?v=PaN3MRVzyS9eoM--ZOqe7gGdH01ZiLXR1xuSsfGl0EY" />
 </head>
 <body>
     <header class="sticky-top">
@@ -85,10 +85,10 @@
 <section id="skills" class="container my-3">
     <h1 class="mb-3">My skills</h1>
 
-    <!-- Legenda -->
+    <!-- Legend -->
     <div class="legend mb-4">
         <div class="legend-row">
-            <span class="badge rounded-pill text-bg-junior">Junior</span>
+            <span class="badge rounded-pill text-bg-light border">Junior</span>
             <span class="legend-text">Beginner – beperkte ervaring, leert de basisprincipes.</span>
         </div>
         <div class="legend-row">
@@ -109,54 +109,91 @@
         </div>
     </div>
 
-    <!-- Filters -->
-    <div class="filter-bar">
-        <div class="btn-group mb-3" role="group" aria-label="Categorie">
-            <button type="button" class="btn btn-outline-secondary active" data-filter-cat="all">Alle</button>
-            <button type="button" class="btn btn-outline-secondary" data-filter-cat="language">Talen</button>
-            <button type="button" class="btn btn-outline-secondary" data-filter-cat="framework">Frameworks</button>
-            <button type="button" class="btn btn-outline-secondary" data-filter-cat="tool">Tools</button>
-            <button type="button" class="btn btn-outline-secondary" data-filter-cat="methodology">Methodieken</button>
-        </div>
-        <div class="btn-group ms-auto mb-3" role="group" aria-label="Niveau">
+    <!-- Filer niveau -->
+    <nav class="filter-bar sticky-top bg-body py-2 mb-4 border-bottom">
+        <div class="btn-group mb-3" role="group" aria-label="Niveau">
             <button type="button" class="btn btn-outline-secondary active" data-filter-level="all">Alle</button>
             <button type="button" class="btn btn-outline-secondary" data-filter-level="junior">Junior</button>
             <button type="button" class="btn btn-outline-secondary" data-filter-level="medior">Medior</button>
             <button type="button" class="btn btn-outline-secondary" data-filter-level="senior">Senior</button>
         </div>
-    </div>
+    </nav>
 
-    <!-- Grid -->
-        <div id="skillsGrid" class="row">
-                <article class="col-12 skill" data-cat="language" data-level="senior">
-                    <div class="card skill-card">
-                            <div class="image-container">
-                                <img class="skill-img card-img-top" src="/media/3btdwojw/c-image.png" alt="C#" />
-                            </div>
+            <div id="category-language" class="category-section mb-5">
+                <!-- Show and go to category -->
+                <div class="btn-group mb-3 d-flex justify-content-center" role="group">
+                    <a href="#category-language" class="btn btn-outline-secondary active">Talen</a>
+                    <a href="#category-framework" class="btn btn-outline-secondary ">Frameworks</a>
+                    <a href="#category-tool" class="btn btn-outline-secondary ">Tools</a>
+                    <a href="#category-methodology" class="btn btn-outline-secondary ">Methodieken</a>
+                </div>
 
-                        <div class="skill-body">
-                            <div class="skill-main">
-                                <h3 class="mb-2">C#</h3>
-                                    <div class="skill-intro mt-2">My favorite language for building structured and reliable applications. Whether it’s a web application in .NET or backend logic, C# is where I feel most at home.</div>
-                            </div>
+                <div class="row">
+                        <article class="col-12 skill" data-cat="language" data-level="senior">
+                            <div class="card skill-card">
+                                    <div class="image-container">
+                                        <img class="skill-img card-img-top" src="/media/3btdwojw/c-image.png" alt="C#" />
+                                    </div>
 
-                            <div class="skill-meta small text-body-secondary">
-                                    <div> Niveau: <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span> </div>
-                                    <div>Experience: 6 year(s)</div>
-                                    <div>Category: <span class="badge rounded-pill text-bg-light border text-capitalize">language</span></div>
+                                <div class="skill-body">
+                                    <div class="skill-main">
+                                        <h3 class="mb-2">C#</h3>
+                                            <div class="skill-intro mt-2">My favorite language for building structured and reliable applications. Whether it’s a web application in .NET or backend logic, C# is where I feel most at home.</div>
+                                    </div>
+
+                                    <div class="skill-meta small text-body-secondary">
+                                            <div> Niveau: <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span> </div>
+                                            <div>Experience: 6 year(s)</div>
+                                            <div>Category: <span class="badge rounded-pill text-bg-light border text-capitalize">language</span></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </article>
-        </div>
+                        </article>
+                </div>
+            </div>
+            <div id="category-framework" class="category-section mb-5">
+                <!-- Show and go to category -->
+                <div class="btn-group mb-3 d-flex justify-content-center" role="group">
+                    <a href="#category-language" class="btn btn-outline-secondary ">Talen</a>
+                    <a href="#category-framework" class="btn btn-outline-secondary active">Frameworks</a>
+                    <a href="#category-tool" class="btn btn-outline-secondary ">Tools</a>
+                    <a href="#category-methodology" class="btn btn-outline-secondary ">Methodieken</a>
+                </div>
+
+                <div class="row">
+                        <article class="col-12 skill" data-cat="framework" data-level="medior / senior">
+                            <div class="card skill-card">
+                                    <div class="image-container">
+                                        <img class="skill-img card-img-top" src="/media/ypbdch43/aspnet.png" alt="ASP.NET Core MVC &amp; RazorPages" />
+                                    </div>
+
+                                <div class="skill-body">
+                                    <div class="skill-main">
+                                        <h3 class="mb-2">ASP.NET Core MVC &amp; RazorPages</h3>
+                                    </div>
+
+                                    <div class="skill-meta small text-body-secondary">
+                                            <div> Niveau: <span class="badge rounded-pill text-bg-medior-senior text-capitalize">medior / senior</span> </div>
+                                            <div>Experience: 3 year(s)</div>
+                                            <div>Category: <span class="badge rounded-pill text-bg-light border text-capitalize">framework</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                </div>
+            </div>
 </section>
+
+<div style="height: 1000px">
+
+</div>
 
     </main>
 
     <footer>© 2025 - Mijn portfolio</footer>
 
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/site.js?v=UC3z2MTzvgq-B0uf0QwObfCR3zvJYrS1fI1D7cR-_Zo"></script>
+    <script src="/assets/js/site.js?v=mxJjvJtHdwtQnzurTwbdaWyYdczq2DPGeoEHUGjrSHk"></script>
     <script src="/assets/js/Components/FilmstripBehavior.js?v=PYzXZ1A8HIJOxPdQwUXZa_qwVASShoNXdgFj72OZopw"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 ﻿
-// label active menu item
+//Common - label active menu item
 document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, "");
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Toggle dark/light mode
+// Common - Toggle dark/light mode
 document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("toggleTheme");
     const light = document.getElementById("theme-pill-light");
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Toggle language
+// Common - Toggle language
 document.addEventListener("DOMContentLoaded", () => {
     const html = document.documentElement;
     const langLinks = document.querySelectorAll(".language-option");
@@ -78,8 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
 });
 
-
-// Toggle list/tile view on portfolio overview page
+// portfolio overview page - Toggle list/tile view
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("projects");
     if (!root) return;
@@ -101,3 +100,4 @@ document.addEventListener("DOMContentLoaded", () => {
     btnTiles.addEventListener("click", () => setView("tiles"));
     btnList.addEventListener("click", () => setView("list"));
 });
+
