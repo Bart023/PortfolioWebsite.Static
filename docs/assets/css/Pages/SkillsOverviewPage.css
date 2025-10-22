@@ -1,0 +1,112 @@
+﻿/* legend */
+#skills .legend {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: .25rem;
+    column-gap: .75rem;
+    align-items: center;
+}
+    #skills .legend .legend-row {
+        display: contents;
+    }
+    #skills .legend .legend-text {
+        font-size: .9rem;
+    }
+#skills .text-bg-junior {
+    background-color: var(--bs-gray-300) !important;
+    color: var(--bs-body-color) !important;
+}
+#skills .text-bg-junior-medior {
+    background-color: var(--bs-info-bg-subtle) !important;
+    color: var(--bs-info-text-emphasis) !important;
+}
+#skills .text-bg-medior {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+#skills .text-bg-medior-senior {
+    background-color: var(--bs-success-bg-subtle) !important;
+    color: var(--bs-success-text-emphasis) !important;
+}
+#skills .text-bg-senior {
+    background-color: var(--bs-success) !important;
+    color: var(--bs-white) !important;
+}
+
+/* Filter bar */
+#skills .filter-bar {
+    display: flex;
+}
+
+/* Items */
+#skills .skill-card {
+    text-decoration: none;
+}
+
+#skills .skill-body > * {
+    padding: .25rem;
+}
+
+#skills .skill-intro {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+    #skills .skill-intro p {
+        margin: 0;
+    }
+
+#skills .skill {
+    flex: 0 0 100% !important;
+}
+
+#skills .skill-card {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#skills .skill-body {
+    width: 100%;
+}
+
+#skills .image-container .skill-img {
+    max-width: 220px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--bs-border-radius);
+}
+
+#skills .skill-meta {
+    min-width: 260px;
+    margin-left: auto;
+}
+
+@media (max-width:767.98px) {
+    #skills .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+        #skills .filter-bar > * {
+            margin-left: initial !important;
+        }
+
+    #skills .skill-intro {
+        display: none;
+    }
+
+    #skills .skill-meta {
+        border-top: 1px solid var(--bs-card-border-color);
+    }
+}
+
+@media (min-width:768px) {
+    #skills .skill-body {
+        display: flex;
+    }
+
+    #skills .skill-meta {
+        border-left: 1px solid var(--bs-card-border-color);
+        width: 30%;
+    }
+}
