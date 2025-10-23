@@ -10,7 +10,7 @@
     visibility: hidden;
 }
 
-/* legend */
+/* Level badges */
 #skills .legend {
     display: grid;
     grid-template-columns: auto 1fr;

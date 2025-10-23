@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?v=2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4" />
-    <link rel="stylesheet" href="/assets/css/site.css?v=tQFyFiIBRH1gmjFEOhEAWzwcBBhtUW-7-CaAdZR11hQ" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=Q6oN592Gs7eYLUHG65PB_AlqINfEVPQe7VyeN04WQHQ" />
     <link rel="stylesheet" href="/assets/css/Components/ImageStripBlock.css?v=rF9DEFiQx4pHBLfWk4m9Bu45v23tbrnW1sx9k7X1zIQ" />
     <link rel="stylesheet" href="/assets/css/Pages/ProjectsOverviewPage.css?v=9MDi-dNy8f9iAq0d5R3e9AzwTI6At6sYe7Eqal-5k6w" />
-    <link rel="stylesheet" href="/assets/css/Pages/SkillsOverviewPage.css?v=j3tCf5uhN-kukDE88aI_xPrG76EuYUUySpZ8SpUeEnA" />
+    <link rel="stylesheet" href="/assets/css/Pages/SkillsOverviewPage.css?v=Vr-MrVNu7f-BMLB1ZPDDGhmC7ZPJpq94uUZpA3WH2bA" />
 </head>
 <body>
     <header class="sticky-top">
@@ -84,41 +84,60 @@
 
 <section id="skills" class="container my-3">
     <h1 class="mb-3">My skills</h1>
+        <div class="lead mb-3"><p>Here you’ll find my skills, grouped by category (Languages, Frameworks, Tools, and Methodologies) and labeled with level indicators. Use the navigation to jump directly to any category.</p></div>
 
-    <!-- Legend -->
-    <div class="legend mb-4">
-        <div class="legend-row">
-            <span class="badge rounded-pill text-bg-light border">Junior</span>
-            <span class="legend-text">Beginner – beperkte ervaring, leert de basisprincipes.</span>
-        </div>
-        <div class="legend-row">
-            <span class="badge rounded-pill text-bg-junior-medior">Junior / Medior</span>
-            <span class="legend-text">Opkomend niveau - past kennis toe in kleinere projecten.</span>
-        </div>
-        <div class="legend-row">
-            <span class="badge rounded-pill text-bg-medior">Medior</span>
-            <span class="legend-text">Solide kennis - werkt zelfstandig aan uiteenlopende taken.</span>
-        </div>
-        <div class="legend-row">
-            <span class="badge rounded-pill text-bg-medior-senior">Medior / Senior</span>
-            <span class="legend-text">Ervaren - begeleidt anderen en neemt technische beslissingen.</span>
-        </div>
-        <div class="legend-row">
-            <span class="badge rounded-pill text-bg-senior">Senior</span>
-            <span class="legend-text">Expert – diepgaande kennis, leidt projecten en architectuur.</span>
+    <nav class="py-3 mb-3 border-bottom d-flex justify-content-end align-items-center gap-2">
+        <!-- Legend button -->
+        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#legendModal">
+            Niveaus toelichting
+        </button>
+            
+        <!-- Filter niveau -->
+        <select id="filterLevel" class="form-select w-auto" aria-label="Filter op niveau">
+            <option value="all" selected>Alle niveaus</option>
+            <option value="junior">Junior</option>
+            <option value="medior">Medior</option>
+            <option value="senior">Senior</option>
+        </select>
+    </nav>
+
+    <!-- Legend Modal -->
+    <div class="modal fade" id="legendModal" tabindex="-1" aria-labelledby="legendModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="legendModalLabel">Niveaus toelichting</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sluiten"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="legend">
+                        <div class="legend-row">
+                            <span class="badge rounded-pill text-bg-light border">Junior</span>
+                            <span class="legend-text">Beginner – beperkte ervaring, leert de basisprincipes.</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="badge rounded-pill text-bg-junior-medior">Junior / Medior</span>
+                            <span class="legend-text">Opkomend niveau - past kennis toe in kleinere projecten.</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="badge rounded-pill text-bg-medior">Medior</span>
+                            <span class="legend-text">Solide kennis - werkt zelfstandig aan uiteenlopende taken.</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="badge rounded-pill text-bg-medior-senior">Medior / Senior</span>
+                            <span class="legend-text">Ervaren - begeleidt anderen en neemt technische beslissingen.</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="badge rounded-pill text-bg-senior">Senior</span>
+                            <span class="legend-text">Expert – diepgaande kennis, leidt projecten en architectuur.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Filer niveau -->
-    <nav class="filter-bar sticky-top bg-body py-2 mb-4 border-bottom">
-        <div class="btn-group mb-3" role="group" aria-label="Niveau">
-            <button type="button" class="btn btn-outline-secondary active" data-filter-level="all">Alle</button>
-            <button type="button" class="btn btn-outline-secondary" data-filter-level="junior">Junior</button>
-            <button type="button" class="btn btn-outline-secondary" data-filter-level="medior">Medior</button>
-            <button type="button" class="btn btn-outline-secondary" data-filter-level="senior">Senior</button>
-        </div>
-    </nav>
-
+    <!-- Skills body -->
             <div id="category-language" class="category-section mb-5">
                 <!-- Show and go to category -->
                 <div class="btn-group mb-3 d-flex justify-content-center" role="group">
@@ -187,6 +206,54 @@
 <div style="height: 1000px">
 
 </div>
+
+<script>
+    document.getElementById('filterLevel').addEventListener('change', function() {
+      const selectedLevel = this.value;
+      const skills = document.querySelectorAll('.skill');
+
+      skills.forEach(skill => {
+        const level = skill.dataset.level;
+        if (selectedLevel === 'all' || level === selectedLevel) {
+          skill.style.display = '';
+        } else {
+          skill.style.display = 'none';
+        }
+      });
+    });
+
+        document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll('[id^="category-"]');
+      const categoryButtons = document.querySelectorAll('.btn-group a[href^="#category-"]');
+
+      // Maak een observer die checkt welke categorie in beeld is
+      const observer = new IntersectionObserver(entries => {
+        // Zoek de sectie die momenteel in beeld is
+        let visibleSection = entries.find(entry => entry.isIntersecting && entry.intersectionRatio > 0.3);
+
+        if (visibleSection) {
+          const id = visibleSection.target.getAttribute('id');
+          history.replaceState(null, "", `#${id}`);
+
+          // active button updaten
+          categoryButtons.forEach(btn => {
+            btn.classList.toggle("active", btn.getAttribute("href") === `#${id}`);
+          });
+        } else {
+          // check of we boven de eerste sectie zijn
+          const firstSectionTop = sections[0].getBoundingClientRect().top + window.scrollY;
+          if (window.scrollY < firstSectionTop - 100) {
+            history.replaceState(null, "", window.location.pathname);
+            categoryButtons.forEach(btn => btn.classList.remove("active"));
+          }
+        }
+      }, { threshold: 0.3 });
+
+      // Observeer elke categorie-sectie
+      sections.forEach(section => observer.observe(section));
+    });
+</script>
+
 
     </main>
 
