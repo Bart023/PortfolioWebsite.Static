@@ -86,7 +86,7 @@
     <h1 class="mb-3">My skills</h1>
         <div class="lead mb-3"><p>Here you’ll find my skills, grouped by category (Languages, Frameworks, Tools, and Methodologies) and labeled with level indicators. Use the navigation to jump directly to any category.</p></div>
 
-    <nav class="py-3 mb-3 border-bottom d-flex justify-content-end align-items-center gap-2">
+    <nav class="sticky-top border-bottom d-flex justify-content-end align-items-center py-2 mb-3  gap-2">
         <!-- Legend button -->
         <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#legendModal">
             Niveaus toelichting
@@ -220,37 +220,6 @@
           skill.style.display = 'none';
         }
       });
-    });
-
-        document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll('[id^="category-"]');
-      const categoryButtons = document.querySelectorAll('.btn-group a[href^="#category-"]');
-
-      // Maak een observer die checkt welke categorie in beeld is
-      const observer = new IntersectionObserver(entries => {
-        // Zoek de sectie die momenteel in beeld is
-        let visibleSection = entries.find(entry => entry.isIntersecting && entry.intersectionRatio > 0.3);
-
-        if (visibleSection) {
-          const id = visibleSection.target.getAttribute('id');
-          history.replaceState(null, "", `#${id}`);
-
-          // active button updaten
-          categoryButtons.forEach(btn => {
-            btn.classList.toggle("active", btn.getAttribute("href") === `#${id}`);
-          });
-        } else {
-          // check of we boven de eerste sectie zijn
-          const firstSectionTop = sections[0].getBoundingClientRect().top + window.scrollY;
-          if (window.scrollY < firstSectionTop - 100) {
-            history.replaceState(null, "", window.location.pathname);
-            categoryButtons.forEach(btn => btn.classList.remove("active"));
-          }
-        }
-      }, { threshold: 0.3 });
-
-      // Observeer elke categorie-sectie
-      sections.forEach(section => observer.observe(section));
     });
 </script>
 
