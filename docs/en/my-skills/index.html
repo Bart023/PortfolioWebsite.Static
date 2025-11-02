@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?v=2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4" />
-    <link rel="stylesheet" href="/assets/css/site.css?v=Q6oN592Gs7eYLUHG65PB_AlqINfEVPQe7VyeN04WQHQ" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=EfZp3IgZDTTbEFt3eFyV7HhEBs-5DiHtq1nVC6ae90c" />
     <link rel="stylesheet" href="/assets/css/Components/ImageStripBlock.css?v=rF9DEFiQx4pHBLfWk4m9Bu45v23tbrnW1sx9k7X1zIQ" />
     <link rel="stylesheet" href="/assets/css/Pages/ProjectsOverviewPage.css?v=9MDi-dNy8f9iAq0d5R3e9AzwTI6At6sYe7Eqal-5k6w" />
-    <link rel="stylesheet" href="/assets/css/Pages/SkillsOverviewPage.css?v=Vr-MrVNu7f-BMLB1ZPDDGhmC7ZPJpq94uUZpA3WH2bA" />
+    <link rel="stylesheet" href="/assets/css/Pages/SkillsOverviewPage.css?v=gYO6U2yMu2p60fi75XnTVsqyYNAw0LV8GzkY6z4BOFA" />
 </head>
 <body>
     <header class="sticky-top">
@@ -138,7 +138,7 @@
     </div>
 
     <!-- Skills body -->
-            <div id="category-language" class="category-section mb-5">
+            <div id="category-language" class="category-section mb-5 scroll-watch-url">
                 <!-- Show and go to category -->
                 <div class="btn-group mb-3 d-flex justify-content-center" role="group">
                     <a href="#category-language" class="btn btn-outline-secondary active">Talen</a>
@@ -168,9 +168,29 @@
                                 </div>
                             </div>
                         </article>
+                        <article class="col-12 skill" data-cat="language" data-level="medior">
+                            <div class="card skill-card">
+                                    <div class="image-container">
+                                        <img class="skill-img card-img-top" src="/media/n3ckqtai/javascript.png" alt="Javascript" />
+                                    </div>
+
+                                <div class="skill-body">
+                                    <div class="skill-main">
+                                        <h3 class="mb-2">Javascript</h3>
+                                            <div class="skill-intro mt-2">Javascript</div>
+                                    </div>
+
+                                    <div class="skill-meta small text-body-secondary">
+                                            <div> Niveau: <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span> </div>
+                                            <div>Experience: 6 year(s)</div>
+                                            <div>Category: <span class="badge rounded-pill text-bg-light border text-capitalize">language</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                 </div>
             </div>
-            <div id="category-framework" class="category-section mb-5">
+            <div id="category-framework" class="category-section mb-5 scroll-watch-url">
                 <!-- Show and go to category -->
                 <div class="btn-group mb-3 d-flex justify-content-center" role="group">
                     <a href="#category-language" class="btn btn-outline-secondary ">Talen</a>
@@ -207,29 +227,13 @@
 
 </div>
 
-<script>
-    document.getElementById('filterLevel').addEventListener('change', function() {
-      const selectedLevel = this.value;
-      const skills = document.querySelectorAll('.skill');
-
-      skills.forEach(skill => {
-        const level = skill.dataset.level;
-        if (selectedLevel === 'all' || level === selectedLevel) {
-          skill.style.display = '';
-        } else {
-          skill.style.display = 'none';
-        }
-      });
-    });
-</script>
-
 
     </main>
 
     <footer>© 2025 - Mijn portfolio</footer>
 
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/site.js?v=mxJjvJtHdwtQnzurTwbdaWyYdczq2DPGeoEHUGjrSHk"></script>
+    <script src="/assets/js/site.js?v=ITJLe6VaUmlEpjVQh9-ZgtgF__zWHrBijXIbZ_q-Yw4"></script>
     <script src="/assets/js/Components/FilmstripBehavior.js?v=PYzXZ1A8HIJOxPdQwUXZa_qwVASShoNXdgFj72OZopw"></script>
 </body>
 </html>

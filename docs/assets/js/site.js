@@ -1,5 +1,4 @@
-﻿
-//Common - label active menu item
+﻿//Common - label active menu item
 document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, "");
 
@@ -78,6 +77,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
 });
 
+// Common - Scroll watch url
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.scroll-watch-url[id^="category-"]');
+    if (!sections.length) return;
+
+    let currentId = null;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY < sections[0].offsetTop) {
+            if (currentId !== null) {
+                currentId = null;
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            return;
+        }
+
+        const active = [...sections].reverse().find(s => s.getBoundingClientRect().top <= 0)?.id;
+
+        if (active && active !== currentId) {
+            currentId = active;
+            history.replaceState(null, '', `#${active}`);
+        }
+    }, { passive: true });
+});
+
 // portfolio overview page - Toggle list/tile view
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("projects");
@@ -101,3 +124,19 @@ document.addEventListener("DOMContentLoaded", () => {
     btnList.addEventListener("click", () => setView("list"));
 });
 
+// portfolio overview page - Filter skill level
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('filterLevel').addEventListener('change', function () {
+        const selectedLevel = this.value;
+        const skills = document.querySelectorAll('.skill');
+
+        skills.forEach(skill => {
+            const level = skill.dataset.level;
+            if (selectedLevel === 'all' || level === selectedLevel) {
+                skill.style.display = '';
+            } else {
+                skill.style.display = 'none';
+            }
+        });
+    });
+});
