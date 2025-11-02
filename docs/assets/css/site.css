@@ -1,16 +1,14 @@
-﻿/* bootstrap overrides */
+﻿/* Variables */
 /* ====================*/
 [data-bs-theme=light] {
     --bs-secondary-bg-rgb: 255, 249, 229;
+    --bs-tertiary-bg-rgb: 253, 251, 248;
 }
 [data-bs-theme=dark] {
 
 }
 
-/* TODO: use this as the main background color: #f4f2ee;*/
-
 /* ====================*/
-
 /* Common */
 /* ====================*/
 html {
@@ -34,6 +32,10 @@ header {
 .navbar {
     background-color: var(--bs-body-bg);
     border-bottom: 1px solid var(--bs-border-color);
+}
+
+.breadcrumb.container {
+    border-bottom: 1px solid var(--bs-light-border-subtle);
 }
 /* ====================*/
 
