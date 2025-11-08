@@ -61,20 +61,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkboxes = document.querySelectorAll(".employer-filter");
     const projects = document.querySelectorAll(".project");
 
-    checkboxes.forEach(cb => {
-        cb.addEventListener("change", () => {
-            const activeEmployers = Array.from(checkboxes)
-                .filter(c => c.checked)
-                .map(c => c.value.toLowerCase());
+    // Apply filters to the project list
+    function applyFilters() {
+        const activeEmployers = Array.from(checkboxes)
+            .filter(c => c.checked)
+            .map(c => c.value.toLowerCase());
 
-            projects.forEach(p => {
-                const employer = (p.querySelector(".project-meta div:nth-child(1)")?.innerText || "").toLowerCase();
-                if (activeEmployers.length === 0 || activeEmployers.every(e => employer.includes(e))) {
-                    p.style.display = "";
-                } else {
-                    p.style.display = "none";
-                }
-            });
+        // Update URL with active filters
+        const params = new URLSearchParams(window.location.search);
+        if (activeEmployers.length > 0) {
+            params.set("employers", activeEmployers.join(","));
+        } else {
+            params.delete("employers");
+        }
+
+        // Push new URL without reloading
+        const newUrl = `${window.location.pathname}?${params.toString()}`;
+        window.history.replaceState({}, "", newUrl);
+
+        // Filter projects (OR logic within the same group)
+        projects.forEach(p => {
+            const employer = (p.querySelector(".project-meta div:nth-child(1)")?.innerText || "").toLowerCase();
+
+            // Show project if no filters selected or if the employer matches at least one selected value
+            if (activeEmployers.length === 0 || activeEmployers.some(e => employer.includes(e))) {
+                p.style.display = "";
+            } else {
+                p.style.display = "none";
+            }
         });
-    });
+    }
+
+    // Listen for checkbox changes
+    checkboxes.forEach(cb => cb.addEventListener("change", applyFilters));
+
+    // Read filters from URL on page load
+    const params = new URLSearchParams(window.location.search);
+    const urlEmployers = params.get("employers")?.split(",").map(e => e.toLowerCase()) || [];
+
+    if (urlEmployers.length > 0) {
+        checkboxes.forEach(cb => {
+            if (urlEmployers.includes(cb.value.toLowerCase())) {
+                cb.checked = true;
+            }
+        });
+        applyFilters(); // Apply filters immediately on load
+    }
 });
