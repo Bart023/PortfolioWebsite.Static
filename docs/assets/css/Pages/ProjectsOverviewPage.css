@@ -1,4 +1,49 @@
-﻿#projects .project-card {
+﻿.projects.container {
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar area */
+#projects .filter-group {
+    padding: 8px;
+    box-shadow: var(--box-shadow-light);
+}
+#projects .sidebar-toggle-projects {
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 24px;
+    justify-content: center !important;
+}
+#projects .filterbar-content {
+    z-index: 1040;
+    padding: 0 8px 8px 8px;
+    min-height: -webkit-fill-available;
+    background-color: var(--bs-body-bg);
+}
+#projects #projects-sidebar-close-btn {
+    right: 8px;
+    color: red;
+    font-size: 24px;
+    position: absolute;
+    background: transparent;
+}
+@media (max-width: 960px) {
+    #projects .filterbar-content {
+        overflow-y: auto;
+    }
+}
+@media (min-width: 960.02px) {
+    #projects .sidebar-toggle-projects {
+       display: none;
+    }
+    #projects #projects-sidebar-close-btn {
+        display: none;
+    }
+}
+
+/* Projects area */
+#projects .project-card {
     text-decoration: none;
 }
 #projects .project-body > * {
