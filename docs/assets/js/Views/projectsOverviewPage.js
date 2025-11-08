@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const setView = view => {
         root.classList.toggle("view-tiles", view === "tiles");
         root.classList.toggle("view-list", view === "list");
-        btnTiles.classList.toggle("active", view === "tiles");
-        btnList.classList.toggle("active", view === "list");
+        btnTiles.classList.toggle("d-none", view === "tiles");
+        btnList.classList.toggle("d-none", view === "list");
         localStorage.setItem("projectView", view);
     };
 
@@ -21,19 +21,43 @@ document.addEventListener("DOMContentLoaded", () => {
     btnList.addEventListener("click", () => setView("list"));
 });
 
-// portfolio overview page - Filter skill level
+// Portfolio overview page - Sorting
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('filterLevel')?.addEventListener('change', function () {
-        const selectedLevel = this.value;
-        const skills = document.querySelectorAll('.skill');
+    const sortOptions = document.querySelectorAll("#sortOptions .dropdown-item");
+    const projectsContainer = document.getElementById("projectList");
+    if (!projectsContainer || sortOptions.length === 0) return;
 
-        skills.forEach(skill => {
-            const level = skill.dataset.level;
-            if (selectedLevel === 'all' || level === selectedLevel) {
-                skill.style.display = '';
-            } else {
-                skill.style.display = 'none';
+    function sortProjects(sortType) {
+        const projectItems = Array.from(projectsContainer.children);
+
+        projectItems.sort((projectA, projectB) => {
+            const sortOrderA = parseInt(projectA.dataset.sortOrder || "0", 10);
+            const sortOrderB = parseInt(projectB.dataset.sortOrder || "0", 10);
+            const startDateA = new Date(projectA.dataset.start || 0).getTime();
+            const startDateB = new Date(projectB.dataset.start || 0).getTime();
+            const difficultyA = parseInt(projectA.dataset.difficulty || "0", 10);
+            const difficultyB = parseInt(projectB.dataset.difficulty || "0", 10);
+
+            switch (sortType) {
+                case "date-desc": return startDateB - startDateA;
+                case "date-asc": return startDateA - startDateB;
+                case "complexity": return difficultyB - difficultyA;
+                default: return sortOrderA - sortOrderB;
             }
+        });
+
+        projectItems.forEach(project => projectsContainer.appendChild(project));
+    }
+
+    sortOptions.forEach(option => {
+        option.addEventListener("click", event => {
+            event.preventDefault();
+
+            sortOptions.forEach(optionItem => optionItem.classList.remove("active"));
+            option.classList.add("active");
+
+            const sortType = option.dataset.sort;
+            sortProjects(sortType);
         });
     });
 });

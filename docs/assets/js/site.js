@@ -100,3 +100,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: true });
 });
+
+// Skills overview page - Filter skill level
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('filterLevel')?.addEventListener('change', function () {
+        const selectedLevel = this.value;
+        const skills = document.querySelectorAll('.skill');
+
+        skills.forEach(skill => {
+            const level = skill.dataset.level;
+            if (selectedLevel === 'all' || level.toLowerCase().includes(selectedLevel.toLowerCase())) {
+                skill.style.display = '';
+            } else {
+                skill.style.display = 'none';
+            }
+        });
+    });
+});

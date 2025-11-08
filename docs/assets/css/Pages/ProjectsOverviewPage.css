@@ -45,6 +45,10 @@
 }
 
 /* Projects area */
+#projects .projects-content-container{
+    width: 100%;
+}
+
 #projects .project-card {
     text-decoration: none;
 }
