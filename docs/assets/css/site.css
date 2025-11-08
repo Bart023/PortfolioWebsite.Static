@@ -19,6 +19,34 @@ html {
     width: 97vw;
     max-width: 1300px;
 }
+
+.overlay {
+    inset: 0;
+    display: none;
+    z-index: 1035;
+    position: fixed;
+    touch-action: none;
+    overscroll-behavior: contain;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+    .overlay.show {
+        opacity: 1;
+        display: block;
+        pointer-events: auto;
+    }
+/* ====================*/
+
+/* ====================*/
+/* Common - componentes */
+/* ====================*/
+.form-check-input {
+    width: 24px;
+    height: 24px;
+}
+.form-check-input:checked {
+    border-color: var(--bs-border-color);
+    background-color: rgb(var(--bs-warning-rgb));
+}
 /* ====================*/
 
 /* Navbar styles */
@@ -43,14 +71,6 @@ header {
 
 /* sidebar area */
 /* ====================*/
-@media (max-width: 960px) {
-    .sidebar {
-        top: 0;
-        left: -400px;
-        z-index: 1000;
-        position: fixed;
-    }
-}
 .sidebar {
     height: 100%;
     width: 250px;
@@ -64,6 +84,15 @@ header {
         left: 0;
         display: block;
     }
+@media (max-width: 960px) {
+    .sidebar {
+        top: 0;
+        width: 380px;
+        left: -400px;
+        z-index: 1040;
+        position: fixed;
+    }
+}
 /* ====================*/
 
 /* Star rating*/

@@ -43,23 +43,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("projects-sidebar");
     const toggleBtn = document.getElementById("projects-sidebar-toggler");
     const closeBtn = document.getElementById("projects-sidebar-close-btn");
+    const overlay = document.getElementById("projects-overlay");
+    function openSidebar() {
+        sidebar.classList.add("open");
+        overlay.classList.add("show");
+        document.body.style.overflow = "hidden";
+    }
 
-    if (sidebar && toggleBtn) {
-        toggleBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
-        });
+    function closeSidebar() {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+        document.body.style.overflow = "";
     }
-    if (sidebar && closeBtn) {
-        closeBtn.addEventListener("click", () => {
-            sidebar.classList.remove("open");
-        });
-    }
+
+    if (toggleBtn) toggleBtn.addEventListener("click", openSidebar);
+    if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
+    if (overlay) overlay.addEventListener("click", closeSidebar);
 });
 
 // portfolio overview page - Filter bar
 document.addEventListener("DOMContentLoaded", () => {
     const checkboxes = document.querySelectorAll(".employer-filter");
     const projects = document.querySelectorAll(".project");
+    const badges = document.querySelectorAll(".active-filter-count");
 
     // Apply filters to the project list
     function applyFilters() {
@@ -83,11 +89,20 @@ document.addEventListener("DOMContentLoaded", () => {
         projects.forEach(p => {
             const employer = (p.querySelector(".project-meta div:nth-child(1)")?.innerText || "").toLowerCase();
 
-            // Show project if no filters selected or if the employer matches at least one selected value
             if (activeEmployers.length === 0 || activeEmployers.some(e => employer.includes(e))) {
                 p.style.display = "";
             } else {
                 p.style.display = "none";
+            }
+        });
+
+        // Update all active filter count badges
+        badges.forEach(badge => {
+            if (activeEmployers.length > 0) {
+                badge.textContent = activeEmployers.length;
+                badge.style.display = "inline-block";
+            } else {
+                badge.style.display = "none";
             }
         });
     }
@@ -105,6 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 cb.checked = true;
             }
         });
-        applyFilters(); // Apply filters immediately on load
     }
+
+    // Apply filters immediately on load
+    applyFilters();
 });
