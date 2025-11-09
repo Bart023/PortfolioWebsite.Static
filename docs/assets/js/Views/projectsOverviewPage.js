@@ -87,65 +87,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // portfolio overview page - Filter bar
 document.addEventListener("DOMContentLoaded", () => {
-    const checkboxes = document.querySelectorAll(".employer-filter");
     const projects = document.querySelectorAll(".project");
     const badges = document.querySelectorAll(".active-filter-count");
 
-    // Apply filters to the project list
+    // Define all filter groups here (easily extendable)
+    const filterGroups = {
+        employers: document.querySelectorAll(".employer-filter"),
+        stack: document.querySelectorAll(".stack-filter")
+    };
+
     function applyFilters() {
-        const activeEmployers = Array.from(checkboxes)
-            .filter(c => c.checked)
-            .map(c => c.value.toLowerCase());
-
-        // Update URL with active filters
         const params = new URLSearchParams(window.location.search);
-        if (activeEmployers.length > 0) {
-            params.set("employers", activeEmployers.join(","));
-        } else {
-            params.delete("employers");
-        }
+        const activeFilters = {};
 
-        // Push new URL without reloading
-        const newUrl = `${window.location.pathname}?${params.toString()}`;
+        // Collect all active filters for each group
+        Object.keys(filterGroups).forEach(group => {
+            const values = Array.from(filterGroups[group])
+                .filter(cb => cb.checked)
+                .map(cb => cb.value.toLowerCase());
+            activeFilters[group] = values;
+
+            // Update URL
+            if (values.length > 0) params.set(group, values.join(","));
+            else params.delete(group);
+        });
+
+        // Update URL without reload
+        const query = params.toString();
+        const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
         window.history.replaceState({}, "", newUrl);
 
-        // Filter projects (OR logic within the same group)
-        projects.forEach(p => {
-            const employer = (p.querySelector(".project-meta div:nth-child(1)")?.innerText || "").toLowerCase();
+        // Filter projects (AND logic between groups, OR logic within each group)
+        projects.forEach(project => {
+            const employer = (project.querySelector(".project-meta div:nth-child(1)")?.innerText || "").toLowerCase();
+            const types = Array.from(project.querySelectorAll(".project-meta .badge.border")).map(b => b.innerText.toLowerCase());
 
-            if (activeEmployers.length === 0 || activeEmployers.some(e => employer.includes(e))) {
-                p.style.display = "";
-            } else {
-                p.style.display = "none";
-            }
+            const matchEmployer =
+                activeFilters.employers.length === 0 ||
+                activeFilters.employers.some(e => employer.includes(e));
+
+            const matchStack =
+                activeFilters.stack.length === 0 ||
+                activeFilters.stack.some(s => types.includes(s));
+
+            project.style.display = matchEmployer && matchStack ? "" : "none";
         });
 
-        // Update all active filter count badges
+        // Update badges with total active filters
+        const totalActive = Object.values(activeFilters).reduce((sum, list) => sum + list.length, 0);
         badges.forEach(badge => {
-            if (activeEmployers.length > 0) {
-                badge.textContent = activeEmployers.length;
-                badge.style.display = "inline-block";
-            } else {
-                badge.style.display = "none";
-            }
+            badge.textContent = totalActive;
+            badge.style.display = totalActive > 0 ? "inline-block" : "none";
         });
     }
 
-    // Listen for checkbox changes
-    checkboxes.forEach(cb => cb.addEventListener("change", applyFilters));
+    // Hook up all checkboxes
+    Object.keys(filterGroups).forEach(group => {
+        filterGroups[group].forEach(cb => cb.addEventListener("change", applyFilters));
+    });
 
-    // Read filters from URL on page load
+    // Read URL params and set initial checkbox states
     const params = new URLSearchParams(window.location.search);
-    const urlEmployers = params.get("employers")?.split(",").map(e => e.toLowerCase()) || [];
+    Object.keys(filterGroups).forEach(group => {
+        const urlValues = params.get(group)?.split(",").map(v => v.toLowerCase()) || [];
+        if (urlValues.length > 0) {
+            filterGroups[group].forEach(cb => {
+                if (urlValues.includes(cb.value.toLowerCase())) cb.checked = true;
+            });
+        }
+    });
 
-    if (urlEmployers.length > 0) {
-        checkboxes.forEach(cb => {
-            if (urlEmployers.includes(cb.value.toLowerCase())) {
-                cb.checked = true;
-            }
-        });
-    }
-
-    // Apply filters immediately on load
     applyFilters();
 });
