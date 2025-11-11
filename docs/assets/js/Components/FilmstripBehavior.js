@@ -153,3 +153,89 @@ function updateArrowStates(container, wrapper) {
     leftArrow.disabled = container.scrollLeft <= 0;
     rightArrow.disabled = container.scrollLeft >= container.scrollWidth - container.clientWidth - 1;
 }
+
+
+// ==============================================================================
+// Filmstrip overlay behavior
+// ==============================================================================
+document.addEventListener('DOMContentLoaded', function () {
+    const filmstrips = document.querySelectorAll('.filmstrip-container');
+
+    filmstrips.forEach(function (container) {
+        initFilmstripOverlay(container.id);
+    });
+});
+
+function initFilmstripOverlay(containerId) {
+    const container = document.getElementById(containerId);
+    const overlay = document.getElementById('overlay-' + containerId);
+    const overlayImg = document.getElementById('overlay-img-' + containerId);
+    const items = container.querySelectorAll('.filmstrip-item');
+    let currentIndex = 0;
+
+    // Initialize click handlers for filmstrip items
+    initSafeClick(items, function (e, item) {
+        currentIndex = parseInt(item.getAttribute('data-index'));
+        openOverlay();
+    });
+
+    // Close button
+    overlay.querySelector('[data-overlay-close]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        closeOverlay();
+    });
+
+    // Previous button
+    overlay.querySelector('[data-overlay-nav="prev"]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        navigate(-1);
+    });
+
+    // Next button
+    overlay.querySelector('[data-overlay-nav="next"]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        navigate(1);
+    });
+
+    // Click on background
+    overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+            closeOverlay();
+        }
+    });
+
+    function openOverlay() {
+        updateImage();
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeOverlay() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function navigate(direction) {
+        currentIndex = (currentIndex + direction + items.length) % items.length;
+        updateImage();
+    }
+
+    function updateImage() {
+        const item = items[currentIndex];
+        overlayImg.src = item.getAttribute('data-img-url');
+        overlayImg.alt = item.getAttribute('data-img-name');
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
+            closeOverlay();
+        } else if (e.key === 'ArrowLeft') {
+            navigate(-1);
+        } else if (e.key === 'ArrowRight') {
+            navigate(1);
+        }
+    });
+}
