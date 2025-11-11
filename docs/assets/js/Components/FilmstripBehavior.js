@@ -160,7 +160,6 @@ function updateArrowStates(container, wrapper) {
 // ==============================================================================
 document.addEventListener('DOMContentLoaded', function () {
     const filmstrips = document.querySelectorAll('.filmstrip-container');
-
     filmstrips.forEach(function (container) {
         initFilmstripOverlay(container.id);
     });
@@ -203,6 +202,34 @@ function initFilmstripOverlay(containerId) {
             closeOverlay();
         }
     });
+
+    // Touch swipe navigation in overlay
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    overlay.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+    }, false);
+    overlay.addEventListener('touchend', function (e) {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipe();
+    }, false);
+
+    function handleSwipe() {
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+        const minSwipeDistance = 50;
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+            if (deltaX > 0) {
+                navigate(-1);
+            } else {
+                navigate(1);
+            }
+        }
+    }
 
     function openOverlay() {
         updateImage();
