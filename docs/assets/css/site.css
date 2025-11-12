@@ -105,16 +105,3 @@ header {
         -webkit-background-clip: text !important;
     }
 /* ====================*/
-
-/* Project Detail Page */
-/* ====================*/
-.project-nav {
-    padding-bottom: 1rem;
-}
-@media (max-width: 991.98px) {
-    .project-info-card {
-        position: static !important;
-        top: auto !important;
-    }
-}
-/* ====================*/

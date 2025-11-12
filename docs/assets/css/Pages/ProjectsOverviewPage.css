@@ -18,7 +18,6 @@
     justify-content: center !important;
 }
 #projects .filterbar-content {
-    z-index: 1040;
     padding: 0 8px 8px 8px;
     min-height: -webkit-fill-available;
     background-color: var(--bs-body-bg);
@@ -33,6 +32,7 @@
 @media (max-width: 960px) {
     #projects .filterbar-content {
         overflow-y: auto;
+        z-index: 1040;
     }
 }
 @media (min-width: 960.02px) {

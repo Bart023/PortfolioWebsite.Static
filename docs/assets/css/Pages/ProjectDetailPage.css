@@ -1,0 +1,14 @@
+﻿#project .project-nav {
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 991.98px) {
+    #project .project-info-card {
+        position: static !important;
+        top: auto !important;
+    }
+}
+
+#project .filmstrip-container{
+    margin-bottom: 1rem;
+}
