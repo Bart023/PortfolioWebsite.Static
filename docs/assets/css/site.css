@@ -105,3 +105,26 @@ header {
         -webkit-background-clip: text !important;
     }
 /* ====================*/
+
+/* Footer link underline effect (center-out) */
+/* ====================*/
+/* Underline center-out, but not for active */
+.hover-underline {
+    position: relative;
+    text-decoration: none;
+}
+    .hover-underline::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        width: 0;
+        height: 1px;
+        background-color: currentColor;
+        transform: translateX(-50%);
+        transition: width .25s ease;
+    }
+    .hover-underline:not(.active):hover::after {
+        width: 100%;
+    }
+/* ====================*/

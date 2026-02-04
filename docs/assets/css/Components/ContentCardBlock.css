@@ -27,8 +27,8 @@
         color-mix(in srgb, rgb(var(--bs-body-color-rgb)) 14%, 
         var(--bs-body-bg)) 0%, 
         color-mix(in srgb, rgb(var(--bs-body-color-rgb)) 7%,
-        var(--bs-body-bg)) 55%, 
-        var(--bs-body-bg) 56% 
+        var(--bs-body-bg)) 50%, 
+        var(--bs-body-bg) 50% 
     );
 }
 
@@ -46,7 +46,7 @@
         color-mix(in srgb, rgb(var(--bs-body-color-rgb)) 14%, 
         var(--bs-body-bg)) 0%, 
         color-mix(in srgb, rgb(var(--bs-body-color-rgb)) 7%, 
-        var(--bs-body-bg)) 55%, 
-        var(--bs-body-bg) 56%
+        var(--bs-body-bg)) 50%, 
+        var(--bs-body-bg) 50%
     );
 }
