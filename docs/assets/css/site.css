@@ -53,9 +53,6 @@ html {
 header {
     z-index: 1030 !important;
 }
-.nav-link.active {
-    text-decoration: underline;
-}
 .navbar {
     background-color: var(--bs-body-bg);
     border-bottom: 1px solid var(--bs-border-color);
@@ -108,7 +105,6 @@ header {
 
 /* Footer link underline effect (center-out) */
 /* ====================*/
-/* Underline center-out, but not for active */
 .hover-underline {
     position: relative;
     text-decoration: none;
@@ -117,7 +113,7 @@ header {
         content: '';
         position: absolute;
         left: 50%;
-        bottom: -2px;
+        bottom: 0;
         width: 0;
         height: 1px;
         background-color: currentColor;
@@ -126,5 +122,9 @@ header {
     }
     .hover-underline:not(.active):hover::after {
         width: 100%;
+    }
+    .hover-underline.active::after {
+        width: 100%;
+        transition: none;
     }
 /* ====================*/
