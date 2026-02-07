@@ -89,12 +89,23 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const projects = document.querySelectorAll(".project");
     const badges = document.querySelectorAll(".active-filter-count");
+    const visibleCountElements = document.querySelectorAll(".visible-projects-count");
 
     // Define all filter groups here (easily extendable)
     const filterGroups = {
         employers: document.querySelectorAll(".employer-filter"),
         stack: document.querySelectorAll(".stack-filter")
     };
+
+    function updateVisibleProjectCount() {
+        const visibleCount = Array.from(projects).filter(project => {
+            return project.style.display !== "none";
+        }).length;
+
+        visibleCountElements.forEach(element => {
+            element.textContent = `${visibleCount} project${visibleCount !== 1 ? "s" : ""}`;
+        });
+    }
 
     function applyFilters() {
         const params = new URLSearchParams(window.location.search);
@@ -139,6 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
             badge.textContent = totalActive;
             badge.style.display = totalActive > 0 ? "inline-block" : "none";
         });
+
+        // Update visible project count
+        updateVisibleProjectCount();
     }
 
     // Hook up all checkboxes

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?v=2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4" />
-    <link rel="stylesheet" href="/assets/css/site.css?v=GpsByFzNpdFbxCSgZhGrpKkTJu2Eh7APNDvqM7seiJM" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=Uv8XcHNckdOhn5HmAx3-9SqQzblzLpvIlRQBEKNW8w0" />
     <link rel="stylesheet" href="/assets/css/Components/ImageStripBlock.css?v=osyk_SlhIn0nZtDcf0aAkn0FmROW3MDk2lLSpvkXmng" />
     <link rel="stylesheet" href="/assets/css/Components/ContentCardBlock.css?v=wZVkzcvzvpIZv1qJrLG89NKAPPjK1k5cIwZJMBFNbNc" />
     <link rel="stylesheet" href="/assets/css/Pages/AboutMePage.css?v=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U" />
@@ -85,6 +85,7 @@
 
     <main>
         
+
 <section id="projects" class="projects container view-list">
 
     <aside id="projects-sidebar" class="sidebar filterbar-content">
@@ -92,6 +93,7 @@
             <div class="d-flex justify-content-between align-items-center gap-2">
                 <h5 class="fw-semibold mt-3">Filters</h5>
                 <span class="active-filter-count badge rounded-pill text-bg-warning gap-1" style="display:inline-block; top:0;">0</span>
+                <small class="visible-projects-count badge rounded-pill text-bg-light border">7 projects</small>
             </div>
             <button id="projects-sidebar-close-btn" class="btn">×</button>
         </div>
@@ -114,125 +116,141 @@
                 </div>
             </div>
 
-            <div class="mb-4">
-                <h6 class="fw-semibold">Stack</h6>
-                <div class="list-group small">
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>.NET MAUI <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value=".NET MAUI" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>ASP.NET Core RazorPages <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="ASP.NET Core RazorPages" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Azure <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Azure" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Blazor WASM <span class="text-muted">(3)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Blazor WASM" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Bootstrap <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Bootstrap" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>C# <span class="text-muted">(7)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="C#" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>CI/CD <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="CI/CD" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>DevOps <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="DevOps" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Docker <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Docker" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Entity Framework Core <span class="text-muted">(3)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Entity Framework Core" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>GIT <span class="text-muted">(7)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="GIT" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>HTML &amp; CSS <span class="text-muted">(4)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="HTML &amp; CSS" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>IIS <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="IIS" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Javascript <span class="text-muted">(4)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Javascript" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Kanban <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Kanban" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Kubernetes <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Kubernetes" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Linux <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Linux" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>MudBlazor <span class="text-muted">(3)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="MudBlazor" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Postman <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Postman" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>PowerShell <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="PowerShell" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Pulumi <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Pulumi" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Scrum <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Scrum" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>SQL <span class="text-muted">(6)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="SQL" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>TypeScript <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="TypeScript" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Umbraco <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="Umbraco" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>VUE.js <span class="text-muted">(1)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="VUE.js" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>xUnit / NUnit <span class="text-muted">(3)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="xUnit / NUnit" />
-                        </label>
-                        <label class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>YAML <span class="text-muted">(2)</span></span>
-                            <input type="checkbox" class="form-check-input stack-filter" value="YAML" />
-                        </label>
+                <div class="mb-4">
+                    <h6 class="fw-semibold">Languages</h6>
+                    <div class="list-group small">
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>C# <span class="text-muted">(7)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="C#" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>HTML &amp; CSS <span class="text-muted">(4)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="HTML &amp; CSS" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Javascript <span class="text-muted">(4)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Javascript" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>PowerShell <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="PowerShell" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>SQL <span class="text-muted">(6)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="SQL" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>TypeScript <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="TypeScript" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>YAML <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="YAML" />
+                            </label>
+                    </div>
                 </div>
-            </div>
+                <div class="mb-4">
+                    <h6 class="fw-semibold">Frameworks</h6>
+                    <div class="list-group small">
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>.NET MAUI <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value=".NET MAUI" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>ASP.NET Core RazorPages <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="ASP.NET Core RazorPages" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Blazor WASM <span class="text-muted">(3)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Blazor WASM" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Bootstrap <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Bootstrap" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Entity Framework Core <span class="text-muted">(3)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Entity Framework Core" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>MudBlazor <span class="text-muted">(3)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="MudBlazor" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>VUE.js <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="VUE.js" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>xUnit / NUnit <span class="text-muted">(3)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="xUnit / NUnit" />
+                            </label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h6 class="fw-semibold">Tools</h6>
+                    <div class="list-group small">
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Azure <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Azure" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Docker <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Docker" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>GIT <span class="text-muted">(7)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="GIT" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>IIS <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="IIS" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Kubernetes <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Kubernetes" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Linux <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Linux" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Postman <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Postman" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Pulumi <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Pulumi" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Umbraco <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Umbraco" />
+                            </label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h6 class="fw-semibold">Methodologies</h6>
+                    <div class="list-group small">
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>CI/CD <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="CI/CD" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>DevOps <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="DevOps" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Kanban <span class="text-muted">(2)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Kanban" />
+                            </label>
+                            <label class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Scrum <span class="text-muted">(1)</span></span>
+                                <input type="checkbox" class="form-check-input stack-filter" value="Scrum" />
+                            </label>
+                    </div>
+                </div>
 
     </aside>
+
     <div id="projects-overlay" class="overlay"></div>
 
     <div class="projects-content-container m-2">
@@ -258,6 +276,7 @@
             <button id="projects-sidebar-toggler" class="btn btn-outline-secondary sidebar-toggle-projects gap-2 mb-3">
                 <span>☰ Filters</span>
                 <span class="active-filter-count badge rounded-pill text-bg-warning" style="display:inline-block; top:0;">0</span>
+                <small class="visible-projects-count badge rounded-pill text-bg-light border">7 projects</small>
             </button>
         </div>
 
@@ -292,18 +311,23 @@
                                             <span class="badge rounded-pill text-bg-light border">Hobby</span>
                                             <span class="badge rounded-pill text-bg-light border">Portfolio</span>
                                     </div>
-                                    <div class="mb-4">
-                                        Stack:
+                                    <div>
+                                        Languages:
                                             <span class="badge rounded-pill text-bg-light border">C#</span>
                                             <span class="badge rounded-pill text-bg-light border">Javascript</span>
                                             <span class="badge rounded-pill text-bg-light border">HTML &amp; CSS</span>
                                             <span class="badge rounded-pill text-bg-light border">SQL</span>
+                                    </div>
+                                    <div>
+                                        Frameworks:
                                             <span class="badge rounded-pill text-bg-light border">ASP.NET Core RazorPages</span>
                                             <span class="badge rounded-pill text-bg-light border">Bootstrap</span>
+                                    </div>
+                                    <div>
+                                        Tools:
                                             <span class="badge rounded-pill text-bg-light border">GIT</span>
                                             <span class="badge rounded-pill text-bg-light border">Umbraco</span>
                                     </div>
-
                             </div>
                         </div>
                     </a>
@@ -334,26 +358,34 @@
                                         Type: 
                                             <span class="badge rounded-pill text-bg-light border">QAS</span>
                                     </div>
-                                    <div class="mb-4">
-                                        Stack:
+                                    <div>
+                                        Languages:
                                             <span class="badge rounded-pill text-bg-light border">C#</span>
                                             <span class="badge rounded-pill text-bg-light border">Javascript</span>
                                             <span class="badge rounded-pill text-bg-light border">HTML &amp; CSS</span>
                                             <span class="badge rounded-pill text-bg-light border">SQL</span>
                                             <span class="badge rounded-pill text-bg-light border">PowerShell</span>
                                             <span class="badge rounded-pill text-bg-light border">YAML</span>
+                                    </div>
+                                    <div>
+                                        Frameworks:
                                             <span class="badge rounded-pill text-bg-light border">Blazor WASM</span>
                                             <span class="badge rounded-pill text-bg-light border">Entity Framework Core</span>
                                             <span class="badge rounded-pill text-bg-light border">xUnit / NUnit</span>
                                             <span class="badge rounded-pill text-bg-light border">MudBlazor</span>
+                                    </div>
+                                    <div>
+                                        Tools:
                                             <span class="badge rounded-pill text-bg-light border">GIT</span>
                                             <span class="badge rounded-pill text-bg-light border">IIS</span>
+                                    </div>
+                                    <div class="mb-4">
+                                        Methodologies:
                                             <span class="badge rounded-pill text-bg-light border">Scrum</span>
                                             <span class="badge rounded-pill text-bg-light border">Kanban</span>
                                             <span class="badge rounded-pill text-bg-light border">CI/CD</span>
                                             <span class="badge rounded-pill text-bg-light border">DevOps</span>
                                     </div>
-
                             </div>
                         </div>
                     </a>
@@ -384,19 +416,25 @@
                                         Type: 
                                             <span class="badge rounded-pill text-bg-light border">E-commerce</span>
                                     </div>
-                                    <div class="mb-4">
-                                        Stack:
+                                    <div>
+                                        Languages:
                                             <span class="badge rounded-pill text-bg-light border">C#</span>
                                             <span class="badge rounded-pill text-bg-light border">TypeScript</span>
                                             <span class="badge rounded-pill text-bg-light border">YAML</span>
                                             <span class="badge rounded-pill text-bg-light border">HTML &amp; CSS</span>
                                             <span class="badge rounded-pill text-bg-light border">SQL</span>
                                             <span class="badge rounded-pill text-bg-light border">Javascript</span>
+                                    </div>
+                                    <div>
+                                        Frameworks:
                                             <span class="badge rounded-pill text-bg-light border">Blazor WASM</span>
                                             <span class="badge rounded-pill text-bg-light border">ASP.NET Core RazorPages</span>
                                             <span class="badge rounded-pill text-bg-light border">Entity Framework Core</span>
                                             <span class="badge rounded-pill text-bg-light border">xUnit / NUnit</span>
                                             <span class="badge rounded-pill text-bg-light border">MudBlazor</span>
+                                    </div>
+                                    <div>
+                                        Tools:
                                             <span class="badge rounded-pill text-bg-light border">GIT</span>
                                             <span class="badge rounded-pill text-bg-light border">Azure</span>
                                             <span class="badge rounded-pill text-bg-light border">Kubernetes</span>
@@ -405,7 +443,6 @@
                                             <span class="badge rounded-pill text-bg-light border">Linux</span>
                                             <span class="badge rounded-pill text-bg-light border">Docker</span>
                                     </div>
-
                             </div>
                         </div>
                     </a>
@@ -437,13 +474,18 @@
                                             <span class="badge rounded-pill text-bg-light border">Mobile app</span>
                                             <span class="badge rounded-pill text-bg-light border">Verification tool</span>
                                     </div>
-                                    <div class="mb-4">
-                                        Stack:
+                                    <div>
+                                        Languages:
                                             <span class="badge rounded-pill text-bg-light border">C#</span>
+                                    </div>
+                                    <div>
+                                        Frameworks:
                                             <span class="badge rounded-pill text-bg-light border">.NET MAUI</span>
+                                    </div>
+                                    <div>
+                                        Tools:
                                             <span class="badge rounded-pill text-bg-light border">GIT</span>
                                     </div>
-
                             </div>
                         </div>
                     </a>
@@ -474,23 +516,31 @@
                                         Type: 
                                             <span class="badge rounded-pill text-bg-light border">ERP</span>
                                     </div>
-                                    <div class="mb-4">
-                                        Stack:
+                                    <div>
+                                        Languages:
                                             <span class="badge rounded-pill text-bg-light border">C#</span>
                                             <span class="badge rounded-pill text-bg-light border">SQL</span>
                                             <span class="badge rounded-pill text-bg-light border">TypeScript</span>
                                             <span class="badge rounded-pill text-bg-light border">Javascript</span>
+                                    </div>
+                                    <div>
+                                        Frameworks:
                                             <span class="badge rounded-pill text-bg-light border">VUE.js</span>
                                             <span class="badge rounded-pill text-bg-light border">xUnit / NUnit</span>
+                                    </div>
+                                    <div>
+                                        Tools:
                                             <span class="badge rounded-pill text-bg-light border">Linux</span>
                                             <span class="badge rounded-pill text-bg-light border">Docker</span>
                                             <span class="badge rounded-pill text-bg-light border">Postman</span>
                                             <span class="badge rounded-pill text-bg-light border">IIS</span>
                                             <span class="badge rounded-pill text-bg-light border">GIT</span>
+                                    </div>
+                                    <div class="mb-4">
+                                        Methodologies:
                                             <span class="badge rounded-pill text-bg-light border">Kanban</span>
                                             <span class="badge rounded-pill text-bg-light border">CI/CD</span>
                                     </div>
-
                             </div>
                         </div>
                     </a>
@@ -524,13 +574,15 @@
                                         Type: 
                                             <span class="badge rounded-pill text-bg-light border">QAS</span>
                                     </div>
-                                    <div class="mb-4">
-                                        Stack:
+                                    <div>
+                                        Languages:
                                             <span class="badge rounded-pill text-bg-light border">C#</span>
                                             <span class="badge rounded-pill text-bg-light border">SQL</span>
+                                    </div>
+                                    <div>
+                                        Tools:
                                             <span class="badge rounded-pill text-bg-light border">GIT</span>
                                     </div>
-
                             </div>
                         </div>
                     </a>
@@ -564,17 +616,22 @@
                                         Type: 
                                             <span class="badge rounded-pill text-bg-light border">Hobby</span>
                                     </div>
-                                    <div class="mb-4">
-                                        Stack:
+                                    <div>
+                                        Languages:
                                             <span class="badge rounded-pill text-bg-light border">C#</span>
                                             <span class="badge rounded-pill text-bg-light border">SQL</span>
                                             <span class="badge rounded-pill text-bg-light border">HTML &amp; CSS</span>
+                                    </div>
+                                    <div>
+                                        Frameworks:
                                             <span class="badge rounded-pill text-bg-light border">Blazor WASM</span>
                                             <span class="badge rounded-pill text-bg-light border">Entity Framework Core</span>
                                             <span class="badge rounded-pill text-bg-light border">MudBlazor</span>
+                                    </div>
+                                    <div>
+                                        Tools:
                                             <span class="badge rounded-pill text-bg-light border">GIT</span>
                                     </div>
-
                             </div>
                         </div>
                     </a>
@@ -637,6 +694,6 @@
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/site.js?v=CEiQAsRnX5I4H7oarPo34r3MXFF8rcTQJ-_7JpDxtTU"></script>
     <script src="/assets/js/Components/FilmstripBehavior.js?v=4awiHrnqmjykIr7tWM2TDhlYFrcwOiWASuQG6aVk3oQ"></script>
-    <script src="/assets/js/Views/projectsOverviewPage.js?v=ChNtewn4Kwa2GWDaOKiWXCkqMqaqiBvfBtKB1SISmlw"></script>
+    <script src="/assets/js/Views/projectsOverviewPage.js?v=SykiOdE3T9rnOx47NQ-JpLDXeGilM2dkXEhTvbTdWH4"></script>
 </body>
 </html>
