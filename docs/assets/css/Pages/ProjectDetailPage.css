@@ -2,6 +2,10 @@
     padding-bottom: 1rem;
 }
 
+#project .project-info-card > .card-body {
+    border-radius: 1rem;
+}
+
 @media (max-width: 991.98px) {
     #project .project-info-card {
         position: static !important;

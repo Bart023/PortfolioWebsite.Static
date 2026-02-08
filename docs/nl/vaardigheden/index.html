@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="/assets/css/Components/ContentCardBlock.css?v=QPF9Fb7yjSvxRu-RiUo27zFZ0HuH08BA5K_9cTWmb-k" />
     <link rel="stylesheet" href="/assets/css/Pages/AboutMePage.css?v=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U" />
     <link rel="stylesheet" href="/assets/css/Pages/ProjectsOverviewPage.css?v=dg3z6pPJK3fpbOtBQtdd1P7gOxU_ZxooxqczLmk4eM4" />
-    <link rel="stylesheet" href="/assets/css/Pages/ProjectDetailPage.css?v=dOeMWwNP_vLPvpfBXJffWBpRxRzUVa4ofaK3QHZX-k0" />
-    <link rel="stylesheet" href="/assets/css/Pages/SkillsOverviewPage.css?v=xrb4YK67ICopBKq9qbkWwvJCTog6qpK_PSC-4ZodCUI" />
+    <link rel="stylesheet" href="/assets/css/Pages/ProjectDetailPage.css?v=52iuEICSs_oGVJqniPMxnMwZOXoXVxM814YCpenizrI" />
+    <link rel="stylesheet" href="/assets/css/Pages/SkillsOverviewPage.css?v=KcUCnII0qJOoKzhARsKVdVp01QJmwpqNweUH-L0FmaM" />
+    <link rel="stylesheet" href="/assets//prism/prism-light.css?v=XT9eETMj-euB6tbCId0TtURl-kBNfi2j5Et2z5Wa-T8" />
 </head>
 <body class="bg-body-tertiary">
     <header class="sticky-top">
@@ -87,8 +88,8 @@
         
 
 <section id="skills" class="container my-3">
-    <h1 class="mb-3">Vaardigheden</h1>
-        <div class="lead mb-3"><p>Hier vind je mijn vaardigheden, gebundeld per categorie en voorzien van niveau-indicatie. </p></div>
+    <h1 class="mb-3 text-center">Vaardigheden</h1>
+        <div class="lead mb-3 text-center"><p>Hier vind je een overzicht van mijn vaardigheden, gebundeld per categorie en voorzien van niveau-indicatie.</p></div>
 
     <nav class="sticky-top border-bottom d-flex justify-content-end align-items-center py-2 mb-3  gap-2">
         <!-- Legend button -->
@@ -97,7 +98,7 @@
         </button>
             
         <!-- Filter niveau -->
-        <select id="filterLevel" class="form-select w-100" aria-label="Filter op niveau">
+        <select id="filterLevel" class="form-select w-100" aria-label="Filter on level">
             <option value="all" selected>Alle niveaus</option>
             <option value="junior">Junior</option>
             <option value="medior">Medior</option>
@@ -110,30 +111,40 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="legendModalLabel">Niveaus toelichting</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sluiten"></button>
+                    <h5 class="modal-title" id="legendModalLabel">Toelichting niveaus</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="legend">
                         <div class="legend-row">
                             <span class="badge rounded-pill text-bg-light border">Junior</span>
-                            <span class="legend-text">Beginner – beperkte ervaring, leert de basisprincipes.</span>
+                            <span class="legend-text">
+                                Beginner &#x2013; beperkte ervaring, leert de basisprincipes.
+                            </span>
                         </div>
                         <div class="legend-row">
                             <span class="badge rounded-pill text-bg-junior-medior">Junior / Medior</span>
-                            <span class="legend-text">Opkomend niveau - past kennis toe in kleinere projecten.</span>
+                            <span class="legend-text">
+                                Opkomend niveau - past kennis toe in kleinere projecten.
+                            </span>
                         </div>
                         <div class="legend-row">
                             <span class="badge rounded-pill text-bg-medior">Medior</span>
-                            <span class="legend-text">Solide kennis - werkt zelfstandig aan uiteenlopende taken.</span>
+                            <span class="legend-text">
+                                Solide kennis - werkt zelfstandig aan uiteenlopende taken.
+                            </span>
                         </div>
                         <div class="legend-row">
                             <span class="badge rounded-pill text-bg-medior-senior">Medior / Senior</span>
-                            <span class="legend-text">Ervaren - begeleidt anderen en neemt technische beslissingen.</span>
+                            <span class="legend-text">
+                                Ervaren - begeleidt anderen en neemt technische beslissingen.
+                            </span>
                         </div>
                         <div class="legend-row">
                             <span class="badge rounded-pill text-bg-senior">Senior</span>
-                            <span class="legend-text">Expert – diepgaande kennis, leidt projecten en architectuur.</span>
+                            <span class="legend-text">
+                                Expert &#x2013; diepgaande kennis, leidt projecten en architectuur.
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -145,10 +156,18 @@
             <div id="category-language" class="category-section mb-5 scroll-watch-url">
                 <!-- Show and go to category -->
                 <div class="btn-group mb-3 d-flex justify-content-center" role="group">
-                    <a href="#category-language" class="btn btn-outline-secondary active">Talen</a>
-                    <a href="#category-framework" class="btn btn-outline-secondary ">Frameworks</a>
-                    <a href="#category-tool" class="btn btn-outline-secondary ">Tools</a>
-                    <a href="#category-methodology" class="btn btn-outline-secondary ">Methodieken</a>
+                    <a href="#category-language" class="btn btn-outline-secondary active">
+                        Talen
+                    </a>
+                    <a href="#category-framework" class="btn btn-outline-secondary ">
+                        Frameworks
+                    </a>
+                    <a href="#category-tool" class="btn btn-outline-secondary ">
+                        Tools
+                    </a>
+                    <a href="#category-methodology" class="btn btn-outline-secondary ">
+                        Methodieken
+                    </a>
                 </div>
 
                 <div class="row">
@@ -166,10 +185,8 @@
 
                                     <div class="skill-meta small text-body-secondary">
                                             <div> Niveau: <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span> </div>
-                                            <div>Experience: 6 year(s)</div>
-                                            <div>Category: <span class="badge rounded-pill text-bg-light border text-capitalize">language</span></div>
                                             <a href="/portfolio?stack=C%23">
-                                                <i class="bi bi-collection"></i> Bekijk projecten met C#
+                                                <i class="bi bi-collection"></i> Zie projecten met C#
                                             </a>
                                     </div>
                                 </div>
@@ -189,10 +206,8 @@
 
                                     <div class="skill-meta small text-body-secondary">
                                             <div> Niveau: <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span> </div>
-                                            <div>Experience: 6 year(s)</div>
-                                            <div>Category: <span class="badge rounded-pill text-bg-light border text-capitalize">language</span></div>
                                             <a href="/portfolio?stack=Javascript">
-                                                <i class="bi bi-collection"></i> Bekijk projecten met Javascript
+                                                <i class="bi bi-collection"></i> Zie projecten met Javascript
                                             </a>
                                     </div>
                                 </div>
@@ -203,10 +218,18 @@
             <div id="category-framework" class="category-section mb-5 scroll-watch-url">
                 <!-- Show and go to category -->
                 <div class="btn-group mb-3 d-flex justify-content-center" role="group">
-                    <a href="#category-language" class="btn btn-outline-secondary ">Talen</a>
-                    <a href="#category-framework" class="btn btn-outline-secondary active">Frameworks</a>
-                    <a href="#category-tool" class="btn btn-outline-secondary ">Tools</a>
-                    <a href="#category-methodology" class="btn btn-outline-secondary ">Methodieken</a>
+                    <a href="#category-language" class="btn btn-outline-secondary ">
+                        Talen
+                    </a>
+                    <a href="#category-framework" class="btn btn-outline-secondary active">
+                        Frameworks
+                    </a>
+                    <a href="#category-tool" class="btn btn-outline-secondary ">
+                        Tools
+                    </a>
+                    <a href="#category-methodology" class="btn btn-outline-secondary ">
+                        Methodieken
+                    </a>
                 </div>
 
                 <div class="row">
@@ -223,10 +246,8 @@
 
                                     <div class="skill-meta small text-body-secondary">
                                             <div> Niveau: <span class="badge rounded-pill text-bg-medior-senior text-capitalize">medior / senior</span> </div>
-                                            <div>Experience: 3 year(s)</div>
-                                            <div>Category: <span class="badge rounded-pill text-bg-light border text-capitalize">framework</span></div>
                                             <a href="/portfolio?stack=ASP.NET%20Core%20RazorPages">
-                                                <i class="bi bi-collection"></i> Bekijk projecten met ASP.NET Core RazorPages
+                                                <i class="bi bi-collection"></i> Zie projecten met ASP.NET Core RazorPages
                                             </a>
                                     </div>
                                 </div>
@@ -236,65 +257,59 @@
             </div>
 </section>
 
-<div style="height: 1000px">
-
-</div>
-
-
     </main>
 
     
 
-<footer class="bg-light border-top mt-5">
+<footer class="bg-body border-top mt-5">
+
     <div class="container py-4">
-        <div class="row gy-3">
-
-            <!-- Links -->
-            <div class="col-12 text-center">
-                    <ul class="list-unstyled mb-0">
-                            <li class="mb-1">
-                                <a class="text-decoration-none text-muted hover-underline" href="/nl/">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="text-decoration-none text-muted hover-underline" href="/nl/over-mij/">
-                                    Over mij
-                                </a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="text-decoration-none text-muted hover-underline" href="/nl/portfolio/">
-                                    Portfolio
-                                </a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="text-decoration-none text-muted hover-underline" href="/nl/vaardigheden/">
-                                    Vaardigheden
-                                </a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="text-decoration-none text-muted hover-underline" href="/nl/contact/">
-                                    Contact
-                                </a>
-                            </li>
-                    </ul>
-            </div>
-
-            <!-- Copyright -->
-            <div class="row pt-3 mt-3 border-top">
-                <div class="text-md-start text-muted small">
-                    © 2026 — Mijn portfolio
-                </div>
-            </div>
-
+        <!-- Links -->
+        <div class="col-12 text-center">
+                <ul class="list-unstyled mb-0">
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/">
+                                Home
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/over-mij/">
+                                Over mij
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/portfolio/">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/vaardigheden/">
+                                Vaardigheden
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/contact/">
+                                Contact
+                            </a>
+                        </li>
+                </ul>
         </div>
     </div>
+
+    <!-- Copyright -->
+    <div class="p-3 border-top">
+        <div class="text-md-start text-muted small">
+            © 2026 — bartvanderburg.nl
+        </div>
+    </div>
+
 </footer>
 
 
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/site.js?v=CEiQAsRnX5I4H7oarPo34r3MXFF8rcTQJ-_7JpDxtTU"></script>
+    <script src="/assets/js/site.js?v=7plofEMHHCCP66_A0auO7YCmD9oXrUNpkUgAG_9ZS90"></script>
     <script src="/assets/js/Components/FilmstripBehavior.js?v=4awiHrnqmjykIr7tWM2TDhlYFrcwOiWASuQG6aVk3oQ"></script>
     <script src="/assets/js/Views/projectsOverviewPage.js?v=SykiOdE3T9rnOx47NQ-JpLDXeGilM2dkXEhTvbTdWH4"></script>
+    <script src="/assets/prism/prism.js?v=I8fjLeWhHlz_3rpl1fLThOx3gN_e2iD8EiP9EPEl9Mc"></script>
 </body>
 </html>

@@ -117,3 +117,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// Code snippet display handling (inline / dialog)
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('[data-display-type]').forEach(btn => {
+        if (btn.dataset.bound === "1") return;
+        btn.dataset.bound = "1";
+
+        btn.addEventListener("click", () => {
+            const mode = btn.dataset.displayType;
+            const inlineId = btn.dataset.inlineId;
+            const dialogId = btn.dataset.dialogId;
+
+            // Dialog mode
+            if (mode === "dialog") {
+                const dlg = document.getElementById(dialogId);
+                if (!dlg) return;
+
+                if (!dlg.open) dlg.showModal();
+
+                dlg.querySelectorAll(`[data-close-dialog="${dialogId}"]`).forEach(closeBtn => {
+                    closeBtn.addEventListener("click", () => dlg.close());
+                });
+
+                dlg.addEventListener("click", (e) => {
+                    const rect = dlg.getBoundingClientRect();
+                    const inDialog =
+                        rect.top <= e.clientY && e.clientY <= rect.bottom &&
+                        rect.left <= e.clientX && e.clientX <= rect.right;
+
+                    if (!inDialog) dlg.close();
+                });
+
+                return;
+            }
+
+            // Inline modes - always toggle
+            const inline = document.getElementById(inlineId);
+            if (!inline) return;
+
+            inline.classList.toggle("d-none");
+        });
+    });
+});
