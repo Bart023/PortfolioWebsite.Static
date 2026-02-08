@@ -1,0 +1,7 @@
+﻿[data-bs-theme=dark] .code-snipet-pre {
+    background-color: #cccccc;
+}
+
+.code-snipet-pre {
+    touch-action: pinch-zoom;
+}
