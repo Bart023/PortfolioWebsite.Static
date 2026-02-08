@@ -56,12 +56,14 @@
         opacity: 0.3;
     }
 
+.filmstrip-item img {
+    aspect-ratio: 1 / 1;
+}
 @media (min-width: 960px) {
     .filmstrip-item {
         flex: 0 0 calc(100% / 4);
     }
 }
-
 @media (min-width: 1260px) {
     .filmstrip-item {
         flex: 0 0 calc(100% / 5);
