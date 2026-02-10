@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Code snippet display handling (inline / dialog)
+// Code snippet - display handling (inline / dialog)
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('[data-display-type]').forEach(btn => {
         if (btn.dataset.bound === "1") return;
@@ -159,4 +159,44 @@ document.addEventListener("DOMContentLoaded", () => {
             inline.classList.toggle("d-none");
         });
     });
+});
+
+// Code snippet - zoom handling
+document.addEventListener("DOMContentLoaded", () => {
+    const STEP = 0.10;
+    const MIN = 0.5;
+    const MAX = 2.0;
+
+    function clamp(n) { return Math.min(MAX, Math.max(MIN, n)); }
+
+    function getZoom(pre) {
+        return parseFloat(pre.dataset.zoom || "1") || 1;
+    }
+
+    function setZoom(pre, zoom) {
+        const v = clamp(zoom).toFixed(2);
+        pre.dataset.zoom = v;
+        pre.style.fontSize = `calc(1rem * ${v})`;
+    }
+
+    document.querySelectorAll("button[data-zoom-in],button[data-zoom-out]")
+        .forEach(btn => {
+            btn.addEventListener("click", () => {
+                const targetId = btn.getAttribute("data-zoom-target");
+                if (!targetId) return;
+
+                const target = document.getElementById(targetId);
+                if (!target) return;
+
+                const pre = target.querySelector("pre");
+                if (!pre) return;
+
+                const current = getZoom(pre);
+                const next = btn.hasAttribute("data-zoom-in")
+                    ? current + STEP
+                    : current - STEP;
+
+                setZoom(pre, next);
+            });
+        });
 });

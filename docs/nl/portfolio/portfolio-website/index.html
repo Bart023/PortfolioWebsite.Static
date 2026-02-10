@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/assets/css/site.css?v=Uv8XcHNckdOhn5HmAx3-9SqQzblzLpvIlRQBEKNW8w0" />
     <link rel="stylesheet" href="/assets/css/Components/ImageStripBlock.css?v=ot95SaMfz2f6DU6dfYeFG5i7FyNGWzuOMkkxuM78z7I" />
     <link rel="stylesheet" href="/assets/css/Components/ContentCardBlock.css?v=QPF9Fb7yjSvxRu-RiUo27zFZ0HuH08BA5K_9cTWmb-k" />
-    <link rel="stylesheet" href="/assets/css/Components/CodeSnipetBlock.css?v=sMfzwOL8b2_PgRTwe6kZAu78zz5kFk3G7828h7XsKRU" />
+    <link rel="stylesheet" href="/assets/css/Components/CodeSnipetBlock.css?v=vcFSXihnbjy2_xOFrf_5NEuLy72r02IU9hFk3tVgrVs" />
     <link rel="stylesheet" href="/assets/css/Views/AboutMePage.css?v=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U" />
     <link rel="stylesheet" href="/assets/css/Views/ProjectsOverviewPage.css?v=dg3z6pPJK3fpbOtBQtdd1P7gOxU_ZxooxqczLmk4eM4" />
     <link rel="stylesheet" href="/assets/css/Views/ProjectDetailPage.css?v=Ieu27vwigz-QyW2SUThqS4rqaKXyKQJFKJgh1R1HQFM" />
@@ -170,9 +170,9 @@
             data-row-span="1"
             style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
 
-    <div class="filmstrip-wrapper" data-filmstrip-id="4d6fa394ce">
+    <div class="filmstrip-wrapper" data-filmstrip-id="8bfa962039">
         <button class="filmstrip-arrow left" data-direction="left">‹</button>
-        <div class="filmstrip-container" id="4d6fa394ce">
+        <div class="filmstrip-container" id="8bfa962039">
                 <div class="filmstrip-item" data-index="0" data-img-url="/media/mshfl02o/solution-folder-structure-overview.png" data-img-name="Solution-folder-structure-overview.png">
                     <img class="img-fluid rounded shadow-sm" src="/media/mshfl02o/solution-folder-structure-overview.png" alt="Solution-folder-structure-overview.png" style="object-fit:cover" />
                 </div>
@@ -192,12 +192,12 @@
         <button class="filmstrip-arrow right" data-direction="right">›</button>
     </div>
     <!-- Overlay -->
-    <div id="overlay-4d6fa394ce" class="image-overlay">
+    <div id="overlay-8bfa962039" class="image-overlay">
         <button class="overlay-close" data-overlay-close>✕</button>
         <button class="filmstrip-arrow left" data-overlay-nav="prev">‹</button>
         <button class="filmstrip-arrow right" data-overlay-nav="next">›</button>
         <div class="overlay-content">
-            <img id="overlay-img-4d6fa394ce" src="" alt="" />
+            <img id="overlay-img-8bfa962039" src="" alt="" />
         </div>
     </div>
         </div>
@@ -219,14 +219,15 @@
                     <h3 class="h6 mb-1 text-truncate">ProjectsOverviewPage.cshtml</h3>
 
             </div>
-
-            <button type="button"
-                    class="btn btn-outline-primary btn-sm flex-shrink-0"
-                    data-display-type="dialog"
-                    data-inline-id="code-inline-6915b3f5312c4c63950df5008860f722"
-                    data-dialog-id="code-snippet-6915b3f5312c4c63950df5008860f722">
-                Bekijk code
-            </button>
+            <div>
+                <button type="button"
+                        class="btn btn-outline-primary btn-sm flex-shrink-0"
+                        data-display-type="dialog"
+                        data-inline-id="code-inline-6915b3f5312c4c63950df5008860f722"
+                        data-dialog-id="code-snippet-6915b3f5312c4c63950df5008860f722">
+                    Bekijk code
+                </button>
+            </div>
         </div>
 
     </div>
@@ -240,13 +241,13 @@
                 </div>
 
                 <div class="d-flex align-items-center gap-2 flex-shrink-0">
-                    <button type="button" class="btn btn-outline-secondary btn-sm" data-close-dialog="code-snippet-6915b3f5312c4c63950df5008860f722" aria-label="Close">
-                        ✕
-                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-zoom-out data-zoom-target="code-snippet-6915b3f5312c4c63950df5008860f722" aria-label="Zoom out">−</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-zoom-in data-zoom-target="code-snippet-6915b3f5312c4c63950df5008860f722" aria-label="Zoom in">+</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-close-dialog="code-snippet-6915b3f5312c4c63950df5008860f722" aria-label="Close">✕</button>
                 </div>
             </div>
             <div class="p-3 flex-grow-1 overflow-auto">
-                <pre class="code-snipet-pre mb-0 rounded border p-3"><code class="language-markup">@using Umbraco.Cms.Core.Models
+                <pre class="mb-0 rounded border p-3"><code class="language-markup">@using Umbraco.Cms.Core.Models
 @using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
@@ -517,14 +518,15 @@
                     <h3 class="h6 mb-1 text-truncate">ProjectsOverviewPage.css</h3>
 
             </div>
-
-            <button type="button"
-                    class="btn btn-outline-primary btn-sm flex-shrink-0"
-                    data-display-type="dialog"
-                    data-inline-id="code-inline-93c09fa5665841d29b8fbefdd7f26ba2"
-                    data-dialog-id="code-snippet-93c09fa5665841d29b8fbefdd7f26ba2">
-                Bekijk code
-            </button>
+            <div>
+                <button type="button"
+                        class="btn btn-outline-primary btn-sm flex-shrink-0"
+                        data-display-type="dialog"
+                        data-inline-id="code-inline-93c09fa5665841d29b8fbefdd7f26ba2"
+                        data-dialog-id="code-snippet-93c09fa5665841d29b8fbefdd7f26ba2">
+                    Bekijk code
+                </button>
+            </div>
         </div>
 
     </div>
@@ -538,13 +540,13 @@
                 </div>
 
                 <div class="d-flex align-items-center gap-2 flex-shrink-0">
-                    <button type="button" class="btn btn-outline-secondary btn-sm" data-close-dialog="code-snippet-93c09fa5665841d29b8fbefdd7f26ba2" aria-label="Close">
-                        ✕
-                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-zoom-out data-zoom-target="code-snippet-93c09fa5665841d29b8fbefdd7f26ba2" aria-label="Zoom out">−</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-zoom-in data-zoom-target="code-snippet-93c09fa5665841d29b8fbefdd7f26ba2" aria-label="Zoom in">+</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-close-dialog="code-snippet-93c09fa5665841d29b8fbefdd7f26ba2" aria-label="Close">✕</button>
                 </div>
             </div>
             <div class="p-3 flex-grow-1 overflow-auto">
-                <pre class="code-snipet-pre mb-0 rounded border p-3"><code class="language-css">.projects.container {
+                <pre class="mb-0 rounded border p-3"><code class="language-css">.projects.container {
     padding: 0;
     display: flex;
 }
@@ -690,14 +692,15 @@
                     <h3 class="h6 mb-1 text-truncate">ProjectsOverviewPage.js</h3>
 
             </div>
-
-            <button type="button"
-                    class="btn btn-outline-primary btn-sm flex-shrink-0"
-                    data-display-type="dialog"
-                    data-inline-id="code-inline-8da7ae7300ac4bbb8d322065196cd850"
-                    data-dialog-id="code-snippet-8da7ae7300ac4bbb8d322065196cd850">
-                Bekijk code
-            </button>
+            <div>
+                <button type="button"
+                        class="btn btn-outline-primary btn-sm flex-shrink-0"
+                        data-display-type="dialog"
+                        data-inline-id="code-inline-8da7ae7300ac4bbb8d322065196cd850"
+                        data-dialog-id="code-snippet-8da7ae7300ac4bbb8d322065196cd850">
+                    Bekijk code
+                </button>
+            </div>
         </div>
 
     </div>
@@ -711,13 +714,13 @@
                 </div>
 
                 <div class="d-flex align-items-center gap-2 flex-shrink-0">
-                    <button type="button" class="btn btn-outline-secondary btn-sm" data-close-dialog="code-snippet-8da7ae7300ac4bbb8d322065196cd850" aria-label="Close">
-                        ✕
-                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-zoom-out data-zoom-target="code-snippet-8da7ae7300ac4bbb8d322065196cd850" aria-label="Zoom out">−</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-zoom-in data-zoom-target="code-snippet-8da7ae7300ac4bbb8d322065196cd850" aria-label="Zoom in">+</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-close-dialog="code-snippet-8da7ae7300ac4bbb8d322065196cd850" aria-label="Close">✕</button>
                 </div>
             </div>
             <div class="p-3 flex-grow-1 overflow-auto">
-                <pre class="code-snipet-pre mb-0 rounded border p-3"><code class="language-javascript">// portfolio overview page - Toggle list/tile view
+                <pre class="mb-0 rounded border p-3"><code class="language-javascript">// portfolio overview page - Toggle list/tile view
 document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
     const root = document.getElementById(&quot;projects&quot;);
     if (!root) return;
@@ -965,7 +968,7 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 
 
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/site.js?v=7plofEMHHCCP66_A0auO7YCmD9oXrUNpkUgAG_9ZS90"></script>
+    <script src="/assets/js/site.js?v=fR2YZk3ZCBltV9t3CfREqx-P4zLbQh-sarb7VPNA9w0"></script>
     <script src="/assets/js/Components/FilmstripBehavior.js?v=4awiHrnqmjykIr7tWM2TDhlYFrcwOiWASuQG6aVk3oQ"></script>
     <script src="/assets/js/Views/projectsOverviewPage.js?v=SykiOdE3T9rnOx47NQ-JpLDXeGilM2dkXEhTvbTdWH4"></script>
     <script src="/assets/prism/prism.js?v=Vg3rNkvwWX1H31BDrsloYsglBMUlq8KIoSVhce-3lN8"></script>
