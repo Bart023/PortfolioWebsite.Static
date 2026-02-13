@@ -1,3 +1,17 @@
 ﻿[data-bs-theme=dark] .code-snipet-pre {
     background-color: #cccccc;
 }
+
+
+.code-snipet-dialog-content {
+    width: 90vw;
+    max-width: 1300px;
+    max-height: 85vh;
+    overflow: hidden;
+}
+
+@media (max-width: 575.98px) {
+    .code-sniper-header {
+        font-size: .8rem;
+    }
+}
