@@ -102,6 +102,7 @@
     <div class="row gy-4 mb-3">
         <div class="col-lg-8">
             <h1 class="mb-3">Rijbewijsvalidator</h1>
+                <p class="lead"><p>Een van de meest uitdagende projecten waaraan ik heb gewerkt. Voor een softwarebedrijf dat oplossingen ontwikkelt binnen de personenvervoerbranche heb ik een .NET MAUI-applicatie ontwikkeld die Nederlandse rijbewijzen via NFC uitleest en valideert volgens de ICAO 9303-standaard.</p></p>
                 <img class="img-fluid rounded w-100" src="/media/w4hbajby/driver-license-validator-main-2.png" alt="Rijbewijsvalidator" />
         </div>
 
@@ -116,7 +117,7 @@
                         <dd class="col-7">active</dd>
 
                             <dt class="col-5">Complexity</dt>
-                            <dd class="col-7"><span class= "badge rounded-pill text-bg-secondary"> 10 / 10 </span ></dd>
+                            <dd class="col-7"><span class= "badge rounded-pill text-bg-secondary"> 9 / 10 </span ></dd>
                             <dt class="col-5">Team size</dt>
                             <dd class="col-7">1</dd>
                             <dt class="col-5">Type</dt>
@@ -136,6 +137,24 @@
         </div>
     </div>
 
+
+<div class="umb-block-grid"
+     data-grid-columns="12;"
+     style="--umb-block-grid--grid-columns: 12;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richTextBlock"
+            data-content-element-type-key="19fc62fa-f85a-4641-a6f0-a273e0c334ea"
+            data-element-key="91ca67d4-7a62-4b8f-952f-5aa1a0806161"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+<h2 class="MsoNormal">Over het project</h2><p class="MsoNormal">Voor een softwarebedrijf dat oplossingen ontwikkelt binnen de personenvervoerbranche heb ik gewerkt aan de implementatie voor het uitlezen en valideren van Nederlandse rijbewijzen via NFC.</p><p class="MsoNormal">De klant was vastgelopen in de implementatie en overwoog een externe, op Java gebaseerde package met tienduizenden euro’s aan jaarlijkse licentiekosten. Deze oplossing bleek niet alleen lastig te integreren binnen een .NET MAUI-applicatie, maar maakte naar mijn idee de code complexer en minder beheersbaar dan nodig. Nadat zij en meerdere van mijn ervaren collega’s er niet uitkwamen, kwam de vraag uiteindelijk bij mij terecht.</p><p class="MsoNormal">Al snel werd mij duidelijk dat de voorgestelde route op termijn ten koste zou gaan van onderhoudbaarheid en inzicht in de werking. In plaats van te blijven proberen een externe Java-oplossing passend te krijgen, besloot ik terug te gaan naar de kern: zorgen dat ik überhaupt een rijbewijs zonder foutcode kon uitlezen. Geen extra abstraherende lagen en geen afhankelijkheid van beperkte documentatie, maar focus op de basis: werkende, beveiligde communicatie met de chip.</p><hr><h2 class="MsoNormal">De doorbraak</h2><p class="MsoNormal">Het uitlezen van een Nederlands rijbewijs vereist communicatie met de NFC-chip volgens de ICAO 9303-standaard. Dit betekent het correct implementeren van BAC (Basic Access Control), het genereren van sessiesleutels op basis van de MRZ en het opzetten van beveiligde communicatie.</p><p class="MsoNormal">De grootste uitdaging zat in het verkrijgen van een geldige respons van de chip. Bij iedere poging kreeg ik slechts een algemene foutcode terug waar ik niets mee kon. Na een intensief weekend mij verdiept te hebben in de specificaties, het analyseren van de communicatie tussen app en chip en het stap voor stap testen van de beveiligde sessie, verscheen er op zondagavond,net voordat ik het wilde opgeven, voor het eerst een andere respons dan een foutmelding. Dat moment betekende dat de beveiligde communicatie werkte. Vanaf daar kon ik beginnen met de volgende fase: het ontsleutelen en valideren van de uitgelezen data.</p><hr><h2 class="MsoNormal">Validatie volgens ICAO 9303 en RDW</h2><p class="MsoNormal">Na het succesvol opzetten van de communicatie met de chip en het ontsleutelen van de data heb ik de volledige validatieketen geïmplementeerd conform ICAO 9303 en de aanvullende documentatie van de RDW.</p><p class="MsoNormal">Dit omvatte onder andere het volgende:</p><ul style="margin-top: 0cm;"><li><p>Controle van de officiële ondertekening van het document<br>Verificatie dat het rijbewijs digitaal is ondertekend door de bevoegde uitgevende instantie (RDW). De publieke sleutel van het document wordt gecontroleerd tegen de certificaatketen (CSCA), zodat vaststaat dat het document authentiek is en niet is gemanipuleerd.</p></li><li><p>Controle dat de chip origineel is (anti-cloning)<br>Via een cryptografische challenge-response wordt gecontroleerd of de chip daadwerkelijk de private sleutel bezit die hoort bij de publieke sleutel in het document. Hiermee wordt uitgesloten dat de chip een kopie is.</p></li><li><p>Integriteitscontrole van de gegevens<br>De hashwaarden van de uitgelezen datagroepen (zoals persoonsgegevens en aanvullende gegevens) worden vergeleken met de waarden die in het ondertekende beveiligingsdocument zijn vastgelegd. Zo wordt vastgesteld dat de gegevens niet zijn aangepast.</p></li></ul><hr><h2 class="MsoNormal">Resultaat</h2><p class="MsoNormal">Het resultaat overtrof de verwachtingen van de klant. De uiteindelijke oplossing leest en valideert alle generaties Nederlandse rijbewijzen volledig volgens internationale standaarden, zonder afhankelijkheid van externe licentiepackages. Hierdoor worden aanzienlijke jaarlijkse kosten bespaard en heeft de klant volledige controle over het verificatieproces.</p><hr><h2 class="MsoNormal">Terugblik</h2><p class="MsoNormal">Dit project geeft een goed beeld van mijn doorzettingsvermogen en hoe ik te werk ga. Waar anderen stoppen omdat het niet lukt en daardoor kiezen voor een richting die de oplossing complexer en minder beheersbaar maakt dan nodig, neem ik bewust een stap terug en kijk ik opnieuw naar de kern van het probleem.</p><p class="MsoNormal">Het was zonder twijfel een van de meest uitdagende projecten waaraan ik heb gewerkt. Juist die combinatie van complexiteit, zelfstandige verdieping en het stap voor stap toewerken naar een werkende oplossing is wat mij energie en motivatie geeft in mijn werk.</p><hr><h2 class="MsoNormal" data-pm-slice="1 1 []">Opmerking</h2><p>Vanwege de aard van het systeem en de betrouwbaarheid en gevoeligheid van de onderliggende data ben ik beperkt in wat ik publiekelijk kan en mag delen. Om die reden zijn op deze website geen schermafbeeldingen, codevoorbeelden of technische detailuitwerkingen opgenomen.</p>        </div>
+</div>
+
+</div>
 
     <br />
 
