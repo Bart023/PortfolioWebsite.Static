@@ -93,15 +93,15 @@
     <aside id="projects-sidebar" class="sidebar filterbar-content">
         <div class="d-flex mb-2 border-bottom">
             <div class="d-flex justify-content-between align-items-center gap-2">
-                <h5 class="fw-semibold mt-3">Filters</h5>
+                <h5 class="fw-semibold mt-3"> Filters </h5>
                 <span class="active-filter-count badge rounded-pill text-bg-warning gap-1" style="display:inline-block; top:0;">0</span>
                 <small class="visible-projects-count badge rounded-pill text-bg-light border">7 projects</small>
             </div>
-            <button id="projects-sidebar-close-btn" class="btn">×</button>
+            <button id="projects-sidebar-close-btn" class="btn">✕</button>
         </div>
 
             <div class="mb-4">
-                <h6 class="fw-semibold">Employer</h6>
+                <h6 class="fw-semibold"> Employer </h6>
                 <div class="list-group small">
                         <label class="list-group-item d-flex justify-content-between align-items-center">
                             <span>Croonwolter&amp;dros <span class="text-muted">(1)</span></span>
@@ -118,8 +118,18 @@
                 </div>
             </div>
 
+        <div class="mb-4">
+            <h6 class="fw-semibold"> With code examples </h6>
+            <div class="list-group small">
+                <label class="list-group-item d-flex justify-content-between align-items-center">
+                    <span> Yes <span class="text-muted">(1)</span></span>
+                    <input type="checkbox" class="form-check-input code-examples-filter" value="yes" />
+                </label>
+            </div>
+        </div>
+
                 <div class="mb-4">
-                    <h6 class="fw-semibold">Languages</h6>
+                    <h6 class="fw-semibold"> Languages </h6>
                     <div class="list-group small">
                             <label class="list-group-item d-flex justify-content-between align-items-center">
                                 <span>C# <span class="text-muted">(7)</span></span>
@@ -152,7 +162,7 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <h6 class="fw-semibold">Frameworks</h6>
+                    <h6 class="fw-semibold"> Frameworks </h6>
                     <div class="list-group small">
                             <label class="list-group-item d-flex justify-content-between align-items-center">
                                 <span>.NET MAUI <span class="text-muted">(1)</span></span>
@@ -189,7 +199,7 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <h6 class="fw-semibold">Tools</h6>
+                    <h6 class="fw-semibold"> Tools </h6>
                     <div class="list-group small">
                             <label class="list-group-item d-flex justify-content-between align-items-center">
                                 <span>Azure <span class="text-muted">(1)</span></span>
@@ -230,7 +240,7 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <h6 class="fw-semibold">Methodologies</h6>
+                    <h6 class="fw-semibold"> methodologies </h6>
                     <div class="list-group small">
                             <label class="list-group-item d-flex justify-content-between align-items-center">
                                 <span>CI/CD <span class="text-muted">(2)</span></span>
@@ -261,22 +271,22 @@
             <div class="d-flex gap-2 mb-2 w-100">
                 <div class="dropdown w-100">
                     <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Sorteren op
+                        Sorting
                     </button>
                     <ul class="dropdown-menu" id="sortOptions">
-                        <li><a class="dropdown-item active" href="#" data-sort="default">Standaard</a></li>
-                        <li><a class="dropdown-item" href="#" data-sort="date-desc">Datum: Hoog - Laag</a></li>
-                        <li><a class="dropdown-item" href="#" data-sort="date-asc">Datum: Laag - Hoog</a></li>
-                        <li><a class="dropdown-item" href="#" data-sort="complexity">Complexity</a></li>
+                        <li><a class="dropdown-item active" href="#" data-sort="default">  Default </a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="date-desc"> Date: high - low </a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="date-asc"> Date: low - high </a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="complexity"> Complexity </a></li>
                     </ul>
                 </div>
                 <div class="d-flex align-items-center gap-2 w-100">
-                    <button id="btnList" type="button" class="btn btn-outline-secondary w-100">☰ List</button>
-                    <button id="btnTiles" type="button" class="btn btn-outline-secondary w-100 d-none">▦ Tiles</button>
+                    <button id="btnList" type="button" class="btn btn-outline-secondary w-100">☰ List </button>
+                    <button id="btnTiles" type="button" class="btn btn-outline-secondary w-100 d-none">▦ Tiles </button>
                 </div>
             </div>
             <button id="projects-sidebar-toggler" class="btn btn-outline-secondary sidebar-toggle-projects gap-2 mb-3">
-                <span>☰ Filters</span>
+                <span>☰ Filters </span>
                 <span class="active-filter-count badge rounded-pill text-bg-warning" style="display:inline-block; top:0;">0</span>
                 <small class="visible-projects-count badge rounded-pill text-bg-light border">7 projects</small>
             </button>
@@ -286,7 +296,8 @@
                 <article class="col-12 col-sm-6 col-lg-4 project"
                          data-sort-order="0"
                          data-start="2024-03-01"
-                         data-difficulty="8">
+                         data-difficulty="8"
+                         data-with-code-examples="false">
                     <a href="/en/portfolio/water-analysis-control-system/" class="card project-card">
 
                             <div class="image-container m-2">
@@ -301,15 +312,19 @@
                             </div>
 
                             <div class="project-meta small text-body-secondary">
-                                    <div>Employer: Dawn technology / Poort80</div>
-                                    <div>Start: March 2024</div>
-                                <div>End: active</div>
+                                    <div> Employer: Dawn technology / Poort80</div>
+                                    <div> Start: March 2024</div>
+                                <div> End: active</div>
                                     <div>
                                         Complexity:
                                         <span class="badge rounded-pill text-bg-secondary">8 / 10</span>
                                     </div>
                                     <div>
-                                        Type: 
+                                        With code examples:
+                                        <span class="badge rounded-pill text-bg-danger">No</span>
+                                    </div>
+                                    <div>
+                                        Type:
                                             <span class="badge rounded-pill text-bg-light border">QAS</span>
                                     </div>
                                     <div>
@@ -334,7 +349,7 @@
                                             <span class="badge rounded-pill text-bg-light border">IIS</span>
                                     </div>
                                     <div class="mb-4">
-                                        Methodologies:
+                                        methodologies:
                                             <span class="badge rounded-pill text-bg-light border">Scrum</span>
                                             <span class="badge rounded-pill text-bg-light border">Kanban</span>
                                             <span class="badge rounded-pill text-bg-light border">CI/CD</span>
@@ -347,7 +362,8 @@
                 <article class="col-12 col-sm-6 col-lg-4 project"
                          data-sort-order="1"
                          data-start="2025-08-01"
-                         data-difficulty="9">
+                         data-difficulty="9"
+                         data-with-code-examples="false">
                     <a href="/en/portfolio/drivers-license-validator/" class="card project-card">
 
                             <div class="image-container m-2">
@@ -362,15 +378,19 @@
                             </div>
 
                             <div class="project-meta small text-body-secondary">
-                                    <div>Employer: Dawn technology / Poort80</div>
-                                    <div>Start: August 2025</div>
-                                <div>End: active</div>
+                                    <div> Employer: Dawn technology / Poort80</div>
+                                    <div> Start: August 2025</div>
+                                <div> End: active</div>
                                     <div>
                                         Complexity:
                                         <span class="badge rounded-pill text-bg-secondary">9 / 10</span>
                                     </div>
                                     <div>
-                                        Type: 
+                                        With code examples:
+                                        <span class="badge rounded-pill text-bg-danger">No</span>
+                                    </div>
+                                    <div>
+                                        Type:
                                             <span class="badge rounded-pill text-bg-light border">Mobile app</span>
                                             <span class="badge rounded-pill text-bg-light border">Verification tool</span>
                                     </div>
@@ -393,7 +413,8 @@
                 <article class="col-12 col-sm-6 col-lg-4 project"
                          data-sort-order="2"
                          data-start="2025-10-01"
-                         data-difficulty="4">
+                         data-difficulty="4"
+                         data-with-code-examples="true">
                     <a href="/en/portfolio/portfolio-website/" class="card project-card">
 
                             <div class="image-container m-2">
@@ -408,15 +429,19 @@
                             </div>
 
                             <div class="project-meta small text-body-secondary">
-                                    <div>Employer: Private</div>
-                                    <div>Start: October 2025</div>
-                                <div>End: active</div>
+                                    <div> Employer: Private</div>
+                                    <div> Start: October 2025</div>
+                                <div> End: active</div>
                                     <div>
                                         Complexity:
                                         <span class="badge rounded-pill text-bg-secondary">4 / 10</span>
                                     </div>
                                     <div>
-                                        Type: 
+                                        With code examples:
+                                        <span class="badge rounded-pill text-bg-success">Yes</span>
+                                    </div>
+                                    <div>
+                                        Type:
                                             <span class="badge rounded-pill text-bg-light border">Hobby</span>
                                             <span class="badge rounded-pill text-bg-light border">Portfolio</span>
                                     </div>
@@ -444,7 +469,8 @@
                 <article class="col-12 col-sm-6 col-lg-4 project"
                          data-sort-order="3"
                          data-start="2022-05-01"
-                         data-difficulty="8">
+                         data-difficulty="8"
+                         data-with-code-examples="false">
                     <a href="/en/portfolio/e-commerce-marketplace/" class="card project-card">
 
                             <div class="image-container m-2">
@@ -456,15 +482,19 @@
                             </div>
 
                             <div class="project-meta small text-body-secondary">
-                                    <div>Employer: Private</div>
-                                    <div>Start: May 2022</div>
-                                <div>End: active</div>
+                                    <div> Employer: Private</div>
+                                    <div> Start: May 2022</div>
+                                <div> End: active</div>
                                     <div>
                                         Complexity:
                                         <span class="badge rounded-pill text-bg-secondary">8 / 10</span>
                                     </div>
                                     <div>
-                                        Type: 
+                                        With code examples:
+                                        <span class="badge rounded-pill text-bg-danger">No</span>
+                                    </div>
+                                    <div>
+                                        Type:
                                             <span class="badge rounded-pill text-bg-light border">E-commerce</span>
                                     </div>
                                     <div>
@@ -501,7 +531,8 @@
                 <article class="col-12 col-sm-6 col-lg-4 project"
                          data-sort-order="4"
                          data-start="2025-03-01"
-                         data-difficulty="7">
+                         data-difficulty="7"
+                         data-with-code-examples="false">
                     <a href="/en/portfolio/erp-for-curtain-studio/" class="card project-card">
 
                             <div class="image-container m-2">
@@ -513,15 +544,19 @@
                             </div>
 
                             <div class="project-meta small text-body-secondary">
-                                    <div>Employer: Dawn technology / Poort80</div>
-                                    <div>Start: March 2025</div>
-                                <div>End: active</div>
+                                    <div> Employer: Dawn technology / Poort80</div>
+                                    <div> Start: March 2025</div>
+                                <div> End: active</div>
                                     <div>
                                         Complexity:
                                         <span class="badge rounded-pill text-bg-secondary">7 / 10</span>
                                     </div>
                                     <div>
-                                        Type: 
+                                        With code examples:
+                                        <span class="badge rounded-pill text-bg-danger">No</span>
+                                    </div>
+                                    <div>
+                                        Type:
                                             <span class="badge rounded-pill text-bg-light border">ERP</span>
                                     </div>
                                     <div>
@@ -545,7 +580,7 @@
                                             <span class="badge rounded-pill text-bg-light border">GIT</span>
                                     </div>
                                     <div class="mb-4">
-                                        Methodologies:
+                                        methodologies:
                                             <span class="badge rounded-pill text-bg-light border">Kanban</span>
                                             <span class="badge rounded-pill text-bg-light border">CI/CD</span>
                                     </div>
@@ -556,7 +591,8 @@
                 <article class="col-12 col-sm-6 col-lg-4 project"
                          data-sort-order="5"
                          data-start="2019-01-01"
-                         data-difficulty="7">
+                         data-difficulty="7"
+                         data-with-code-examples="false">
                     <a href="/en/portfolio/gui-testadapter-with-computer-vision/" class="card project-card">
 
                             <div class="image-container m-2">
@@ -568,15 +604,19 @@
                             </div>
 
                             <div class="project-meta small text-body-secondary">
-                                    <div>Employer: Croonwolter&amp;dros</div>
-                                    <div>Start: January 2019</div>
-                                <div>End: active</div>
+                                    <div> Employer: Croonwolter&amp;dros</div>
+                                    <div> Start: January 2019</div>
+                                <div> End: active</div>
                                     <div>
                                         Complexity:
                                         <span class="badge rounded-pill text-bg-secondary">7 / 10</span>
                                     </div>
                                     <div>
-                                        Type: 
+                                        With code examples:
+                                        <span class="badge rounded-pill text-bg-danger">No</span>
+                                    </div>
+                                    <div>
+                                        Type:
                                             <span class="badge rounded-pill text-bg-light border">QAS</span>
                                     </div>
                                     <div>
@@ -595,7 +635,8 @@
                 <article class="col-12 col-sm-6 col-lg-4 project"
                          data-sort-order="6"
                          data-start="2024-09-01"
-                         data-difficulty="3">
+                         data-difficulty="3"
+                         data-with-code-examples="false">
                     <a href="/en/portfolio/stock-app/" class="card project-card">
 
                             <div class="image-container m-2">
@@ -610,15 +651,19 @@
                             </div>
 
                             <div class="project-meta small text-body-secondary">
-                                    <div>Employer: Private</div>
-                                    <div>Start: September 2024</div>
-                                <div>End: active</div>
+                                    <div> Employer: Private</div>
+                                    <div> Start: September 2024</div>
+                                <div> End: active</div>
                                     <div>
                                         Complexity:
                                         <span class="badge rounded-pill text-bg-secondary">3 / 10</span>
                                     </div>
                                     <div>
-                                        Type: 
+                                        With code examples:
+                                        <span class="badge rounded-pill text-bg-danger">No</span>
+                                    </div>
+                                    <div>
+                                        Type:
                                             <span class="badge rounded-pill text-bg-light border">Hobby</span>
                                     </div>
                                     <div>
@@ -697,7 +742,7 @@
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/site.js?v=fR2YZk3ZCBltV9t3CfREqx-P4zLbQh-sarb7VPNA9w0"></script>
     <script src="/assets/js/Components/FilmstripBehavior.js?v=4awiHrnqmjykIr7tWM2TDhlYFrcwOiWASuQG6aVk3oQ"></script>
-    <script src="/assets/js/Views/projectsOverviewPage.js?v=SykiOdE3T9rnOx47NQ-JpLDXeGilM2dkXEhTvbTdWH4"></script>
+    <script src="/assets/js/Views/projectsOverviewPage.js?v=sHoVQPxm6iPNjOHjywBXzBXDkSDRF6ZP53Ti4LTKv5o"></script>
     <script src="/assets/prism/prism.js?v=Vg3rNkvwWX1H31BDrsloYsglBMUlq8KIoSVhce-3lN8"></script>
 </body>
 </html>

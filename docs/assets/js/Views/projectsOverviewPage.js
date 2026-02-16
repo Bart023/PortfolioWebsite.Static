@@ -94,7 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Define all filter groups here (easily extendable)
     const filterGroups = {
         employers: document.querySelectorAll(".employer-filter"),
-        stack: document.querySelectorAll(".stack-filter")
+        stack: document.querySelectorAll(".stack-filter"),
+        codeExamples: document.querySelectorAll(".code-examples-filter")
     };
 
     function updateVisibleProjectCount() {
@@ -132,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
         projects.forEach(project => {
             const employer = (project.querySelector(".project-meta div:nth-child(1)")?.innerText || "").toLowerCase();
             const types = Array.from(project.querySelectorAll(".project-meta .badge.border")).map(b => b.innerText.toLowerCase());
+            const hasCodeExamples = project.dataset.withCodeExamples === "true";
 
             const matchEmployer =
                 activeFilters.employers.length === 0 ||
@@ -141,7 +143,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 activeFilters.stack.length === 0 ||
                 activeFilters.stack.some(s => types.includes(s));
 
-            project.style.display = matchEmployer && matchStack ? "" : "none";
+            const matchCodeExamples =
+                activeFilters.codeExamples.length === 0 ||
+                (activeFilters.codeExamples.includes("yes") && hasCodeExamples);
+
+            project.style.display = matchEmployer && matchStack && matchCodeExamples ? "" : "none";
         });
 
         // Update badges with total active filters
