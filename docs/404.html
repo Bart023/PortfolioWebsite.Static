@@ -64,7 +64,7 @@
         <h1>404</h1>
         <p>Page not found</p>
         <p class="redirect-info">You will be redirected in 3 seconds...</p>
-        <a href="/">Go to homepage</a>
+        <a id="homeLink" href="/">Go to homepage</a>
     </div>
 
     <script>
@@ -75,9 +75,16 @@
             var m = p.match(/^\/(nl|en)(\/|$)/);
             var lang = m ? m[1] : null;
 
+            var target = lang ? ("/" + lang + "/") : "/";
+
+            // Update button link
+            var link = document.getElementById("homeLink");
+            if (link) {
+                link.setAttribute("href", target);
+            }
+
             // Redirect to home
-            setTimeout(() => {
-                var target = lang ? ("/" + lang + "/") : "/";
+            setTimeout(function () {
                 location.replace(target);
             }, 3000);
         })();
