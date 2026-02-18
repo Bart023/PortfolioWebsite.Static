@@ -87,14 +87,13 @@
 
     <main>
         
-
 <article id="project" class="container my-2">
     
         <nav class="project-nav d-flex justify-content-between align-items-center">
           <a href="/nl/portfolio/erp-voor-gordijnatelier/" class="btn btn-outline-secondary ">
             <i class="bi bi-arrow-left me-2"></i> Vorige project
           </a>
-          <a href="/nl/portfolio/stock-app/" class="btn btn-outline-secondary ">
+          <a href="/nl/portfolio/magazijn-beheer-software/" class="btn btn-outline-secondary ">
             Volgende project <i class="bi bi-arrow-right ms-2"></i>
           </a>
         </nav>
@@ -102,7 +101,7 @@
     <div class="row gy-4 mb-3">
         <div class="col-lg-8">
             <h1 class="mb-3">GUI testadapter met beeldherkenning</h1>
-                <p class="lead"><p></p></p>
+                <p class="lead"><p>Mijn afstudeerproject bij Croonwolter&amp;dros markeerde het begin van mijn carrière in C#. Binnen dit project heb ik een productieklare GUI testadapter op basis van beeldherkenning ontwikkeld, waarmee het testen van SCADA systemen voor grootschalige infrastructuurprojecten robuuster en realistischer is geworden. </p></p>
                 <img class="img-fluid rounded w-100" src="/media/k4knctou/gta-main-image.png" alt="GUI testadapter met beeldherkenning" />
         </div>
 
@@ -114,7 +113,7 @@
                             <dt class="col-5">Start</dt>
                             <dd class="col-7">januari 2019</dd>
                         <dt class="col-5">End</dt>
-                        <dd class="col-7">active</dd>
+                        <dd class="col-7">juli 2020</dd>
 
                             <dt class="col-5">Complexity</dt>
                             <dd class="col-7"><span class= "badge rounded-pill text-bg-secondary"> 7 / 10 </span ></dd>
@@ -128,6 +127,7 @@
                             <dd class="col-7">
                                     <span class="badge rounded-pill text-bg-light border">C#</span>
                                     <span class="badge rounded-pill text-bg-light border">SQL</span>
+                                    <span class="badge rounded-pill text-bg-light border">xUnit / NUnit</span>
                                     <span class="badge rounded-pill text-bg-light border">GIT</span>
                             </dd>
                     </dl>
@@ -137,6 +137,25 @@
     </div>
 
 
+<div class="umb-block-grid"
+     data-grid-columns="12;"
+     style="--umb-block-grid--grid-columns: 12;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richTextBlock"
+            data-content-element-type-key="19fc62fa-f85a-4641-a6f0-a273e0c334ea"
+            data-element-key="1f780bc1-7c40-4e83-93f6-326236bd0c57"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+<h2 data-pm-slice="0 0 []">Over het project</h2><p class="MsoNormal">Mijn afstudeerproject bij Croonwolter&amp;dros was mijn eerste echte opdracht in C#, en tegelijk een project waarin direct veel verantwoordelijkheid en technische diepgang samenkwamen. Binnen de organisatie worden grootschalige infrastructuur- en utiliteitsprojecten ontwikkeld, waaronder SCADA-systemen voor bruggen en sluizen.</p><p class="MsoNormal">Deze systemen bevatten complexe grafische gebruikersinterfaces (GUI’s) met tientallen tot honderden animatieobjecten, statusindicatoren en meldingen. Elk project wordt uitvoerig getest om te controleren of het systeem zich onder verschillende omstandigheden correct gedraagt. Een onderdeel van het bestaande testsysteem controleerde de GUI door specifieke pixelkleuren te vergelijken met vooraf ingestelde configuraties.</p><p class="MsoNormal">Deze aanpak werkte, maar was kwetsbaar. Kleine wijzigingen in positie, formaat of kleur van een object zorgden ervoor dat configuraties aangepast moesten worden. Daarnaast kon het testsysteem geen echte gebruikersinteractie nabootsen; knoppen werden intern via tags aangestuurd in plaats van via muis- of toetsenbordinteractie.</p><p class="MsoNormal">De opdracht was om te onderzoeken hoe beeldherkenning kon worden ingezet om dit testsysteem robuuster, flexibeler en realistischer te maken, en om deze oplossing daadwerkelijk te realiseren en te integreren binnen het bestaande testlandschap.</p><hr><h2 class="MsoNormal">De uitdaging</h2><p class="MsoNormal">Het doel was om een GUI-testadapter te ontwikkelen die:</p><ul style="margin-top: 0cm;"><li><p>Visuele objecten en animaties herkent op basis van beeldherkenning</p></li><li><p>Teksten en meldingen kan detecteren en valideren</p></li><li><p>Minder gevoelig is voor kleine wijzigingen in vorm, positie of kleur</p></li><li><p>Bediencommando’s uitvoert zoals een echte gebruiker (muis- en toetsenbordinteractie)</p></li><li><p>Aansluit op het bestaande testsysteem</p></li><li><p>Toepasbaar is op zowel Windows als Linux</p></li></ul><p class="MsoNormal">Daarbij moest gebruik worden gemaakt van een open-source beeldherkenningsbibliotheek en moest de oplossing uitbreidbaar, onderhoudbaar en betrouwbaar blijven.</p><p class="MsoNormal">Dit betekende dat ik mij moest verdiepen in:</p><ul style="margin-top: 0cm;"><li><p>Beeldverwerking en template matching</p></li><li><p>Tekstherkenning (OCR)</p></li><li><p>Detectie van animatiestaten en GUI-objecten</p></li><li><p>Het bepalen van mate van overeenkomst (confidence scoring)</p></li><li><p>Cross-platform toepasbaarheid</p></li><li><p>Integratie binnen een bestaand, bedrijfskritisch testsysteem</p></li></ul><hr><h2 class="MsoNormal">Aanpak en realisatie</h2><p class="MsoNormal">Het project is uitgevoerd in drie fasen: analyse, proof-of-concept en realisatie.</p><p class="MsoNormal">In de eerste fase heb ik het bestaande testsysteem geanalyseerd, collega’s geïnterviewd en de huidige testmethodiek volledig in kaart gebracht. In de tweede fase heb ik middels een proof-of-concept aangetoond dat beeldherkenning geschikt was om GUI-objecten én teksten betrouwbaar te detecteren, inclusief positie en overeenkomstscore.</p><p class="MsoNormal">In de laatste fase heb ik de oplossing doorontwikkeld tot een volwaardig product dat in productie is genomen. De testadapter is ontwikkeld in C# en uitgebreid met een configuratiescherm waarmee testobjecten sneller en eenvoudiger kunnen worden toegevoegd en beheerd.</p><p class="MsoNormal">De uiteindelijke oplossing kon:</p><ul style="margin-top: 0cm;"><li><p>Animatieobjecten herkennen en hun toestand bepalen</p></li><li><p>Teksten en meldingen herkennen en valideren</p></li><li><p>De overeenkomst met de verwachte configuratie berekenen</p></li><li><p>Bediencommando’s uitvoeren via gesimuleerde gebruikersinteractie</p></li></ul><p class="MsoNormal">De oplossing werd onder andere toegepast binnen het project Groot Onderhoud Bruggen en Sluizen (GOBS), waar de GUI van onder meer Urkersluis als testobject diende.</p><hr><h2 class="MsoNormal">Resultaat</h2><p class="MsoNormal">De nieuwe GUI-testadapter heeft het bestaande pixel-gebaseerde testsysteem aanzienlijk robuuster gemaakt. Kleine wijzigingen in GUI-elementen leidden niet langer direct tot falende tests, terwijl animaties én teksten betrouwbaar konden worden herkend en gevalideerd. Gebruikersinteracties konden daarnaast realistischer worden nagebootst.</p><p class="MsoNormal">De oplossing is daadwerkelijk in productie genomen en inzetbaar gemaakt voor bestaande en toekomstige projecten. Hiermee werd een structurele verbetering gerealiseerd binnen het testproces van SCADA-systemen.</p><hr><h2 class="MsoNormal">Terugblik</h2><p class="MsoNormal">Dit project markeert het begin van mijn werk met C#. Het was technisch uitdagend en vroeg om zelfstandig onderzoek, experimenteren en het vertalen van theoretische beeldverwerking naar een praktisch en productierijp systeem.</p><p class="MsoNormal">De afstudeerscriptie is beoordeeld met een 9, wat voor mij een bevestiging was van zowel de technische diepgang als de praktische toepasbaarheid van de oplossing. Na afronding van mijn studie ben ik nog enkele jaren werkzaam gebleven bij Croonwolter&amp;dros, waar ik mijn ontwikkeling als software engineer verder heb voortgezet.</p><p class="MsoNormal">Wat ik in dit project heb geleerd, het analyseren van bestaande systemen, het kritisch bevragen van aannames en het uitwerken van een proof of concept tot een productieoplossing, vormt nog altijd de basis van mijn manier van werken.</p>        </div>
+</div>
+
+</div>
+
+
     <br />
 
     
@@ -144,7 +163,7 @@
           <a href="/nl/portfolio/erp-voor-gordijnatelier/" class="btn btn-outline-secondary ">
             <i class="bi bi-arrow-left me-2"></i> Vorige project
           </a>
-          <a href="/nl/portfolio/stock-app/" class="btn btn-outline-secondary ">
+          <a href="/nl/portfolio/magazijn-beheer-software/" class="btn btn-outline-secondary ">
             Volgende project <i class="bi bi-arrow-right ms-2"></i>
           </a>
         </nav>

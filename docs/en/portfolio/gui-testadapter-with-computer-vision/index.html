@@ -87,14 +87,13 @@
 
     <main>
         
-
 <article id="project" class="container my-2">
     
         <nav class="project-nav d-flex justify-content-between align-items-center">
           <a href="/en/portfolio/erp-for-curtain-studio/" class="btn btn-outline-secondary ">
             <i class="bi bi-arrow-left me-2"></i> Vorige project
           </a>
-          <a href="/en/portfolio/stock-app/" class="btn btn-outline-secondary ">
+          <a href="/en/portfolio/warehouse-management-software/" class="btn btn-outline-secondary ">
             Volgende project <i class="bi bi-arrow-right ms-2"></i>
           </a>
         </nav>
@@ -102,6 +101,7 @@
     <div class="row gy-4 mb-3">
         <div class="col-lg-8">
             <h1 class="mb-3">GUI testadapter with computer vision</h1>
+                <p class="lead"><p>My graduation project at Croonwolter&amp;dros marked the beginning of my career in C#. Within this project, I developed a production ready GUI test adapter based on image recognition, making the testing of SCADA systems for large scale infrastructure projects more robust and realistic.</p></p>
                 <img class="img-fluid rounded w-100" src="/media/k4knctou/gta-main-image.png" alt="GUI testadapter with computer vision" />
         </div>
 
@@ -113,7 +113,7 @@
                             <dt class="col-5">Start</dt>
                             <dd class="col-7">January 2019</dd>
                         <dt class="col-5">End</dt>
-                        <dd class="col-7">active</dd>
+                        <dd class="col-7">July 2020</dd>
 
                             <dt class="col-5">Complexity</dt>
                             <dd class="col-7"><span class= "badge rounded-pill text-bg-secondary"> 7 / 10 </span ></dd>
@@ -127,6 +127,7 @@
                             <dd class="col-7">
                                     <span class="badge rounded-pill text-bg-light border">C#</span>
                                     <span class="badge rounded-pill text-bg-light border">SQL</span>
+                                    <span class="badge rounded-pill text-bg-light border">xUnit / NUnit</span>
                                     <span class="badge rounded-pill text-bg-light border">GIT</span>
                             </dd>
                     </dl>
@@ -136,6 +137,25 @@
     </div>
 
 
+<div class="umb-block-grid"
+     data-grid-columns="12;"
+     style="--umb-block-grid--grid-columns: 12;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richTextBlock"
+            data-content-element-type-key="19fc62fa-f85a-4641-a6f0-a273e0c334ea"
+            data-element-key="1f780bc1-7c40-4e83-93f6-326236bd0c57"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+<h2 data-start="132" data-end="154">About the Project</h2><p data-start="156" data-end="462">My graduation project at Croonwolter&amp;dros was my first real assignment in C#, and at the same time a project that immediately combined responsibility with technical depth. Within the organization, large scale infrastructure and utility projects are developed, including SCADA systems for bridges and locks.</p><p data-start="464" data-end="825">These systems contain complex graphical user interfaces with dozens to hundreds of animated objects, status indicators, and notifications. Each project is extensively tested to ensure the system behaves correctly under various conditions. Part of the existing test system verified the GUI by comparing specific pixel colors with predefined configuration values.</p><p data-start="827" data-end="1124">This approach worked, but it was fragile. Small changes in position, size, or color of an object required configuration updates. In addition, the test system could not simulate real user interaction. Buttons were triggered internally through tags rather than through mouse or keyboard interaction.</p><p data-start="1126" data-end="1351">The assignment was to investigate how image recognition could be used to make this test system more robust, flexible, and realistic, and to actually implement and integrate this solution within the existing testing landscape.</p><hr data-start="1353" data-end="1356"><h2 data-start="1358" data-end="1376">The Challenge</h2><p data-start="1378" data-end="1432">The goal was to develop a GUI test adapter that could:</p><ul data-start="1434" data-end="1806"><li><p data-start="1436" data-end="1501">Recognize visual objects and animations using image recognition</p></li><li><p data-start="1504" data-end="1549">Detect and validate texts and notifications</p></li><li><p data-start="1552" data-end="1617">Be less sensitive to small changes in shape, position, or color</p></li><li><p data-start="1620" data-end="1718">Execute control commands in the same way a real user would, using mouse and keyboard interaction</p></li><li><p data-start="1721" data-end="1762">Integrate with the existing test system</p></li><li><p data-start="1765" data-end="1806">Be applicable on both Windows and Linux</p></li></ul><p data-start="1808" data-end="1923">The solution had to use an open source image recognition library and remain extensible, maintainable, and reliable.</p><p data-start="1925" data-end="1962">This required in depth research into:</p><ul data-start="1964" data-end="2249"><li><p data-start="1966" data-end="2006">Image processing and template matching</p></li><li><p data-start="2009" data-end="2040">Optical character recognition</p></li><li><p data-start="2043" data-end="2091">Detection of animation states and GUI elements</p></li><li><p data-start="2094" data-end="2150">Determining similarity levels using confidence scoring</p></li><li><p data-start="2153" data-end="2183">Cross platform applicability</p></li><li><p data-start="2186" data-end="2249">Integration within an existing, business critical test system</p></li></ul><hr data-start="2251" data-end="2254"><h2 data-start="2256" data-end="2288">Approach and Implementation</h2><p data-start="2290" data-end="2376">The project was executed in three phases: analysis, proof of concept, and realization.</p><p data-start="2378" data-end="2682">In the first phase, I analyzed the existing test system, interviewed colleagues, and fully mapped the current testing methodology. In the second phase, I demonstrated through a proof of concept that image recognition could reliably detect GUI objects and texts, including position and similarity scoring.</p><p data-start="2684" data-end="2944">In the final phase, I further developed the solution into a fully functional product that was taken into production. The test adapter was developed in C# and extended with a configuration interface that made it easier and faster to add and manage test objects.</p><p data-start="2946" data-end="2980">The final solution was capable of:</p><ul data-start="2982" data-end="3222"><li><p data-start="2984" data-end="3043">Recognizing animation objects and determining their state</p></li><li><p data-start="3046" data-end="3098">Recognizing and validating texts and notifications</p></li><li><p data-start="3101" data-end="3156">Calculating the match with the expected configuration</p></li><li><p data-start="3159" data-end="3222">Executing control commands through simulated user interaction</p></li></ul><p data-start="3224" data-end="3380">The solution was applied within the Major Maintenance Bridges and Locks project, where the GUI of Urkersluis served as one of the primary test environments.</p><hr data-start="3382" data-end="3385"><h2 data-start="3387" data-end="3398">Result</h2><p data-start="3400" data-end="3733">The new GUI test adapter significantly improved the robustness of the original pixel based testing approach. Small modifications in GUI elements no longer immediately caused failing tests, while both animations and texts could be reliably recognized and validated. User interaction could also be simulated in a more realistic manner.</p><p data-start="3735" data-end="3917">The solution was successfully deployed to production and made available for both existing and future projects. This resulted in a structural improvement of the SCADA testing process.</p><hr data-start="3919" data-end="3922"><h2 data-start="3924" data-end="3939">Reflection</h2><p data-start="3941" data-end="4174">This project marked the beginning of my work with C#. It was technically challenging and required independent research, experimentation, and translating theoretical image processing concepts into a practical, production ready system.</p><p data-start="4176" data-end="4444">The graduation thesis received a grade of 9, which confirmed both the technical depth and practical applicability of the solution. After completing my studies, I continued working at Croonwolter&amp;dros for several years, further developing myself as a software engineer.</p><p data-start="4446" data-end="4664" data-is-last-node="" data-is-only-node="">What I learned in this project, analyzing existing systems, critically questioning assumptions, and developing a proof of concept into a production solution, still forms the foundation of how I approach projects today.</p>        </div>
+</div>
+
+</div>
+
+
     <br />
 
     
@@ -143,7 +163,7 @@
           <a href="/en/portfolio/erp-for-curtain-studio/" class="btn btn-outline-secondary ">
             <i class="bi bi-arrow-left me-2"></i> Vorige project
           </a>
-          <a href="/en/portfolio/stock-app/" class="btn btn-outline-secondary ">
+          <a href="/en/portfolio/warehouse-management-software/" class="btn btn-outline-secondary ">
             Volgende project <i class="bi bi-arrow-right ms-2"></i>
           </a>
         </nav>
