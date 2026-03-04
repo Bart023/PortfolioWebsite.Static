@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="nl" data-bs-theme="light">
+<head>
+    <script> !function(){try{ document.documentElement.setAttribute('data-bs-theme', localStorage.getItem('theme') || 'light'); }catch(e){} }(); </script>
+    <title>Online marktplaats</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex"> 
+    <link rel="icon" type="image" href="/assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?v=2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=Uv8XcHNckdOhn5HmAx3-9SqQzblzLpvIlRQBEKNW8w0" />
+    <link rel="stylesheet" href="/assets/css/Components/ImageStripBlock.css?v=ot95SaMfz2f6DU6dfYeFG5i7FyNGWzuOMkkxuM78z7I" />
+    <link rel="stylesheet" href="/assets/css/Components/ContentCardBlock.css?v=QPF9Fb7yjSvxRu-RiUo27zFZ0HuH08BA5K_9cTWmb-k" />
+    <link rel="stylesheet" href="/assets/css/Components/CodeSnipetBlock.css?v=wnBa0Oq1lu-70ZWLBDFxI56qgF34sgJCdeeWVEkhoCM" />
+    <link rel="stylesheet" href="/assets/css/Views/AboutMePage.css?v=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U" />
+    <link rel="stylesheet" href="/assets/css/Views/ProjectsOverviewPage.css?v=BFj6eBZb6kxA7aqb20FTpVAl7PfGxF7hg_ssac4776k" />
+    <link rel="stylesheet" href="/assets/css/Views/ProjectDetailPage.css?v=Ieu27vwigz-QyW2SUThqS4rqaKXyKQJFKJgh1R1HQFM" />
+    <link rel="stylesheet" href="/assets/css/Views/SkillsOverviewPage.css?v=KcUCnII0qJOoKzhARsKVdVp01QJmwpqNweUH-L0FmaM" />
+    <link rel="stylesheet" href="/assets//prism/prism.css?v=3ICmFVZTbZLwKKL1_jEDIajWXaBkZGvvrV-jUn3Ro10" />
+</head>
+<body class="bg-body-tertiary">
+    <header class="sticky-top">
+        
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand mx-auto ms-lg-4 pe-5" href="/nl/">Bart van der Burg</a>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto me-5">
+                <li class="nav-item">
+                    <a class="nav-link hover-underline" href="/nl/over-mij/">Over mij</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover-underline" href="/nl/portfolio/">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover-underline" href="/nl/vaardigheden/">Vaardigheden</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover-underline" href="/nl/contact/">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown position-absolute top-0 end-0 mt-1 me-1">
+            <button class="btn btn-outline-secondary border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear-fill fs-4"></i>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+                <li class="dropdown-header fw-bold">Thema</li>
+                <li>
+                    <button class="dropdown-item" id="toggleTheme">
+                        <i class="bi bi-sun-fill me-2"></i>
+                        <span id="theme-pill-light">Light</span> / <span id="theme-pill-dark">Dark</span>
+                    </button>
+                </li>
+
+                <li><hr class="dropdown-divider"></li>
+
+                <li class="dropdown-header fw-bold">Taal</li>
+                <li>
+                    <a class="dropdown-item language-option" data-lang="nl" href="#">
+                        🇳🇱 Nederlands
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item language-option" data-lang="en" href="#">
+                        🇬🇧 English
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+        <nav aria-label="breadcrumb" class="breadcrumb-nav bg-body-tertiary"><ol class="breadcrumb container p-2 rounded"><li class="breadcrumb-item"><a href="/nl/"><i class="bi bi-house-door"></i></a></li><li class="breadcrumb-item"><a href="/nl/portfolio/">Portfolio</a></li><li class="breadcrumb-item active" aria-current="page">Online marktplaats</li></ol></nav>
+    </header>
+
+    <main>
+        
+<article id="project" class="container my-2">
+    
+        <nav class="project-nav d-flex justify-content-between align-items-center">
+          <a href="/nl/portfolio/wateranalyses-controlesysteem/" class="btn btn-outline-secondary ">
+            <i class="bi bi-arrow-left me-2"></i> Vorige project
+          </a>
+          <a href="/nl/portfolio/rijbewijsvalidator/" class="btn btn-outline-secondary ">
+            Volgende project <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </nav>
+
+    <div class="row gy-4 mb-3">
+        <div class="col-lg-8">
+            <h1 class="mb-3">Online marktplaats</h1>
+                <p class="lead"><p>Mijn meest realistische en uitgebreide leer- en probeeromgeving. Een marktplaats waarop derde partijen zich kunnen registreren en producten kunnen verkopen, gebouwd om techniek- en architectuurkeuzes zoals Clean Architecture, DDD, CQRS en cloudoplossingen in een realistische en productiegerichte context toe te passen en verder te verdiepen.</p></p>
+                <img class="img-fluid rounded w-100" src="/media/x2pggwwz/online-marketplace-main.png" alt="Online marktplaats" />
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow-sm project-info-card sticky-lg-top" style="top: 7rem;">
+                <div class="card-body bg-body-secondary">
+                    <h5 class="card-title mb-3"><i class="bi bi-info-circle me-2"></i>Project info</h5>
+                    <dl class="row mb-0 small">
+                            <dt class="col-5">Start</dt>
+                            <dd class="col-7">mei 2022</dd>
+                        <dt class="col-5">End</dt>
+                        <dd class="col-7">januari 0001</dd>
+
+                            <dt class="col-5">Complexity</dt>
+                            <dd class="col-7"><span class= "badge rounded-pill text-bg-secondary"> 8 / 10 </span ></dd>
+                            <dt class="col-5">Team size</dt>
+                            <dd class="col-7">1</dd>
+                            <dt class="col-5">Type</dt>
+                            <dd class="col-7">
+                                    <span class="badge rounded-pill text-bg-light border">E-commerce</span>
+                            </dd>
+                            <dt class="col-5">Stack</dt>
+                            <dd class="col-7">
+                                    <span class="badge rounded-pill text-bg-light border">C#</span>
+                                    <span class="badge rounded-pill text-bg-light border">TypeScript</span>
+                                    <span class="badge rounded-pill text-bg-light border">YAML</span>
+                                    <span class="badge rounded-pill text-bg-light border">HTML &amp; CSS</span>
+                                    <span class="badge rounded-pill text-bg-light border">SQL</span>
+                                    <span class="badge rounded-pill text-bg-light border">Javascript</span>
+                                    <span class="badge rounded-pill text-bg-light border">Blazor WASM</span>
+                                    <span class="badge rounded-pill text-bg-light border">ASP.NET Core RazorPages</span>
+                                    <span class="badge rounded-pill text-bg-light border">Entity Framework Core</span>
+                                    <span class="badge rounded-pill text-bg-light border">xUnit / NUnit</span>
+                                    <span class="badge rounded-pill text-bg-light border">MudBlazor</span>
+                                    <span class="badge rounded-pill text-bg-light border">GIT</span>
+                                    <span class="badge rounded-pill text-bg-light border">Azure</span>
+                                    <span class="badge rounded-pill text-bg-light border">Kubernetes</span>
+                                    <span class="badge rounded-pill text-bg-light border">Pulumi</span>
+                                    <span class="badge rounded-pill text-bg-light border">Postman</span>
+                                    <span class="badge rounded-pill text-bg-light border">Linux</span>
+                                    <span class="badge rounded-pill text-bg-light border">Docker</span>
+                                    <span class="badge rounded-pill text-bg-light border">CI/CD</span>
+                            </dd>
+                            <dt class="col-5">Live</dt>
+                            <dd class="col-7"><a href="https://test.pekkie.nl" target="_blank">https://test.pekkie.nl</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="umb-block-grid"
+     data-grid-columns="12;"
+     style="--umb-block-grid--grid-columns: 12;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richTextBlock"
+            data-content-element-type-key="19fc62fa-f85a-4641-a6f0-a273e0c334ea"
+            data-element-key="9f0a0b80-ac23-48fd-a3f0-5d68ea3b0c58"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+<h2 data-start="193" data-end="214" data-pm-slice="1 1 []">Over het project</h2><p data-start="216" data-end="452">Dit project is mijn meest uitgebreide en realistische leer- en probeeromgeving. Sinds 2022 gebruik ik dit project om nieuwe tools, technieken, architectuurkeuzes en cloudoplossingen in een praktische context toe te passen en te toetsen.</p><p data-start="454" data-end="663">Het platform is opgezet als een marktplaats waarop derde partijen zich kunnen registreren en hun eigen producten kunnen aanbieden en verkopen, inclusief uitgebreide productspecificaties en filtermogelijkheden.</p><p data-start="665" data-end="967">In de afgelopen jaren ben ik twee keer vrijwel volledig opnieuw begonnen, omdat eerdere versies niet meer aansloten bij mijn huidige kennis en inzichten. Elke herstart was daarbij een bewuste keuze om techniek, architectuur en ontwerpprincipes beter te laten aansluiten bij mijn groei als ontwikkelaar.</p><hr><p></p>        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="imageStripBlock"
+            data-content-element-type-key="13f1082d-191f-4d70-961b-f541942a70c7"
+            data-element-key="b02b35d1-1a09-488d-9451-8df15c66c3e1"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+    <div class="filmstrip-wrapper" data-filmstrip-id="29bcf47987">
+        <button class="filmstrip-arrow left" data-direction="left">‹</button>
+        <div class="filmstrip-container" id="29bcf47987">
+                <div class="filmstrip-item" data-index="0" data-img-url="/media/yyrhshkd/frontend-screenshot-home_1.png" data-img-name="frontend-screenshot-Home_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/yyrhshkd/frontend-screenshot-home_1.png" alt="frontend-screenshot-Home_1.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="1" data-img-url="/media/fgoh35sk/frontend-screenshot-catalog_1.png" data-img-name="frontend-screenshot-Catalog_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/fgoh35sk/frontend-screenshot-catalog_1.png" alt="frontend-screenshot-Catalog_1.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="2" data-img-url="/media/oealmtrz/frontend-screenshot-productpage_1.png" data-img-name="frontend-screenshot-ProductPage_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/oealmtrz/frontend-screenshot-productpage_1.png" alt="frontend-screenshot-ProductPage_1.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="3" data-img-url="/media/osqp5214/frontend-screenshot-shoppingcart_1.png" data-img-name="frontend-screenshot-ShoppingCart_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/osqp5214/frontend-screenshot-shoppingcart_1.png" alt="frontend-screenshot-ShoppingCart_1.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="4" data-img-url="/media/bekixgnx/frontend-screenshot-addproduct_1.png" data-img-name="frontend-screenshot-AddProduct_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/bekixgnx/frontend-screenshot-addproduct_1.png" alt="frontend-screenshot-AddProduct_1.png" style="object-fit:cover" />
+                </div>
+        </div>
+        <button class="filmstrip-arrow right" data-direction="right">›</button>
+    </div>
+    <!-- Overlay -->
+    <div id="overlay-29bcf47987" class="image-overlay">
+        <button class="overlay-close" data-overlay-close>✕</button>
+        <button class="filmstrip-arrow left" data-overlay-nav="prev">‹</button>
+        <button class="filmstrip-arrow right" data-overlay-nav="next">›</button>
+        <div class="overlay-content">
+            <img id="overlay-img-29bcf47987" src="" alt="" />
+        </div>
+    </div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richTextBlock"
+            data-content-element-type-key="19fc62fa-f85a-4641-a6f0-a273e0c334ea"
+            data-element-key="2c331de4-a3bd-4992-a0df-885d1e847e69"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+<hr data-start="969" data-end="1011"><h2 data-start="1013" data-end="1030">Architectuur</h2><p data-start="1032" data-end="1346">De huidige architectuur is gebaseerd op Clean Architecture in combinatie met CQRS, MediatR en rich domain models. Hiervoor heb ik gekozen omdat dit past bij hoe ik graag werk: duidelijke structuur in de code zonder het onnodig complex te maken, waarbij de codebase testbaar, onderhoudbaar en overzichtelijk blijft.</p><p data-start="1348" data-end="1645">De domeinlogica is ondergebracht in de domeinmodellen zelf, waarbij business rules en validaties niet in de handlers of services maar in de aggregates zijn geplaatst. Dit sluit aan bij DDD-principes en zorgt ervoor dat de kern van het systeem onafhankelijk blijft van infrastructuur en frameworks.</p><p data-start="1647" data-end="1985">De verschillende domeinen zijn verder logisch gescheiden, maar nog niet volledig gemodelleerd als expliciete bounded contexts. Een volgende stap in de ontwikkeling van dit project is het verder isoleren van deze domeinen en het explicieter toepassen van Domain Driven Design om complexiteit beter te beheersen naarmate het project groeit.</p><hr data-start="1987" data-end="2029"><h2 data-start="2031" data-end="2050">Infrastructuur</h2><p data-start="2052" data-end="2310">Voor hosting gebruik ik Azure Container Apps. Hiervoor heb ik gekozen omdat ik de kracht van Kubernetes, zoals automatische schaalbaarheid, revisiebeheer en containergebaseerde deployments, wilde benutten zonder zelf een Kubernetes cluster te hoeven beheren.</p><p data-start="2312" data-end="2698">Eerder heb ik het platform gehost in een Azure Kubernetes cluster om hands-on ervaring op te doen met Kubernetes. Hoewel dit erg leerzaam was, bleek de complexiteit van het beheer in deze fase niet in verhouding te staan tot wat het platform nodig had. Daarom heb ik gekozen voor Azure Container Apps om mijn tijd vooral te besteden aan het product zelf in plaats van aan clusterbeheer.</p><p data-start="2700" data-end="2964">Voor het beheren van de infrastructuur gebruik ik Pulumi. Dit is een Infrastructure as Code tool waarmee de volledige cloudinfrastructuur in C# kan worden beschreven. Zowel de Kubernetesomgeving als de Azure Container Apps-omgeving zijn hiermee volledig ingericht.</p><hr data-start="2966" data-end="3008"><h2 data-start="3010" data-end="3032">Technische keuzes</h2><p data-start="3034" data-end="3387">• Storefront: ASP.NET Core Razor Pages – voor performance en maximale controle<br>• Portaal voor beheerders en verkopers: Blazor – voor snelle ontwikkeling en rijke interactie<br>• Data toegang: Entity Framework Core – voor eenvoud en betrouwbaarheid<br>• Source control en CI/CD: GitHub<br>• Hosting: Azure Container Apps<br>• Infrastructuurbeheer: Pulumi</p>        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="imageStripBlock"
+            data-content-element-type-key="13f1082d-191f-4d70-961b-f541942a70c7"
+            data-element-key="116d0ef3-53c8-4593-8b14-57c78bc50fdf"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+    <div class="filmstrip-wrapper" data-filmstrip-id="2caf0e1152">
+        <button class="filmstrip-arrow left" data-direction="left">‹</button>
+        <div class="filmstrip-container" id="2caf0e1152">
+                <div class="filmstrip-item" data-index="0" data-img-url="/media/5irdl1mf/solution-diagram.png" data-img-name="Solution-diagram.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/5irdl1mf/solution-diagram.png" alt="Solution-diagram.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="1" data-img-url="/media/slib0geo/solution-screenshot-high-overview.png" data-img-name="Solution-screenshot-high-overview.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/slib0geo/solution-screenshot-high-overview.png" alt="Solution-screenshot-high-overview.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="2" data-img-url="/media/eqlhraa2/solution-screenshot-storefront.png" data-img-name="Solution-screenshot-storefront.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/eqlhraa2/solution-screenshot-storefront.png" alt="Solution-screenshot-storefront.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="3" data-img-url="/media/vqvner2n/solution-screenshot-portal.png" data-img-name="Solution-screenshot-portal.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/vqvner2n/solution-screenshot-portal.png" alt="Solution-screenshot-portal.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="4" data-img-url="/media/qvrnf1ls/solution-screenshot-backend-api.png" data-img-name="Solution-screenshot-backend-API.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/qvrnf1ls/solution-screenshot-backend-api.png" alt="Solution-screenshot-backend-API.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="5" data-img-url="/media/ckile0tf/solution-screenshot-backend-application.png" data-img-name="Solution-screenshot-backend-application.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/ckile0tf/solution-screenshot-backend-application.png" alt="Solution-screenshot-backend-application.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="6" data-img-url="/media/43xpvesi/solution-screenshot-cloud-infra.png" data-img-name="Solution-screenshot-cloud-infra.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/43xpvesi/solution-screenshot-cloud-infra.png" alt="Solution-screenshot-cloud-infra.png" style="object-fit:cover" />
+                </div>
+        </div>
+        <button class="filmstrip-arrow right" data-direction="right">›</button>
+    </div>
+    <!-- Overlay -->
+    <div id="overlay-2caf0e1152" class="image-overlay">
+        <button class="overlay-close" data-overlay-close>✕</button>
+        <button class="filmstrip-arrow left" data-overlay-nav="prev">‹</button>
+        <button class="filmstrip-arrow right" data-overlay-nav="next">›</button>
+        <div class="overlay-content">
+            <img id="overlay-img-2caf0e1152" src="" alt="" />
+        </div>
+    </div>
+        </div>
+</div>
+
+</div>
+
+
+    <br />
+
+    
+        <nav class="project-nav d-flex justify-content-between align-items-center">
+          <a href="/nl/portfolio/wateranalyses-controlesysteem/" class="btn btn-outline-secondary ">
+            <i class="bi bi-arrow-left me-2"></i> Vorige project
+          </a>
+          <a href="/nl/portfolio/rijbewijsvalidator/" class="btn btn-outline-secondary ">
+            Volgende project <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </nav>
+
+</article>
+
+    </main>
+
+    
+
+<footer class="bg-body border-top mt-5">
+
+    <div class="container py-4">
+        <!-- Links -->
+        <div class="col-12 text-center">
+                <ul class="list-unstyled mb-0">
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/">
+                                Home
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/over-mij/">
+                                Over mij
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/portfolio/">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/vaardigheden/">
+                                Vaardigheden
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/nl/contact/">
+                                Contact
+                            </a>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="p-3 border-top">
+        <div class="text-md-start text-muted small">
+            © 2026 — bartvanderburg.nl
+        </div>
+    </div>
+
+</footer>
+
+
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/site.js?v=fR2YZk3ZCBltV9t3CfREqx-P4zLbQh-sarb7VPNA9w0"></script>
+    <script src="/assets/js/Components/FilmstripBehavior.js?v=4awiHrnqmjykIr7tWM2TDhlYFrcwOiWASuQG6aVk3oQ"></script>
+    <script src="/assets/js/Views/projectsOverviewPage.js?v=sHoVQPxm6iPNjOHjywBXzBXDkSDRF6ZP53Ti4LTKv5o"></script>
+    <script src="/assets/prism/prism.js?v=Vg3rNkvwWX1H31BDrsloYsglBMUlq8KIoSVhce-3lN8"></script>
+</body>
+</html>

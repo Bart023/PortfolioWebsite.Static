@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="nl" data-bs-theme="light">
+<head>
+    <script> !function(){try{ document.documentElement.setAttribute('data-bs-theme', localStorage.getItem('theme') || 'light'); }catch(e){} }(); </script>
+    <title>E-commerce marketplace</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex"> 
+    <link rel="icon" type="image" href="/assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?v=2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=Uv8XcHNckdOhn5HmAx3-9SqQzblzLpvIlRQBEKNW8w0" />
+    <link rel="stylesheet" href="/assets/css/Components/ImageStripBlock.css?v=ot95SaMfz2f6DU6dfYeFG5i7FyNGWzuOMkkxuM78z7I" />
+    <link rel="stylesheet" href="/assets/css/Components/ContentCardBlock.css?v=QPF9Fb7yjSvxRu-RiUo27zFZ0HuH08BA5K_9cTWmb-k" />
+    <link rel="stylesheet" href="/assets/css/Components/CodeSnipetBlock.css?v=wnBa0Oq1lu-70ZWLBDFxI56qgF34sgJCdeeWVEkhoCM" />
+    <link rel="stylesheet" href="/assets/css/Views/AboutMePage.css?v=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U" />
+    <link rel="stylesheet" href="/assets/css/Views/ProjectsOverviewPage.css?v=BFj6eBZb6kxA7aqb20FTpVAl7PfGxF7hg_ssac4776k" />
+    <link rel="stylesheet" href="/assets/css/Views/ProjectDetailPage.css?v=Ieu27vwigz-QyW2SUThqS4rqaKXyKQJFKJgh1R1HQFM" />
+    <link rel="stylesheet" href="/assets/css/Views/SkillsOverviewPage.css?v=KcUCnII0qJOoKzhARsKVdVp01QJmwpqNweUH-L0FmaM" />
+    <link rel="stylesheet" href="/assets//prism/prism.css?v=3ICmFVZTbZLwKKL1_jEDIajWXaBkZGvvrV-jUn3Ro10" />
+</head>
+<body class="bg-body-tertiary">
+    <header class="sticky-top">
+        
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand mx-auto ms-lg-4 pe-5" href="/en/">Bart van der Burg</a>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto me-5">
+                <li class="nav-item">
+                    <a class="nav-link hover-underline" href="/en/about-me/">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover-underline" href="/en/portfolio/">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover-underline" href="/en/skills/">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover-underline" href="/en/contact/">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown position-absolute top-0 end-0 mt-1 me-1">
+            <button class="btn btn-outline-secondary border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear-fill fs-4"></i>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+                <li class="dropdown-header fw-bold">Thema</li>
+                <li>
+                    <button class="dropdown-item" id="toggleTheme">
+                        <i class="bi bi-sun-fill me-2"></i>
+                        <span id="theme-pill-light">Light</span> / <span id="theme-pill-dark">Dark</span>
+                    </button>
+                </li>
+
+                <li><hr class="dropdown-divider"></li>
+
+                <li class="dropdown-header fw-bold">Taal</li>
+                <li>
+                    <a class="dropdown-item language-option" data-lang="nl" href="#">
+                        🇳🇱 Nederlands
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item language-option" data-lang="en" href="#">
+                        🇬🇧 English
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+        <nav aria-label="breadcrumb" class="breadcrumb-nav bg-body-tertiary"><ol class="breadcrumb container p-2 rounded"><li class="breadcrumb-item"><a href="/en/"><i class="bi bi-house-door"></i></a></li><li class="breadcrumb-item"><a href="/en/portfolio/">Portfolio</a></li><li class="breadcrumb-item active" aria-current="page">E-commerce marketplace</li></ol></nav>
+    </header>
+
+    <main>
+        
+<article id="project" class="container my-2">
+    
+        <nav class="project-nav d-flex justify-content-between align-items-center">
+          <a href="/en/portfolio/water-analysis-control-system/" class="btn btn-outline-secondary ">
+            <i class="bi bi-arrow-left me-2"></i> Vorige project
+          </a>
+          <a href="/en/portfolio/drivers-license-validator/" class="btn btn-outline-secondary ">
+            Volgende project <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </nav>
+
+    <div class="row gy-4 mb-3">
+        <div class="col-lg-8">
+            <h1 class="mb-3">E-commerce marketplace</h1>
+                <p class="lead"><p>My most realistic and extensive learning and experimentation environment. A marketplace where third parties can register and sell products, built to apply and further deepen technical and architectural choices such as Clean Architecture, DDD, CQRS and cloud solutions in a realistic, production oriented context.</p></p>
+                <img class="img-fluid rounded w-100" src="/media/x2pggwwz/online-marketplace-main.png" alt="E-commerce marketplace" />
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow-sm project-info-card sticky-lg-top" style="top: 7rem;">
+                <div class="card-body bg-body-secondary">
+                    <h5 class="card-title mb-3"><i class="bi bi-info-circle me-2"></i>Project info</h5>
+                    <dl class="row mb-0 small">
+                            <dt class="col-5">Start</dt>
+                            <dd class="col-7">May 2022</dd>
+                        <dt class="col-5">End</dt>
+                        <dd class="col-7">January 0001</dd>
+
+                            <dt class="col-5">Complexity</dt>
+                            <dd class="col-7"><span class= "badge rounded-pill text-bg-secondary"> 8 / 10 </span ></dd>
+                            <dt class="col-5">Team size</dt>
+                            <dd class="col-7">1</dd>
+                            <dt class="col-5">Type</dt>
+                            <dd class="col-7">
+                                    <span class="badge rounded-pill text-bg-light border">E-commerce</span>
+                            </dd>
+                            <dt class="col-5">Stack</dt>
+                            <dd class="col-7">
+                                    <span class="badge rounded-pill text-bg-light border">C#</span>
+                                    <span class="badge rounded-pill text-bg-light border">TypeScript</span>
+                                    <span class="badge rounded-pill text-bg-light border">YAML</span>
+                                    <span class="badge rounded-pill text-bg-light border">HTML &amp; CSS</span>
+                                    <span class="badge rounded-pill text-bg-light border">SQL</span>
+                                    <span class="badge rounded-pill text-bg-light border">Javascript</span>
+                                    <span class="badge rounded-pill text-bg-light border">Blazor WASM</span>
+                                    <span class="badge rounded-pill text-bg-light border">ASP.NET Core RazorPages</span>
+                                    <span class="badge rounded-pill text-bg-light border">Entity Framework Core</span>
+                                    <span class="badge rounded-pill text-bg-light border">xUnit / NUnit</span>
+                                    <span class="badge rounded-pill text-bg-light border">MudBlazor</span>
+                                    <span class="badge rounded-pill text-bg-light border">GIT</span>
+                                    <span class="badge rounded-pill text-bg-light border">Azure</span>
+                                    <span class="badge rounded-pill text-bg-light border">Kubernetes</span>
+                                    <span class="badge rounded-pill text-bg-light border">Pulumi</span>
+                                    <span class="badge rounded-pill text-bg-light border">Postman</span>
+                                    <span class="badge rounded-pill text-bg-light border">Linux</span>
+                                    <span class="badge rounded-pill text-bg-light border">Docker</span>
+                                    <span class="badge rounded-pill text-bg-light border">CI/CD</span>
+                            </dd>
+                            <dt class="col-5">Live</dt>
+                            <dd class="col-7"><a href="https://test.pekkie.nl" target="_blank">https://test.pekkie.nl</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="umb-block-grid"
+     data-grid-columns="12;"
+     style="--umb-block-grid--grid-columns: 12;">
+    
+<div class="umb-block-grid__layout-container">
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richTextBlock"
+            data-content-element-type-key="19fc62fa-f85a-4641-a6f0-a273e0c334ea"
+            data-element-key="9f0a0b80-ac23-48fd-a3f0-5d68ea3b0c58"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+<h2 data-start="143" data-end="165" data-pm-slice="1 1 []">About the project</h2><p data-start="167" data-end="399">This project is my most extensive and realistic learning and experimentation environment. Since 2022, I have been using it to apply and test new tools, techniques, architectural approaches and cloud solutions in a practical context.</p><p data-start="401" data-end="578">The platform is set up as a marketplace where third parties can register and offer their own products for sale, including extensive product specifications and filtering options.</p><p data-start="580" data-end="872">Over the past few years, I have restarted the project almost completely twice, because earlier versions no longer aligned with my current knowledge and insights. Each restart was a conscious decision to realign the technology, architecture and design principles with my growth as a developer.</p><hr><p></p>        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="imageStripBlock"
+            data-content-element-type-key="13f1082d-191f-4d70-961b-f541942a70c7"
+            data-element-key="b02b35d1-1a09-488d-9451-8df15c66c3e1"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+    <div class="filmstrip-wrapper" data-filmstrip-id="a5c921c923">
+        <button class="filmstrip-arrow left" data-direction="left">‹</button>
+        <div class="filmstrip-container" id="a5c921c923">
+                <div class="filmstrip-item" data-index="0" data-img-url="/media/yyrhshkd/frontend-screenshot-home_1.png" data-img-name="frontend-screenshot-Home_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/yyrhshkd/frontend-screenshot-home_1.png" alt="frontend-screenshot-Home_1.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="1" data-img-url="/media/fgoh35sk/frontend-screenshot-catalog_1.png" data-img-name="frontend-screenshot-Catalog_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/fgoh35sk/frontend-screenshot-catalog_1.png" alt="frontend-screenshot-Catalog_1.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="2" data-img-url="/media/oealmtrz/frontend-screenshot-productpage_1.png" data-img-name="frontend-screenshot-ProductPage_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/oealmtrz/frontend-screenshot-productpage_1.png" alt="frontend-screenshot-ProductPage_1.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="3" data-img-url="/media/osqp5214/frontend-screenshot-shoppingcart_1.png" data-img-name="frontend-screenshot-ShoppingCart_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/osqp5214/frontend-screenshot-shoppingcart_1.png" alt="frontend-screenshot-ShoppingCart_1.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="4" data-img-url="/media/bekixgnx/frontend-screenshot-addproduct_1.png" data-img-name="frontend-screenshot-AddProduct_1.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/bekixgnx/frontend-screenshot-addproduct_1.png" alt="frontend-screenshot-AddProduct_1.png" style="object-fit:cover" />
+                </div>
+        </div>
+        <button class="filmstrip-arrow right" data-direction="right">›</button>
+    </div>
+    <!-- Overlay -->
+    <div id="overlay-a5c921c923" class="image-overlay">
+        <button class="overlay-close" data-overlay-close>✕</button>
+        <button class="filmstrip-arrow left" data-overlay-nav="prev">‹</button>
+        <button class="filmstrip-arrow right" data-overlay-nav="next">›</button>
+        <div class="overlay-content">
+            <img id="overlay-img-a5c921c923" src="" alt="" />
+        </div>
+    </div>
+        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="richTextBlock"
+            data-content-element-type-key="19fc62fa-f85a-4641-a6f0-a273e0c334ea"
+            data-element-key="2c331de4-a3bd-4992-a0df-885d1e847e69"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+<hr data-start="874" data-end="877"><h2 data-start="879" data-end="896">Architecture</h2><p data-start="898" data-end="1215">The current architecture is based on Clean Architecture in combination with CQRS, MediatR and rich domain models. I chose this approach because it fits the way I prefer to work: clear structure in the code without making it unnecessarily complex, while keeping the codebase testable, maintainable and well structured.</p><p data-start="1217" data-end="1512">Domain logic is placed within the domain models themselves, where business rules and validations are implemented in the aggregates rather than in handlers or services. This aligns with DDD principles and ensures that the core of the system remains independent from infrastructure and frameworks.</p><p data-start="1514" data-end="1795">The different domains are logically separated, but not yet fully modeled as explicit bounded contexts. A next step in the evolution of this project is to further isolate these domains and apply Domain Driven Design more explicitly to better manage complexity as the platform grows.</p><hr data-start="1797" data-end="1800"><h2 data-start="1802" data-end="1821">Infrastructure</h2><p data-start="1823" data-end="2061">For hosting, I use Azure Container Apps. I chose this because I wanted the strengths of Kubernetes, such as automatic scaling, revision management and container based deployments, without having to manage a full Kubernetes cluster myself.</p><p data-start="2063" data-end="2455">Previously, I hosted the platform in an Azure Kubernetes cluster to gain hands on experience with Kubernetes. Although this was very educational, the complexity of managing the cluster at this stage was not proportional to what the platform actually required. For that reason, I moved to Azure Container Apps so I could spend more time on the product itself rather than on cluster management.</p><p data-start="2457" data-end="2724">For infrastructure management, I use Pulumi. This is an Infrastructure as Code tool that allows the entire cloud environment to be defined in C#. Both the Kubernetes environment and the Azure Container Apps environment have been fully provisioned using this approach.</p><hr data-start="2726" data-end="2729"><h2 data-start="2731" data-end="2753">Technical choices</h2><p data-start="2755" data-end="3093" data-is-last-node="" data-is-only-node="">• Storefront: <a target="" data-router-slot="disabled" href="http://ASP.NET" type="external">ASP.NET</a> Core Razor Pages – for performance and maximum control<br>• Admin and vendor portal: Blazor – for rapid development and rich interaction<br>• Data access: Entity Framework Core – for simplicity and reliability<br>• Source control and CI/CD: GitHub<br>• Hosting: Azure Container Apps<br>• Infrastructure management: Pulumi</p>        </div>
+        <div
+            class="umb-block-grid__layout-item"
+            data-content-element-type-alias="imageStripBlock"
+            data-content-element-type-key="13f1082d-191f-4d70-961b-f541942a70c7"
+            data-element-key="116d0ef3-53c8-4593-8b14-57c78bc50fdf"
+            data-col-span="12"
+            data-row-span="1"
+            style=" --umb-block-grid--item-column-span: 12; --umb-block-grid--item-row-span: 1; ">
+
+    <div class="filmstrip-wrapper" data-filmstrip-id="b6fa56898b">
+        <button class="filmstrip-arrow left" data-direction="left">‹</button>
+        <div class="filmstrip-container" id="b6fa56898b">
+                <div class="filmstrip-item" data-index="0" data-img-url="/media/5irdl1mf/solution-diagram.png" data-img-name="Solution-diagram.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/5irdl1mf/solution-diagram.png" alt="Solution-diagram.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="1" data-img-url="/media/slib0geo/solution-screenshot-high-overview.png" data-img-name="Solution-screenshot-high-overview.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/slib0geo/solution-screenshot-high-overview.png" alt="Solution-screenshot-high-overview.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="2" data-img-url="/media/eqlhraa2/solution-screenshot-storefront.png" data-img-name="Solution-screenshot-storefront.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/eqlhraa2/solution-screenshot-storefront.png" alt="Solution-screenshot-storefront.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="3" data-img-url="/media/vqvner2n/solution-screenshot-portal.png" data-img-name="Solution-screenshot-portal.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/vqvner2n/solution-screenshot-portal.png" alt="Solution-screenshot-portal.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="4" data-img-url="/media/qvrnf1ls/solution-screenshot-backend-api.png" data-img-name="Solution-screenshot-backend-API.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/qvrnf1ls/solution-screenshot-backend-api.png" alt="Solution-screenshot-backend-API.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="5" data-img-url="/media/ckile0tf/solution-screenshot-backend-application.png" data-img-name="Solution-screenshot-backend-application.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/ckile0tf/solution-screenshot-backend-application.png" alt="Solution-screenshot-backend-application.png" style="object-fit:cover" />
+                </div>
+                <div class="filmstrip-item" data-index="6" data-img-url="/media/43xpvesi/solution-screenshot-cloud-infra.png" data-img-name="Solution-screenshot-cloud-infra.png">
+                    <img class="img-fluid rounded shadow-sm" src="/media/43xpvesi/solution-screenshot-cloud-infra.png" alt="Solution-screenshot-cloud-infra.png" style="object-fit:cover" />
+                </div>
+        </div>
+        <button class="filmstrip-arrow right" data-direction="right">›</button>
+    </div>
+    <!-- Overlay -->
+    <div id="overlay-b6fa56898b" class="image-overlay">
+        <button class="overlay-close" data-overlay-close>✕</button>
+        <button class="filmstrip-arrow left" data-overlay-nav="prev">‹</button>
+        <button class="filmstrip-arrow right" data-overlay-nav="next">›</button>
+        <div class="overlay-content">
+            <img id="overlay-img-b6fa56898b" src="" alt="" />
+        </div>
+    </div>
+        </div>
+</div>
+
+</div>
+
+
+    <br />
+
+    
+        <nav class="project-nav d-flex justify-content-between align-items-center">
+          <a href="/en/portfolio/water-analysis-control-system/" class="btn btn-outline-secondary ">
+            <i class="bi bi-arrow-left me-2"></i> Vorige project
+          </a>
+          <a href="/en/portfolio/drivers-license-validator/" class="btn btn-outline-secondary ">
+            Volgende project <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </nav>
+
+</article>
+
+    </main>
+
+    
+
+<footer class="bg-body border-top mt-5">
+
+    <div class="container py-4">
+        <!-- Links -->
+        <div class="col-12 text-center">
+                <ul class="list-unstyled mb-0">
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/en/">
+                                Home
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/en/about-me/">
+                                About me
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/en/portfolio/">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/en/skills/">
+                                Skills
+                            </a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="text-decoration-none text-muted hover-underline" href="/en/contact/">
+                                Contact
+                            </a>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="p-3 border-top">
+        <div class="text-md-start text-muted small">
+            © 2026 — bartvanderburg.nl
+        </div>
+    </div>
+
+</footer>
+
+
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/site.js?v=fR2YZk3ZCBltV9t3CfREqx-P4zLbQh-sarb7VPNA9w0"></script>
+    <script src="/assets/js/Components/FilmstripBehavior.js?v=4awiHrnqmjykIr7tWM2TDhlYFrcwOiWASuQG6aVk3oQ"></script>
+    <script src="/assets/js/Views/projectsOverviewPage.js?v=sHoVQPxm6iPNjOHjywBXzBXDkSDRF6ZP53Ti4LTKv5o"></script>
+    <script src="/assets/prism/prism.js?v=Vg3rNkvwWX1H31BDrsloYsglBMUlq8KIoSVhce-3lN8"></script>
+</body>
+</html>
