@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("toggleTheme");
     const light = document.getElementById("theme-pill-light");
     const dark = document.getElementById("theme-pill-dark");
+    const sunIcon = document.getElementById("theme-icon-sun");
+    const moonIcon = document.getElementById("theme-icon-moon");
 
     let theme = localStorage.getItem("theme") || "light";
     applyTheme(theme);
@@ -38,11 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (theme === "light") {
             light.classList.add("badge", "rounded-pill", "text-bg-warning");
+            sunIcon.classList.remove("d-none");
+            moonIcon.classList.add("d-none");
         } else {
             dark.classList.add("badge", "rounded-pill", "text-bg-warning");
+            sunIcon.classList.add("d-none");
+            moonIcon.classList.remove("d-none");
         }
-
-        btn.querySelector("i").className = theme === "light" ? "bi bi-sun-fill me-2" : "bi bi-moon-fill me-2";
     }
 });
 
