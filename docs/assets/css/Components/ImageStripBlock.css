@@ -101,8 +101,8 @@
     .overlay-content img {
         width: auto;
         height: auto;
-        max-width: min(90vw, 90vh);
-        max-height: min(90vh, 90vw);
+        max-width: min(98vw, 98vh);
+        max-height: min(98vh, 98vw);
         object-fit: contain;
         border-radius: 4px;
     }

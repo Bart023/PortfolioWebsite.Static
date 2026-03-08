@@ -5,8 +5,9 @@
     <script> !function(){try{ document.documentElement.setAttribute('data-bs-theme', localStorage.getItem('theme') || 'light'); }catch(e){} }(); </script>
     <title>Home</title>
     <meta charset="utf-8" />
-    <link rel="icon" type="image" href="/assets/favicon.ico" />
+    <link rel="icon" type="image" href="/assets/favicon_16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex"> 
     
     <link rel="preload" href="/assets/bootstrap/css/bootstrap.min.css?v=WWqRjl1McctzGyNBLVsUXkKcIgOiPpv3upDv8-KRu7g" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?v=WWqRjl1McctzGyNBLVsUXkKcIgOiPpv3upDv8-KRu7g" /></noscript>
@@ -49,9 +50,9 @@
             </ul>
         </div>
 
-        <div class="dropdown position-absolute top-0 end-0 mt-1 me-1">
+        <div class="dropdown position-absolute top-0 end-0 mt-2 me-1">
             <button class="btn btn-outline-secondary border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="text-secondary ms-1" aria-hidden="true"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="bi ms-1" aria-hidden="true"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
   <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/></svg>
             </button>
 
@@ -59,8 +60,8 @@
                 <li class="dropdown-header fw-bold">Thema</li>
                 <li>
                     <button class="dropdown-item" id="toggleTheme">
-                        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="text-secondary me-2" aria-hidden="true"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
-                        <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="text-secondary me-2 d-none" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="bi text-secondary me-2" aria-hidden="true"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
+                        <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="bi text-secondary me-2 d-none" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
   <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></svg>
                         <span id="theme-pill-light">Light</span> / <span id="theme-pill-dark">Dark</span>
                     </button>
@@ -93,13 +94,11 @@
 
     <div class="position-relative">
         <div class="ratio" style="min-height: 250px; max-height: 25px;">
-            <img src="/media/hxsf1qif/backgroundbeige_0bc0f5b5.webp"
-                 alt="Header image" class="w-100 h-100 object-fit-cover rounded">
+            <img src="/media/hxsf1qif/backgroundbeige_222fd586.webp" width="100%" height="100%" class="object-fit-cover rounded" alt="Header image" loading="lazy" />
         </div>
         <div class="position-absolute top-100 start-50" style="transform: translate(-50%, -70%);">
             <div class="rounded-circle overflow-hidden border border-3 border-white shadow" style="width: 300px; height: 300px;">
-                <img src="/media/ofspmn4p/profielfoto-cartoon_a405e688.webp"
-                     alt="Bart van der Burg" class="w-100 h-100 object-fit-cover">
+                <img src="/media/ofspmn4p/profielfoto-cartoon_0127f56c.webp" width="100%" height="100%" class="object-fit-cover" alt="Bart van der Burg" loading="lazy" />
             </div>
         </div>
     </div>
@@ -131,8 +130,7 @@
     <div class="border rounded-3 p-3 bg-body shadow-sm position-relative content-card folded-corner-br">
         <div class="row g-4">
                 <div class="col-md-6">
-                     <img src="/media/bxrgkpiv/about-me-2_8d8025fe.webp"
-                          class="img-fluid rounded shadow-sm" alt="Over mij" height="100%" width="100%">
+                    <img src="/media/bxrgkpiv/about-me-2_313b741f.webp" width="100%" height="100%" class="img-fluid rounded shadow-sm" alt="Over mij" loading="lazy" />
                 </div>
 
             <div class="col-md-6 px-2">
@@ -166,8 +164,7 @@
             </div>
 
                 <div class="col-md-6">
-                     <img src="/media/2hrjvjxx/home-portfolio_230140a7.webp"
-                          class="img-fluid rounded shadow-sm" alt="Portfolio" height="100%" width="100%">
+                    <img src="/media/2hrjvjxx/home-portfolio_35cd5918.webp" width="100%" height="100%" class="img-fluid rounded shadow-sm" alt="Portfolio" loading="lazy" />
                 </div>
         </div>
 
@@ -189,8 +186,7 @@
     <div class="border rounded-3 p-3 bg-body shadow-sm position-relative content-card folded-corner-br">
         <div class="row g-4">
                 <div class="col-md-6">
-                     <img src="/media/ttkhtxte/vaardigheden-home-3_59ba603b.webp"
-                          class="img-fluid rounded shadow-sm" alt="Vaardigheden" height="100%" width="100%">
+                    <img src="/media/ttkhtxte/vaardigheden-home-3_506a20ed.webp" width="100%" height="100%" class="img-fluid rounded shadow-sm" alt="Vaardigheden" loading="lazy" />
                 </div>
 
             <div class="col-md-6 px-2">
@@ -224,8 +220,7 @@
             </div>
 
                 <div class="col-md-6">
-                     <img src="/media/s4kprdec/contact-home-2_e60749a6.webp"
-                          class="img-fluid rounded shadow-sm" alt="Contact" height="100%" width="100%">
+                    <img src="/media/s4kprdec/contact-home-2_a66fb8ee.webp" width="100%" height="100%" class="img-fluid rounded shadow-sm" alt="Contact" loading="lazy" />
                 </div>
         </div>
 

@@ -57,6 +57,7 @@
 }
 
 #projects .project-img {
+    border-radius: var(--bs-border-radius);
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
@@ -93,8 +94,9 @@
 }
 
 #projects.view-list .image-container .project-img {
-    border-radius: var(--bs-border-radius);
-    max-width: 220px;
+    height: fit-content;
+    max-width: 200px;
+    width: 20vw;
 }
 
 #projects.view-list .project-meta {
