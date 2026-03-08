@@ -51,7 +51,7 @@
         </div>
 
         <div class="dropdown position-absolute top-0 end-0 mt-2 me-1">
-            <button class="btn btn-outline-secondary border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-outline-secondary border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open settings menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="bi ms-1" aria-hidden="true"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
   <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/></svg>
             </button>
@@ -59,7 +59,7 @@
             <ul class="dropdown-menu dropdown-menu-end shadow">
                 <li class="dropdown-header fw-bold">Thema</li>
                 <li>
-                    <button class="dropdown-item" id="toggleTheme">
+                    <button class="dropdown-item" id="toggleTheme" aria-label="Toggle light and dark theme">
                         <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="bi text-secondary me-2" aria-hidden="true"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
                         <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="bi text-secondary me-2 d-none" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
   <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></svg>
@@ -71,21 +71,20 @@
 
                 <li class="dropdown-header fw-bold">Taal</li>
                 <li>
-                    <a class="dropdown-item language-option" data-lang="nl" href="#">
+                    <a class="dropdown-item language-option" data-lang="nl" href="#" aria-label="Schakel naar Nederlands">
                         🇳🇱 Nederlands
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-item language-option" data-lang="en" href="#">
+                    <a class="dropdown-item language-option" data-lang="en" href="#" aria-label="Switch to English">
                         🇬🇧 English
                     </a>
                 </li>
             </ul>
         </div>
-
     </div>
 </nav>
-        <nav aria-label="breadcrumb" class="breadcrumb-nav bg-body-tertiary"><ol class="breadcrumb container p-2 rounded"><li class="breadcrumb-item"><a href="/en/"><i class="bi bi-house-door"></i></a></li><li class="breadcrumb-item active" aria-current="page">Portfolio</li></ol></nav>
+        <nav aria-label="breadcrumb" class="breadcrumb-nav bg-body-tertiary"><ol class="breadcrumb container p-2 rounded"><li class="breadcrumb-item"><a href="/en/" aria-label="Go to homepage"><i class="bi bi-house-door"></i></a></li><li class="breadcrumb-item active" aria-current="page">Portfolio</li></ol></nav>
     </header>
 
     <main>
@@ -99,7 +98,7 @@
                 <span class="active-filter-count badge rounded-pill text-bg-warning gap-1" style="display:inline-block; top:0;">0</span>
                 <small class="visible-projects-count badge rounded-pill text-bg-light border">7 projects</small>
             </div>
-            <button id="projects-sidebar-close-btn" class="btn">✕</button>
+            <button id="projects-sidebar-close-btn" class="btn" aria-label="Close filters">✕</button>
         </div>
 
             <div class="mb-4">
@@ -276,22 +275,22 @@
         <div class="projects-header-container d-flex flex-wrap justify-content-between align-items-center mt-1 gap-2">
             <div class="d-flex gap-2 mb-2 w-100">
                 <div class="dropdown w-100">
-                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Sorting options">
                         Sorting
                     </button>
                     <ul class="dropdown-menu" id="sortOptions">
-                        <li><a class="dropdown-item active" href="#" data-sort="default">  Default </a></li>
-                        <li><a class="dropdown-item" href="#" data-sort="date-desc"> Date: high - low </a></li>
-                        <li><a class="dropdown-item" href="#" data-sort="date-asc"> Date: low - high </a></li>
-                        <li><a class="dropdown-item" href="#" data-sort="complexity"> Complexity </a></li>
+                        <li><a class="dropdown-item active" href="#" data-sort="default" aria-label="Sort by default order">  Default </a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="date-desc" aria-label="Sort by date: newest first"> Date: high - low </a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="date-asc" aria-label="Sort by date: oldest first"> Date: low - high </a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="complexity" aria-label="Sort by complexity"> Complexity </a></li>
                     </ul>
                 </div>
                 <div class="d-flex align-items-center gap-2 w-100">
-                    <button id="btnList" type="button" class="btn btn-outline-secondary w-100">☰ List </button>
-                    <button id="btnTiles" type="button" class="btn btn-outline-secondary w-100 d-none">▦ Tiles </button>
+                    <button id="btnList" type="button" class="btn btn-outline-secondary w-100" aria-label="Switch to list view">☰ List </button>
+                    <button id="btnTiles" type="button" class="btn btn-outline-secondary w-100 d-none" aria-label="Switch to tiles view">▦ Tiles </button>
                 </div>
             </div>
-            <button id="projects-sidebar-toggler" class="btn btn-outline-secondary sidebar-toggle-projects gap-2 mb-3">
+            <button id="projects-sidebar-toggler" class="btn btn-outline-secondary sidebar-toggle-projects gap-2 mb-3" aria-label="Toggle filters sidebar">
                 <span>☰ Filters </span>
                 <span class="active-filter-count badge rounded-pill text-bg-warning" style="display:inline-block; top:0;">0</span>
                 <small class="visible-projects-count badge rounded-pill text-bg-light border">7 projects</small>
@@ -304,7 +303,7 @@
                          data-start="2024-03-01"
                          data-difficulty="8"
                          data-with-code-examples="false">
-                    <a href="/en/portfolio/water-analysis-control-system/" class="card project-card">
+                    <a href="/en/portfolio/water-analysis-control-system/" class="card project-card" aria-label="View project: Water analysis control system">
 
                             <div class="image-container m-2">
                                 <img src="/media/anppkm0y/quality-control-system-for-water-analyses-main_2256e944.webp" width="100%" height="100%" class="project-img card-img-top" alt="Water analysis control system" loading="lazy" />
@@ -370,7 +369,7 @@
                          data-start="2022-05-01"
                          data-difficulty="8"
                          data-with-code-examples="true">
-                    <a href="/en/portfolio/e-commerce-marketplace/" class="card project-card">
+                    <a href="/en/portfolio/e-commerce-marketplace/" class="card project-card" aria-label="View project: E-commerce marketplace">
 
                             <div class="image-container m-2">
                                 <img src="/media/x2pggwwz/online-marketplace-main_80c40887.webp" width="100%" height="100%" class="project-img card-img-top" alt="E-commerce marketplace" loading="lazy" />
@@ -439,7 +438,7 @@
                          data-start="2025-08-01"
                          data-difficulty="9"
                          data-with-code-examples="false">
-                    <a href="/en/portfolio/drivers-license-validator/" class="card project-card">
+                    <a href="/en/portfolio/drivers-license-validator/" class="card project-card" aria-label="View project: Drivers license validator">
 
                             <div class="image-container m-2">
                                 <img src="/media/w4hbajby/driver-license-validator-main-2_3aa63936.webp" width="100%" height="100%" class="project-img card-img-top" alt="Drivers license validator" loading="lazy" />
@@ -490,7 +489,7 @@
                          data-start="2025-10-01"
                          data-difficulty="4"
                          data-with-code-examples="true">
-                    <a href="/en/portfolio/portfolio-website/" class="card project-card">
+                    <a href="/en/portfolio/portfolio-website/" class="card project-card" aria-label="View project: Portfolio website">
 
                             <div class="image-container m-2">
                                 <img src="/media/2hrjvjxx/home-portfolio_74ad2d79.webp" width="100%" height="100%" class="project-img card-img-top" alt="Portfolio website" loading="lazy" />
@@ -546,7 +545,7 @@
                          data-start="2025-03-01"
                          data-difficulty="6"
                          data-with-code-examples="false">
-                    <a href="/en/portfolio/erp-for-curtain-studio/" class="card project-card">
+                    <a href="/en/portfolio/erp-for-curtain-studio/" class="card project-card" aria-label="View project: ERP for curtain studio">
 
                             <div class="image-container m-2">
                                 <img src="/media/nyxkctfc/erp-curtain-studio-main-2_13a88b0a.webp" width="100%" height="100%" class="project-img card-img-top" alt="ERP for curtain studio" loading="lazy" />
@@ -609,7 +608,7 @@
                          data-start="2019-01-01"
                          data-difficulty="7"
                          data-with-code-examples="false">
-                    <a href="/en/portfolio/gui-testadapter-with-computer-vision/" class="card project-card">
+                    <a href="/en/portfolio/gui-testadapter-with-computer-vision/" class="card project-card" aria-label="View project: GUI testadapter with computer vision">
 
                             <div class="image-container m-2">
                                 <img src="/media/k4knctou/gta-main-image_8d147634.webp" width="100%" height="100%" class="project-img card-img-top" alt="GUI testadapter with computer vision" loading="lazy" />
@@ -660,7 +659,7 @@
                          data-start="2022-11-01"
                          data-difficulty="6"
                          data-with-code-examples="false">
-                    <a href="/en/portfolio/warehouse-management-software/" class="card project-card">
+                    <a href="/en/portfolio/warehouse-management-software/" class="card project-card" aria-label="View project: Warehouse management software">
 
                             <div class="image-container m-2">
                                 <img src="/media/p32fbjpu/warehouse-management-software_4982dbbc.webp" width="100%" height="100%" class="project-img card-img-top" alt="Warehouse management software" loading="lazy" />
