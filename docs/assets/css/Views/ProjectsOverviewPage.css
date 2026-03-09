@@ -72,15 +72,19 @@
         margin: 0;
     }
 
-/* Tiles view */
+/* --- Tiles view --- */
 #projects.view-tiles .project-meta {
     border-top: 1px solid var(--bs-card-border-color);
 }
 #projects.view-tiles .project-intro {
     display: none;
 }
+#projects.view-tiles .project-img {
+    height: 100%;
+    width: 100%;
+}
 
-/* List view */
+/* --- List view --- */
 #projects.view-list .project {
     flex: 0 0 100% !important;
 }
