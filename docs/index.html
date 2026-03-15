@@ -39,8 +39,8 @@
     <noscript><link rel="stylesheet" href="/assets/css/site.css?v=3Qf8bQa5sPMHVW5NHYRqlHR3HYwh3unb6w-qQVsKH-0" /></noscript>
 
     
-    <link rel="preload" href="/assets/css/Components/HomePage.css?v=Tc8AqKjGHHBT9MQM_B5VtJK1LTP6rI3SZCXMZv5I4yE" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="/assets/css/Components/HomePage.css?v=Tc8AqKjGHHBT9MQM_B5VtJK1LTP6rI3SZCXMZv5I4yE" /></noscript>
+    <!-- Critical CSS should load synchronously to prevent CLS -->
+    <link rel="stylesheet" href="/assets/css/Components/HomePage.css?v=3pkWn5I79eo5FvqNVu3tvdTaLE4ZSeCJP1q_0EPk8KQ" />
     
     <link rel="preload" href="/assets/css/Components/ContentCardBlock.css?v=jcBdciAs69eK7zm8O6zOCXV56Vroy-tqfoshdKi_V4o" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/assets/css/Components/ContentCardBlock.css?v=jcBdciAs69eK7zm8O6zOCXV56Vroy-tqfoshdKi_V4o" /></noscript>
@@ -176,7 +176,7 @@
         </div>
         <div class="position-absolute top-100 start-50" style="transform: translate(-50%, -70%);">
             <div class="rounded-circle overflow-hidden border border-3 border-white shadow">
-                <img itemprop="image" src="/media/ofspmn4p/profielfoto-cartoon_ca2d1576.webp" width="300" height="300" class="w-100 h-100" alt="Bart van der Burg | .NET developer" loading="lazy" />
+                <img itemprop="image" src="/media/ofspmn4p/profielfoto-cartoon_ca2d1576.webp" srcset="/media/ofspmn4p/profielfoto-cartoon_ca2d1576.webp 1x, /media/ofspmn4p/profielfoto-cartoon_31909d49.webp 2x, /media/ofspmn4p/profielfoto-cartoon_9a754a89.webp 3x" width="300" height="300" class="w-100 h-100" alt="Bart van der Burg | .NET developer" loading="lazy" />
             </div>
         </div>
     </section>
@@ -213,14 +213,72 @@
                 </div>
             </div>
             
-            <div class="tech-stack-preview" aria-label="Technologieën">
-                <span class="tech-badge">.NET</span>
-                <span class="tech-badge">C#</span>
-                <span class="tech-badge">Azure</span>
-                <span class="tech-badge">Microservices</span>
-                <span class="tech-badge">SQL Server</span>
-                <span class="tech-badge">Docker</span>
-            </div>
+                <div class="tech-stack-carousel" aria-label="[[Technologies]]">
+                    <div class="tech-stack-track">
+                            <span class="tech-badge">.NET MAUI</span>
+                            <span class="tech-badge">ASP.NET Core RazorPages</span>
+                            <span class="tech-badge">Azure</span>
+                            <span class="tech-badge">Blazor WASM</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">C#</span>
+                            <span class="tech-badge">CI/CD</span>
+                            <span class="tech-badge">Clean Architecture</span>
+                            <span class="tech-badge">CQRS</span>
+                            <span class="tech-badge">DDD</span>
+                            <span class="tech-badge">DevOps</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Entity Framework Core</span>
+                            <span class="tech-badge">GIT</span>
+                            <span class="tech-badge">HTML &amp; CSS</span>
+                            <span class="tech-badge">IIS</span>
+                            <span class="tech-badge">Javascript</span>
+                            <span class="tech-badge">Kanban</span>
+                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">MudBlazor</span>
+                            <span class="tech-badge">Postman</span>
+                            <span class="tech-badge">PowerShell</span>
+                            <span class="tech-badge">Pulumi</span>
+                            <span class="tech-badge">Scrum</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Umbraco</span>
+                            <span class="tech-badge">VUE.js</span>
+                            <span class="tech-badge">xUnit / NUnit</span>
+                            <span class="tech-badge">YAML</span>
+                            <span class="tech-badge" aria-hidden="true">.NET MAUI</span>
+                            <span class="tech-badge" aria-hidden="true">ASP.NET Core RazorPages</span>
+                            <span class="tech-badge" aria-hidden="true">Azure</span>
+                            <span class="tech-badge" aria-hidden="true">Blazor WASM</span>
+                            <span class="tech-badge" aria-hidden="true">Bootstrap</span>
+                            <span class="tech-badge" aria-hidden="true">C#</span>
+                            <span class="tech-badge" aria-hidden="true">CI/CD</span>
+                            <span class="tech-badge" aria-hidden="true">Clean Architecture</span>
+                            <span class="tech-badge" aria-hidden="true">CQRS</span>
+                            <span class="tech-badge" aria-hidden="true">DDD</span>
+                            <span class="tech-badge" aria-hidden="true">DevOps</span>
+                            <span class="tech-badge" aria-hidden="true">Docker</span>
+                            <span class="tech-badge" aria-hidden="true">Entity Framework Core</span>
+                            <span class="tech-badge" aria-hidden="true">GIT</span>
+                            <span class="tech-badge" aria-hidden="true">HTML &amp; CSS</span>
+                            <span class="tech-badge" aria-hidden="true">IIS</span>
+                            <span class="tech-badge" aria-hidden="true">Javascript</span>
+                            <span class="tech-badge" aria-hidden="true">Kanban</span>
+                            <span class="tech-badge" aria-hidden="true">Kubernetes</span>
+                            <span class="tech-badge" aria-hidden="true">Linux</span>
+                            <span class="tech-badge" aria-hidden="true">MudBlazor</span>
+                            <span class="tech-badge" aria-hidden="true">Postman</span>
+                            <span class="tech-badge" aria-hidden="true">PowerShell</span>
+                            <span class="tech-badge" aria-hidden="true">Pulumi</span>
+                            <span class="tech-badge" aria-hidden="true">Scrum</span>
+                            <span class="tech-badge" aria-hidden="true">SQL</span>
+                            <span class="tech-badge" aria-hidden="true">TypeScript</span>
+                            <span class="tech-badge" aria-hidden="true">Umbraco</span>
+                            <span class="tech-badge" aria-hidden="true">VUE.js</span>
+                            <span class="tech-badge" aria-hidden="true">xUnit / NUnit</span>
+                            <span class="tech-badge" aria-hidden="true">YAML</span>
+                    </div>
+                </div>
         </div>
     </section>
 
@@ -245,7 +303,7 @@
     <div class="content-card image-left">
         <div class="card-inner">
                 <figure class="card-image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/media/bxrgkpiv/about-me-2_87cc7d35.webp" width="600" height="600" class="w-100 h-100" alt="Illustratie over Bart van der Burg als .NET developer" loading="lazy" />
+                    <img src="/media/bxrgkpiv/about-me-2_87cc7d35.webp" srcset="/media/bxrgkpiv/about-me-2_87cc7d35.webp 1x, /media/bxrgkpiv/about-me-2_69c0df38.webp 2x, /media/bxrgkpiv/about-me-2_9822b5ca.webp 3x" width="600" height="600" class="w-100 h-100" alt="Illustratie over Bart van der Burg als .NET developer" loading="lazy" />
                     <meta itemprop="url" content="/media/bxrgkpiv/about-me-2.png" />
                     <meta itemprop="width" content="600" />
                     <meta itemprop="height" content="600" />
@@ -284,7 +342,7 @@
     <div class="content-card image-right">
         <div class="card-inner">
                 <figure class="card-image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/media/2hrjvjxx/home-portfolio_d34ed570.webp" width="600" height="600" class="w-100 h-100" alt="Portfolio met software projecten van Bart van der Burg" loading="lazy" />
+                    <img src="/media/2hrjvjxx/home-portfolio_d34ed570.webp" srcset="/media/2hrjvjxx/home-portfolio_d34ed570.webp 1x, /media/2hrjvjxx/home-portfolio_bbe5b17d.webp 2x, /media/2hrjvjxx/home-portfolio_535dc083.webp 3x" width="600" height="600" class="w-100 h-100" alt="Portfolio met software projecten van Bart van der Burg" loading="lazy" />
                     <meta itemprop="url" content="/media/2hrjvjxx/home-portfolio.png" />
                     <meta itemprop="width" content="600" />
                     <meta itemprop="height" content="600" />
@@ -323,7 +381,7 @@
     <div class="content-card image-left">
         <div class="card-inner">
                 <figure class="card-image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/media/ttkhtxte/vaardigheden-home-3_da1b4276.webp" width="600" height="600" class="w-100 h-100" alt=" Overzicht van technische kennis en vaardigheden op het gebied van .NET, Azure en software engineering." loading="lazy" />
+                    <img src="/media/ttkhtxte/vaardigheden-home-3_da1b4276.webp" srcset="/media/ttkhtxte/vaardigheden-home-3_da1b4276.webp 1x, /media/ttkhtxte/vaardigheden-home-3_90883c4d.webp 2x, /media/ttkhtxte/vaardigheden-home-3_312a3030.webp 3x" width="600" height="600" class="w-100 h-100" alt=" Overzicht van technische kennis en vaardigheden op het gebied van .NET, Azure en software engineering." loading="lazy" />
                     <meta itemprop="url" content="/media/ttkhtxte/vaardigheden-home-3.png" />
                     <meta itemprop="width" content="600" />
                     <meta itemprop="height" content="600" />
@@ -503,7 +561,7 @@
         "description": "Van maatwerk software tot cloud hostingSinds 2019 ben ik werkzaam als .NET software developer en focus ik mij op het bouwen van uitdagende maatwerk software. Daarnaast houd ik mij bezig met software architectuur, cloud oplossingen in Azure en het automatiseren van development processen met CI/CD. Op deze website lees je meer over mijn achtergrond, technische expertise en projecten waar ik aan heb gewerkt.",
         "url": "https://localhost:44376",
             "sameAs": ["https://www.linkedin.com/in/bartvanderburg"],
-        "knowsAbout": [".NET", "C#", "Azure", "Microservices", "SQL Server", "Docker", "Software Architecture"],
+        "knowsAbout": [".NET MAUI", "ASP.NET Core RazorPages", "Azure", "Blazor WASM", "Bootstrap", "C#", "CI/CD", "Clean Architecture", "CQRS", "DDD",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Amsterdam",

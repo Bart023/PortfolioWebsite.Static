@@ -96,12 +96,45 @@
     font-weight: 500;
     color: var(--bs-secondary-color);
     transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .tech-badge:hover {
     border-color: var(--primary-color);
     color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+/* Tech Stack Carousel - Auto-scrolling infinite carousel */
+.tech-stack-carousel {
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.tech-stack-track {
+    gap: 0.75rem;
+    display: flex;
+    padding: .25rem;
+    width: max-content;
+    animation: tech-stack-scroll 45s linear infinite;
+}
+
+.tech-stack-carousel:hover .tech-stack-track {
+    animation-play-state: paused;
+}
+
+@keyframes tech-stack-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* CTA Banner */
