@@ -40,10 +40,13 @@
 
     
     <!-- Critical CSS should load synchronously to prevent CLS -->
-    <link rel="stylesheet" href="/assets/css/Components/HomePage.css?v=3pkWn5I79eo5FvqNVu3tvdTaLE4ZSeCJP1q_0EPk8KQ" />
+    <link rel="stylesheet" href="/assets/css/Components/HomePage.css?v=lUs7ZfRvxfvbonRtvnZNvfYwVcnyNBRiufRR84Rcivw" />
     
     <link rel="preload" href="/assets/css/Components/ContentCardBlock.css?v=jcBdciAs69eK7zm8O6zOCXV56Vroy-tqfoshdKi_V4o" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/assets/css/Components/ContentCardBlock.css?v=jcBdciAs69eK7zm8O6zOCXV56Vroy-tqfoshdKi_V4o" /></noscript>
+
+    <link rel="preload" href="/assets/css/Components/ProfileBanner.css?v=nAbtQ4QY4CnZdx3JVnQxJEd0ZhG8PLzs68Vfj9aAuh8" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/assets/css/Components/ProfileBanner.css?v=nAbtQ4QY4CnZdx3JVnQxJEd0ZhG8PLzs68Vfj9aAuh8" /></noscript>
 
     
     <script type="application/ld&#x2B;json">
@@ -175,26 +178,25 @@
     <main id="main-content" class="flex-grow-1" role="main">
         
 <div itemscope itemtype="https://schema.org/Person">
-    <!-- Home Banner -->
-    <section id="home-banner" class="position-relative">
-        <div class="ratio" style="min-height: 250px; max-height: 25px;">
-            <div class="gradient-banner" style="height:250px;"></div>
+    <section id="home-banner" class="position-relative profile-banner">
+    <div class="ratio">
+        <div class="gradient-banner"></div>
+    </div>
+    <div class="position-absolute top-100 start-50 profile-circle-wrapper">
+        <div class="rounded-circle overflow-hidden border border-3 border-white shadow profile-circle">
+            <img itemprop="image" src="/media/ofspmn4p/profielfoto-cartoon_ca2d1576.webp" srcset="/media/ofspmn4p/profielfoto-cartoon_ca2d1576.webp 1x, /media/ofspmn4p/profielfoto-cartoon_31909d49.webp 2x, /media/ofspmn4p/profielfoto-cartoon_9a754a89.webp 3x" width="300" height="300" class="w-100 h-100" alt="Bart van der Burg | Senior .NET Software Engineer" loading="lazy" />
         </div>
-        <div class="position-absolute top-100 start-50" style="transform: translate(-50%, -70%);">
-            <div class="rounded-circle overflow-hidden border border-3 border-white shadow">
-                <img itemprop="image" src="/media/ofspmn4p/profielfoto-cartoon_ca2d1576.webp" srcset="/media/ofspmn4p/profielfoto-cartoon_ca2d1576.webp 1x, /media/ofspmn4p/profielfoto-cartoon_31909d49.webp 2x, /media/ofspmn4p/profielfoto-cartoon_9a754a89.webp 3x" width="300" height="300" class="w-100 h-100" alt="Bart van der Burg | Senior .NET Software Engineer" loading="lazy" />
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Hero Content -->
     <section class="home-hero container" aria-labelledby="hero-heading">
-        <div class="hero-content text-center" style="margin-top: 100px;">
+        <div class="hero-content text-center" style="margin-top: 60px;">
             <h1 id="hero-heading" class="hero-name" itemprop="name">Bart van der Burg | Senior .NET Software Engineer</h1>
             
 
                 <div class="hero-intro-text" itemprop="description">
-                    <h2 data-pm-slice="1 1 []"><br>From custom software to cloud solutions in .NET and Azure</h2><p>Since 2019, I have been working as a software engineer on complex challenges, translating them into sustainable and scalable software solutions. I look beyond just the code and actively contribute to functional design, process optimization, and technical architecture. I also develop cloud solutions in Azure and implement automated CI/CD pipelines to improve efficiency. My goal is always to deliver solutions that are user-friendly, reliable, performant, and maintainable.</p>
+                    <h2 data-pm-slice="1 1 []"><br>From custom software to cloud solutions in .NET and Azure</h2><p>Since 2019, I have been working as a software engineer on complex challenges, translating them into sustainable and scalable software solutions. I look beyond just the code and actively contribute to functional design, process optimization, and software architecture. I also develop cloud solutions in Azure and implement automated CI/CD pipelines to improve efficiency. My goal is always to deliver solutions that are user-friendly, reliable, performant, and maintainable.</p>
                 </div>
 
             <div class="hero-cta-buttons">
@@ -457,7 +459,7 @@
                     Bart van der Burg
                 </a>
                 <p class="footer-description">
-                    Senior .NET software engineer - specialized in custom software solutions and Azure cloud solutions - Amsterdam region
+                    Senior .NET software engineer specialized in custom software and scalable Azure cloud solutions, based in the Amsterdam region
                 </p>
                 
                 <div class="footer-social mt-4">
@@ -536,12 +538,15 @@
                                 Send a message
                             </a>
                         </li>
-                    <li>
-                        <span class="d-flex align-items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bi" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            Amsterdam - Nederland
-                        </span>
-                    </li>
+                        <li>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Amsterdam%20-%20Nederland"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="d-flex align-items-center gap-2 text-decoration-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bi" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Amsterdam - Nederland
+                            </a>
+                        </li>
                 </ul>
             </div>
         </div>
