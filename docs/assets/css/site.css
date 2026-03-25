@@ -154,6 +154,8 @@ header {
     border-color: transparent;
 }
 .breadcrumb-nav {
+    --bs-bg-opacity: 0.80;
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--bs-light-border-subtle);
 }
 .breadcrumb {
