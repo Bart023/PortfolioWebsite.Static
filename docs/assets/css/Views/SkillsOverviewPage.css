@@ -1,4 +1,8 @@
-﻿/* Important for 'Show and go to category' */
+﻿#skills {
+    overflow-x: clip;
+}
+
+/* Important for 'Show and go to category' */
 #skills .category-section {
     position: relative;
 }
@@ -180,10 +184,4 @@
     #skills .skills-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-/* Prevent ANY child from widening the page on narrow touch viewports */
-#skills {
-    overflow-x: clip; /* clip = no scroll container created, sticky nav still works */
-    max-width: 100%;
 }
