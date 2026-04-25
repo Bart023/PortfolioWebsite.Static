@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Common - Scroll watch url
+// Updates the URL hash based on the currently visible section with class "scroll-watch-url" and id starting with "category-"
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.scroll-watch-url[id^="category-"]');
     if (!sections.length) return;
@@ -186,4 +187,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 setZoom(pre, next);
             });
         });
+});
+
+// Content card blocks - touch-active hover effect via IntersectionObserver
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".content-card");
+    if (!cards.length) return;
+
+    let observerInitialized = false;
+
+    window.addEventListener("touchstart", () => {
+        if (observerInitialized) return;
+        observerInitialized = true;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("touch-active", entry.isIntersecting);
+                });
+            },
+            { rootMargin: "-35% 0px -35% 0px", threshold: 0 }
+        );
+
+        cards.forEach(card => observer.observe(card));
+    }, { passive: true });
 });

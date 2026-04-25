@@ -17,3 +17,17 @@
 #project .filmstrip-container{
     margin-bottom: 1rem;
 }
+
+/* Stack tag cloud */
+#project .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+}
+
+/* Tighten the info card dl */
+#project .project-info-card dl dt,
+#project .project-info-card dl dd {
+    margin-bottom: .35rem;
+    line-height: 1.4;
+}

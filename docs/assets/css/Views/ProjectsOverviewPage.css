@@ -127,3 +127,18 @@
         border-left: 1px solid var(--bs-card-border-color);
     }
 }
+
+/* Tag cloud for stack badges */
+#projects .project-stack,
+#project .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+    margin-top: .25rem;
+}
+
+/* Meta panel typography tightening */
+#projects .project-meta > div {
+    margin-bottom: .2rem;
+    line-height: 1.4;
+}

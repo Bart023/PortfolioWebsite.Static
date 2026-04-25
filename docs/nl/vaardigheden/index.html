@@ -30,12 +30,12 @@
     <link rel="preload" href="/assets/bootstrap/css/bootstrap.min.css?v=WWqRjl1McctzGyNBLVsUXkKcIgOiPpv3upDv8-KRu7g" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?v=WWqRjl1McctzGyNBLVsUXkKcIgOiPpv3upDv8-KRu7g" /></noscript>
 
-    <link rel="preload" href="/assets/css/site.css?v=VP9FTFVBZzJHdLA2Y_Yfc88w2n64liBtD-OtDWm_3Yo" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="/assets/css/site.css?v=VP9FTFVBZzJHdLA2Y_Yfc88w2n64liBtD-OtDWm_3Yo" /></noscript>
+    <link rel="preload" href="/assets/css/site.css?v=3PMfj1cL5c64LE5563seYTMbKHa4g0AwyzEThYqNsVs" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/assets/css/site.css?v=3PMfj1cL5c64LE5563seYTMbKHa4g0AwyzEThYqNsVs" /></noscript>
 
     
-    <link rel="preload" href="/assets/css/Views/SkillsOverviewPage.css?v=4cnSETHXHQyCeSSnh5tw5q-9gBqrmT1B74RUzWfGXYs" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="/assets/css/Views/SkillsOverviewPage.css?v=4cnSETHXHQyCeSSnh5tw5q-9gBqrmT1B74RUzWfGXYs" /></noscript>
+    <link rel="preload" href="/assets/css/Views/SkillsOverviewPage.css?v=SgpopW0NXh819INyEryladnDNvHDVlOBGN4wXtw6DEs" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/assets/css/Views/SkillsOverviewPage.css?v=SgpopW0NXh819INyEryladnDNvHDVlOBGN4wXtw6DEs" /></noscript>
 
     
     <script type="application/ld&#x2B;json">
@@ -170,7 +170,7 @@
     <h1 class="mb-3 text-center">Vaardigheden</h1>
         <div class="lead mb-3 text-center"><p>Hier vind je een overzicht van mijn vaardigheden, gebundeld per categorie en voorzien van niveau-indicatie.</p></div>
 
-    <nav class="sticky-top border-bottom d-flex justify-content-end align-items-center py-2 mb-3  gap-2">
+    <nav class="sticky-top border-bottom d-flex justify-content-end align-items-center py-2 mb-3 gap-2">
         <!-- Legend button -->
         <button type="button" class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#legendModal" aria-label="Open level definitions">
             Toelichting niveaus
@@ -233,62 +233,125 @@
 
     <!-- Skills body -->
             <div id="category-language" class="category-section mb-5 scroll-watch-url">
-                <!-- Show and go to category -->
-                <div class="btn-group mb-3 d-flex justify-content-center" role="group">
-                    <a href="#category-language" class="btn btn-outline-secondary active" aria-label="Jump to Languages category">
-                        Talen
-                    </a>
-                    <a href="#category-framework" class="btn btn-outline-secondary " aria-label="Jump to Frameworks category">
-                        Frameworks
-                    </a>
-                    <a href="#category-tool" class="btn btn-outline-secondary " aria-label="Jump to Tools category">
-                        Tools
-                    </a>
-                    <a href="#category-methodology" class="btn btn-outline-secondary " aria-label="Jump to Methodologies category">
-                        Methodieken
-                    </a>
+                <!-- Category navigation -->
+                <div class="category-nav mb-4">
+                    <a href="#category-language"     class="btn btn-outline-secondary active" aria-label="Jump to Languages">Talen</a>
+                    <a href="#category-framework"    class="btn btn-outline-secondary " aria-label="Jump to Frameworks">Frameworks</a>
+                    <a href="#category-tool"         class="btn btn-outline-secondary " aria-label="Jump to Tools">Tools</a>
+                    <a href="#category-methodology"  class="btn btn-outline-secondary " aria-label="Jump to Methodologies">Methodieken</a>
+                    <a href="#category-architecture" class="btn btn-outline-secondary " aria-label="Jump to Architecture">Architectuur</a>
                 </div>
 
-                <div class="row">
-                        <article class="col-12 skill" data-cat="language" data-level="senior">
-                            <div class="card skill-card">
-                                    <div class="image-container">
-                                        <img src="/media/3btdwojw/c-image_6e64e4a8.webp" srcset="/media/3btdwojw/c-image_6e64e4a8.webp 1x, /media/3btdwojw/c-image_f23837e2.webp 2x, /media/3btdwojw/c-image_98cde1f3.webp 3x" width="100" height="100" class="skill-img card-img-top" alt="C#" loading="lazy" />
-                                    </div>
-
-                                <div class="skill-body">
+                <div class="skills-grid">
+                        <article class="skill" data-cat="language" data-level="senior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
                                     <div class="skill-main">
-                                        <h3 class="mb-2">C#</h3>
-                                            <div class="skill-intro mt-2">Mijn favoriete taal voor het bouwen van gestructureerde en betrouwbare applicaties. Of het nu gaat om een webapplicatie in .NET of logica in de backend.</div>
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">C#</h3>
+                                                <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span>
+                                        </div>
                                     </div>
 
-                                    <div class="skill-meta small text-body-secondary">
-                                            <div> Niveau: <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span> </div>
-                                            <a href="/portfolio?stack=C%23" aria-label="See all projects using C#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-2" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=C%23" class="skill-link" aria-label="See all projects using C#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
                                                 Zie projecten met C#
                                             </a>
                                     </div>
                                 </div>
                             </div>
                         </article>
-                        <article class="col-12 skill" data-cat="language" data-level="medior">
-                            <div class="card skill-card">
-                                    <div class="image-container">
-                                        <img src="/media/n3ckqtai/javascript_4d9675b3.webp" srcset="/media/n3ckqtai/javascript_4d9675b3.webp 1x, /media/n3ckqtai/javascript_7e70029d.webp 2x, /media/n3ckqtai/javascript_3ed9c3fd.webp 3x" width="100" height="100" class="skill-img card-img-top" alt="Javascript" loading="lazy" />
-                                    </div>
-
-                                <div class="skill-body">
+                        <article class="skill" data-cat="language" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
                                     <div class="skill-main">
-                                        <h3 class="mb-2">Javascript</h3>
-                                            <div class="skill-intro mt-2">Javascript</div>
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">SQL</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
                                     </div>
 
-                                    <div class="skill-meta small text-body-secondary">
-                                            <div> Niveau: <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span> </div>
-                                            <a href="/portfolio?stack=Javascript" aria-label="See all projects using Javascript">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-2" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=SQL" class="skill-link" aria-label="See all projects using SQL">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met SQL
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="language" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Javascript</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Javascript" class="skill-link" aria-label="See all projects using Javascript">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
                                                 Zie projecten met Javascript
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="language" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">TypeScript</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=TypeScript" class="skill-link" aria-label="See all projects using TypeScript">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met TypeScript
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="language" data-level="junior / medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">YAML</h3>
+                                                <span class="badge rounded-pill text-bg-junior-medior text-capitalize">junior / medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=YAML" class="skill-link" aria-label="See all projects using YAML">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met YAML
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="language" data-level="medior / senior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">HTML &amp; CSS</h3>
+                                                <span class="badge rounded-pill text-bg-medior-senior text-capitalize">medior / senior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=HTML%20%26%20CSS" class="skill-link" aria-label="See all projects using HTML &amp; CSS">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met HTML &amp; CSS
                                             </a>
                                     </div>
                                 </div>
@@ -297,39 +360,503 @@
                 </div>
             </div>
             <div id="category-framework" class="category-section mb-5 scroll-watch-url">
-                <!-- Show and go to category -->
-                <div class="btn-group mb-3 d-flex justify-content-center" role="group">
-                    <a href="#category-language" class="btn btn-outline-secondary " aria-label="Jump to Languages category">
-                        Talen
-                    </a>
-                    <a href="#category-framework" class="btn btn-outline-secondary active" aria-label="Jump to Frameworks category">
-                        Frameworks
-                    </a>
-                    <a href="#category-tool" class="btn btn-outline-secondary " aria-label="Jump to Tools category">
-                        Tools
-                    </a>
-                    <a href="#category-methodology" class="btn btn-outline-secondary " aria-label="Jump to Methodologies category">
-                        Methodieken
-                    </a>
+                <!-- Category navigation -->
+                <div class="category-nav mb-4">
+                    <a href="#category-language"     class="btn btn-outline-secondary " aria-label="Jump to Languages">Talen</a>
+                    <a href="#category-framework"    class="btn btn-outline-secondary active" aria-label="Jump to Frameworks">Frameworks</a>
+                    <a href="#category-tool"         class="btn btn-outline-secondary " aria-label="Jump to Tools">Tools</a>
+                    <a href="#category-methodology"  class="btn btn-outline-secondary " aria-label="Jump to Methodologies">Methodieken</a>
+                    <a href="#category-architecture" class="btn btn-outline-secondary " aria-label="Jump to Architecture">Architectuur</a>
                 </div>
 
-                <div class="row">
-                        <article class="col-12 skill" data-cat="framework" data-level="medior / senior">
-                            <div class="card skill-card">
-                                    <div class="image-container">
-                                        <img src="/media/ypbdch43/aspnet_5f777896.webp" srcset="/media/ypbdch43/aspnet_5f777896.webp 1x, /media/ypbdch43/aspnet_666699d2.webp 2x, /media/ypbdch43/aspnet_942f9dfe.webp 3x" width="100" height="100" class="skill-img card-img-top" alt="ASP.NET Core RazorPages" loading="lazy" />
-                                    </div>
-
-                                <div class="skill-body">
+                <div class="skills-grid">
+                        <article class="skill" data-cat="framework" data-level="junior / medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
                                     <div class="skill-main">
-                                        <h3 class="mb-2">ASP.NET Core RazorPages</h3>
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">.NET MAUI</h3>
+                                                <span class="badge rounded-pill text-bg-junior-medior text-capitalize">junior / medior</span>
+                                        </div>
                                     </div>
 
-                                    <div class="skill-meta small text-body-secondary">
-                                            <div> Niveau: <span class="badge rounded-pill text-bg-medior-senior text-capitalize">medior / senior</span> </div>
-                                            <a href="/portfolio?stack=ASP.NET%20Core%20RazorPages" aria-label="See all projects using ASP.NET Core RazorPages">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-2" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=.NET%20MAUI" class="skill-link" aria-label="See all projects using .NET MAUI">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met .NET MAUI
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="framework" data-level="senior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">.NET Blazor</h3>
+                                                <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=.NET%20Blazor" class="skill-link" aria-label="See all projects using .NET Blazor">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met .NET Blazor
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="framework" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">ASP.NET Core MVC</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=ASP.NET%20Core%20MVC" class="skill-link" aria-label="See all projects using ASP.NET Core MVC">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met ASP.NET Core MVC
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="framework" data-level="medior / senior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">ASP.NET Core RazorPages</h3>
+                                                <span class="badge rounded-pill text-bg-medior-senior text-capitalize">medior / senior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=ASP.NET%20Core%20RazorPages" class="skill-link" aria-label="See all projects using ASP.NET Core RazorPages">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
                                                 Zie projecten met ASP.NET Core RazorPages
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="framework" data-level="junior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">VUE.js</h3>
+                                                <span class="badge rounded-pill text-bg-light border text-capitalize">junior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=VUE.js" class="skill-link" aria-label="See all projects using VUE.js">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met VUE.js
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="framework" data-level="junior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Next.js</h3>
+                                                <span class="badge rounded-pill text-bg-light border text-capitalize">junior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Next.js" class="skill-link" aria-label="See all projects using Next.js">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Next.js
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                </div>
+            </div>
+            <div id="category-tool" class="category-section mb-5 scroll-watch-url">
+                <!-- Category navigation -->
+                <div class="category-nav mb-4">
+                    <a href="#category-language"     class="btn btn-outline-secondary " aria-label="Jump to Languages">Talen</a>
+                    <a href="#category-framework"    class="btn btn-outline-secondary " aria-label="Jump to Frameworks">Frameworks</a>
+                    <a href="#category-tool"         class="btn btn-outline-secondary active" aria-label="Jump to Tools">Tools</a>
+                    <a href="#category-methodology"  class="btn btn-outline-secondary " aria-label="Jump to Methodologies">Methodieken</a>
+                    <a href="#category-architecture" class="btn btn-outline-secondary " aria-label="Jump to Architecture">Architectuur</a>
+                </div>
+
+                <div class="skills-grid">
+                        <article class="skill" data-cat="tool" data-level="senior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">GIT</h3>
+                                                <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=GIT" class="skill-link" aria-label="See all projects using GIT">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met GIT
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="tool" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Azure</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Azure" class="skill-link" aria-label="See all projects using Azure">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Azure
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="tool" data-level="junior / medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">IIS</h3>
+                                                <span class="badge rounded-pill text-bg-junior-medior text-capitalize">junior / medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=IIS" class="skill-link" aria-label="See all projects using IIS">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met IIS
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="tool" data-level="junior / medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Linux</h3>
+                                                <span class="badge rounded-pill text-bg-junior-medior text-capitalize">junior / medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Linux" class="skill-link" aria-label="See all projects using Linux">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Linux
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="tool" data-level="medior / senior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Docker</h3>
+                                                <span class="badge rounded-pill text-bg-medior-senior text-capitalize">medior / senior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Docker" class="skill-link" aria-label="See all projects using Docker">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Docker
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="tool" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Umbraco</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Umbraco" class="skill-link" aria-label="See all projects using Umbraco">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Umbraco
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="tool" data-level="junior / medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Kubernetes</h3>
+                                                <span class="badge rounded-pill text-bg-junior-medior text-capitalize">junior / medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Kubernetes" class="skill-link" aria-label="See all projects using Kubernetes">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Kubernetes
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="tool" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Pulumi (IaC)</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Pulumi%20%28IaC%29" class="skill-link" aria-label="See all projects using Pulumi (IaC)">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Pulumi (IaC)
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                </div>
+            </div>
+            <div id="category-methodology" class="category-section mb-5 scroll-watch-url">
+                <!-- Category navigation -->
+                <div class="category-nav mb-4">
+                    <a href="#category-language"     class="btn btn-outline-secondary " aria-label="Jump to Languages">Talen</a>
+                    <a href="#category-framework"    class="btn btn-outline-secondary " aria-label="Jump to Frameworks">Frameworks</a>
+                    <a href="#category-tool"         class="btn btn-outline-secondary " aria-label="Jump to Tools">Tools</a>
+                    <a href="#category-methodology"  class="btn btn-outline-secondary active" aria-label="Jump to Methodologies">Methodieken</a>
+                    <a href="#category-architecture" class="btn btn-outline-secondary " aria-label="Jump to Architecture">Architectuur</a>
+                </div>
+
+                <div class="skills-grid">
+                        <article class="skill" data-cat="methodology" data-level="">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Scrum</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Scrum" class="skill-link" aria-label="See all projects using Scrum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Scrum
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="methodology" data-level="">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Kanban</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Kanban" class="skill-link" aria-label="See all projects using Kanban">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Kanban
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="methodology" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">DDD</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=DDD" class="skill-link" aria-label="See all projects using DDD">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met DDD
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="methodology" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">CI/CD</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=CI%2FCD" class="skill-link" aria-label="See all projects using CI/CD">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met CI/CD
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="methodology" data-level="">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">DevOps</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=DevOps" class="skill-link" aria-label="See all projects using DevOps">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met DevOps
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                </div>
+            </div>
+            <div id="category-architecture" class="category-section mb-5 scroll-watch-url">
+                <!-- Category navigation -->
+                <div class="category-nav mb-4">
+                    <a href="#category-language"     class="btn btn-outline-secondary " aria-label="Jump to Languages">Talen</a>
+                    <a href="#category-framework"    class="btn btn-outline-secondary " aria-label="Jump to Frameworks">Frameworks</a>
+                    <a href="#category-tool"         class="btn btn-outline-secondary " aria-label="Jump to Tools">Tools</a>
+                    <a href="#category-methodology"  class="btn btn-outline-secondary " aria-label="Jump to Methodologies">Methodieken</a>
+                    <a href="#category-architecture" class="btn btn-outline-secondary active" aria-label="Jump to Architecture">Architectuur</a>
+                </div>
+
+                <div class="skills-grid">
+                        <article class="skill" data-cat="architecture" data-level="senior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Clean Architecture</h3>
+                                                <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Clean%20Architecture" class="skill-link" aria-label="See all projects using Clean Architecture">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Clean Architecture
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="architecture" data-level="medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Modular Monolith</h3>
+                                                <span class="badge rounded-pill text-bg-medior text-capitalize">medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Modular%20Monolith" class="skill-link" aria-label="See all projects using Modular Monolith">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Modular Monolith
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="architecture" data-level="junior / medior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Microservices</h3>
+                                                <span class="badge rounded-pill text-bg-junior-medior text-capitalize">junior / medior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Microservices" class="skill-link" aria-label="See all projects using Microservices">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Microservices
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="architecture" data-level="junior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">Event-Driven Architecture</h3>
+                                                <span class="badge rounded-pill text-bg-light border text-capitalize">junior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=Event-Driven%20Architecture" class="skill-link" aria-label="See all projects using Event-Driven Architecture">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met Event-Driven Architecture
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="skill" data-cat="architecture" data-level="senior">
+                            <div class="skill-card card h-100">
+                                <div class="skill-body card-body">
+                                    <div class="skill-main">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                            <h3 class="skill-name mb-0">CQRS</h3>
+                                                <span class="badge rounded-pill text-bg-senior text-capitalize">senior</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-footer mt-2 small text-body-secondary d-flex flex-wrap gap-3 align-items-center">
+                                            <a href="/portfolio?stack=CQRS" class="skill-link" aria-label="See all projects using CQRS">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="bi text-secondary me-1" aria-hidden="true"><path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/></svg>
+                                                Zie projecten met CQRS
                                             </a>
                                     </div>
                                 </div>
@@ -452,7 +979,20 @@
 
 
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js?v=bHWnzxvaVWkGg_IDZDktGX6GN6S7EumNeM9lCXPWP_8" defer></script>
-    <script src="/assets/js/site.js?v=N_0JNymKurVBjIw9KNZdRbUzSDYjpuI7-96WZKZe_Wo" defer></script>
+    <script src="/assets/js/site.js?v=uwRvQFY0a7ULqmVoTTUXjWkoWqlGpVpqQFGvahLaL6s" defer></script>
     
+    <script>
+        function centerActiveBtn(nav) {
+            const active = nav.querySelector('.active');
+            if (active)
+                nav.scrollLeft = active.offsetLeft - (nav.offsetWidth - active.offsetWidth) / 2;
+        }
+
+        document.querySelectorAll('.category-nav').forEach(nav => {
+            centerActiveBtn(nav);
+            new ResizeObserver(() => centerActiveBtn(nav)).observe(nav);
+        });
+    </script>
+
 </body>
 </html>

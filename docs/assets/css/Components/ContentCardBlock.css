@@ -15,7 +15,7 @@
     border: 1px solid var(--border-color);
 }
 
-.content-card:hover {
+.content-card:is(:hover, .touch-active) {
     transform: translateY(-6px);
     box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,0.12);
     border-color: var(--primary-light);
@@ -60,7 +60,7 @@
     transition: transform var(--transition-slow);
 }
 
-.content-card:hover .card-image img {
+.content-card:is(:hover, .touch-active) .card-image img {
     transform: scale(1.05);
 }
 
@@ -74,7 +74,7 @@
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
 }
 
-.content-card:hover .card-image::after {
+.content-card:is(:hover, .touch-active) .card-image::after {
     opacity: 1;
 }
 
@@ -110,7 +110,7 @@
         transition: width var(--transition-base);
         background: var(--primary-gradient);
     }
-    .content-card:hover .card-title::after {
+    .content-card:is(:hover, .touch-active) .card-title::after {
         width: 180px;
     }
 
@@ -169,7 +169,7 @@
     border-color: var(--border-color);
 }
 
-[data-bs-theme=dark] .content-card:hover {
+[data-bs-theme=dark] .content-card:is(:hover, .touch-active) {
     border-color: var(--primary-color);
 }
 

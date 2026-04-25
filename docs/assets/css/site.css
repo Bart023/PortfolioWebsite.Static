@@ -114,10 +114,11 @@ header {
     z-index: 1030 !important;
 }
 .navbar {
-    background-color: rgba(var(--bs-body-bg-rgb), 0.75);
+    z-index: 10;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--bs-border-color);
+    background-color: rgba(var(--bs-body-bg-rgb), 0.75);
 }
 .navbar-brand {
     font-weight: 700;
@@ -329,3 +330,19 @@ header {
     color: white;
     border-color: transparent;
 }
+
+/* ====================*/
+/* Category badge colours (shared across Skills & Portfolio pages) */
+/* ====================*/
+.badge-cat-language,
+.badge-cat-framework,
+.badge-cat-tool,
+.badge-cat-methodology,
+.badge-cat-architecture {
+    background-color: var(--bs-body-bg) !important;
+}
+.badge-cat-language    { border-color: var(--primary-color,   #667eea) !important; color: var(--primary-color,   #667eea) !important; }
+.badge-cat-framework   { border-color: var(--bs-success)               !important; color: var(--bs-success)               !important; }
+.badge-cat-tool        { border-color: var(--bs-warning)               !important; color: var(--bs-warning-text-emphasis) !important; }
+.badge-cat-methodology { border-color: var(--bs-info)                  !important; color: var(--bs-info-text-emphasis)    !important; }
+.badge-cat-architecture{ border-color: var(--accent-purple, #764ba2)   !important; color: var(--accent-purple, #764ba2)   !important; }
